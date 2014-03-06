@@ -9,7 +9,10 @@ See more at [http://www.schedjoules.com](http://www.schedjoules.com) .
  - Download CalendarStore.zip or checkout the repository
  - Read the Documentation at [http://schedjoules.github.io/iOS-SDK/](http://schedjoules.github.io/iOS-SDK/)
  - Examine the example app "SampleCalendarApp"
+ 
+### And then:
  - Get an AuthorizationToken for your app
+ - Integrate the SchedJoules CalendarStore.framework within 5 minutes in your own app
  - Profit!!
 
 ## AuthorizationToken
