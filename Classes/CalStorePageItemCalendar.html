@@ -39,19 +39,7 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/beingPurchased">&nbsp;&nbsp;&nbsp;&nbsp;beingPurchased</option>
-	
-	<option value="//api/name/fetchingPriceInfo">&nbsp;&nbsp;&nbsp;&nbsp;fetchingPriceInfo</option>
-	
-	<option value="//api/name/identifier">&nbsp;&nbsp;&nbsp;&nbsp;identifier</option>
-	
 	<option value="//api/name/installed">&nbsp;&nbsp;&nbsp;&nbsp;installed</option>
-	
-	<option value="//api/name/priceInfo">&nbsp;&nbsp;&nbsp;&nbsp;priceInfo</option>
-	
-	<option value="//api/name/purchased">&nbsp;&nbsp;&nbsp;&nbsp;purchased</option>
-	
-	<option value="//api/name/relatedIdentifiers">&nbsp;&nbsp;&nbsp;&nbsp;relatedIdentifiers</option>
 	
 	
 	
@@ -60,13 +48,7 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/cancelFetchingPriceInfo">&nbsp;&nbsp;&nbsp;&nbsp;- cancelFetchingPriceInfo</option>
-	
 	<option value="//api/name/createUrlWithCompletionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- createUrlWithCompletionHandler:</option>
-	
-	<option value="//api/name/fetchPriceInfoWithCompletionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchPriceInfoWithCompletionHandler:</option>
-	
-	<option value="//api/name/purchaseWithCompletionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- purchaseWithCompletionHandler:</option>
 	
 	
 	
@@ -84,15 +66,9 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_URL">URL</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_In-App Purchase Info">In-App Purchase Info</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Getting an URL">Getting an URL</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Store Integration">Store Integration</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Price Information">Price Information</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Fetching Price Information">Fetching Price Information</a></span></li>
 	
 </ul></li>
 
@@ -102,19 +78,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beingPurchased">beingPurchased</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchingPriceInfo">fetchingPriceInfo</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/identifier">identifier</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/installed">installed</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/priceInfo">priceInfo</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/purchased">purchased</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/relatedIdentifiers">relatedIdentifiers</a></span></li>
 	
 </ul></li>
 
@@ -124,13 +88,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancelFetchingPriceInfo">cancelFetchingPriceInfo</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createUrlWithCompletionHandler:">createUrlWithCompletionHandler:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchPriceInfoWithCompletionHandler:">fetchPriceInfoWithCompletionHandler:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/purchaseWithCompletionHandler:">purchaseWithCompletionHandler:</a></span></li>
 	
 </ul></li>
 
@@ -156,7 +114,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/CalStorePageItem.html">CalStorePageItem</a> : <a href="../Classes/CalStoreObject.html">CalStoreObject</a> : NSObject</td>
+	<td class="specification-value"><a href="../Classes/CalStorePageItemPurchasable.html">CalStorePageItemPurchasable</a> : <a href="../Classes/CalStorePageItem.html">CalStorePageItem</a> : <a href="../Classes/CalStoreObject.html">CalStoreObject</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">CalStorePageItemCalendar.h</td>
@@ -172,32 +130,11 @@
 						<p>A CalStorePageItemCalendar is the item that corresponds to an ICS calendar that the user
 can purchase and install.</p>
 
-<p>Objects of this class can be <a href="#//api/name/purchased">purchased</a> and <a href="#//api/name/installed">installed</a> by the user. After an object has
-been <a href="#//api/name/purchased">purchased</a>, the url property will return the unique url to the ICS calendar.</p>
+<p>Objects of this class can be purchased and <a href="#//api/name/installed">installed</a> by the user. After an object has
+been purchased, the url property will return the unique url to the ICS calendar.</p>
 
-<p><strong>In-App Purchases</strong></p>
-
-<p>Each In-App purchase added to your app for the Calendar Store, gives access to a
-<strong>one or more</strong> CalStorePageItemCalendar&rsquo;s. The <a href="#//api/name/identifier">identifier</a> property tells you
-which in-app purchase the user must have bought to have access to this item&rsquo;s
-content. If the user <a href="#//api/name/purchased">purchased</a> the corresponding in-app purchase, he can be given
-access to all <CalStorePageItemCalendar> url that have the same <a href="#//api/name/identifier">identifier</a>.</p>
-
-<p><strong>Purchasing and Installing</strong></p>
-
-<p>To give the user access to this items content, use the following steps:</p>
-
-<ol>
-<li>Observe the <code>kCalStoreOrderStatusChangedNotification</code> notification for state changes
- about this item&rsquo;s state. Update your UI accordingly.</li>
-<li>Check if the <a href="#//api/name/purchased">purchased</a> property is YES and <a href="#//api/name/beingPurchased">beingPurchased</a> does not indicate a purchase is currently in progress.</li>
-<li>If not, start an async purchase operation using <a href="#//api/name/purchaseWithCompletionHandler:">purchaseWithCompletionHandler:</a> and
- in the completion handler show errors to the user when needed.</li>
-<li>During purchasing, the <a href="#//api/name/beingPurchased">beingPurchased</a> property will return YES to indicate a purchase is in progress.</li>
-<li>If the completionHandler indicated success, check the <a href="#//api/name/purchased">purchased</a> property again.</li>
-<li>If it returns YES, then the calendar can be <a href="#//api/name/installed">installed</a> using the <a href="../Classes/CalStoreInstallCalendarViewController.html">CalStoreInstallCalendarViewController</a>.</li>
-</ol>
-
+<p>Use the <a href="../Classes/CalStorePageItemPurchasable.html">CalStorePageItemPurchasable</a> methods of this object to check purchasing information,
+pricing info and start a purchase.</p>
 					</div>
 					
 					
@@ -209,8 +146,8 @@ access to all <CalStorePageItemCalendar> url that have the same <a href="#//api/
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="URL" name="task_URL"></a>
-						<h3 class="subsubtitle task-title">URL</h3>
+						<a title="Getting an URL" name="task_Getting an URL"></a>
+						<h3 class="subsubtitle task-title">Getting an URL</h3>
 
 						<ul class="task-list">
 							<li>
@@ -218,26 +155,6 @@ access to all <CalStorePageItemCalendar> url that have the same <a href="#//api/
 		<code><a href="#//api/name/createUrlWithCompletionHandler:">&ndash;&nbsp;createUrlWithCompletionHandler:</a></code>
 	</span>
 	
-	
-</li>
-						</ul>
-						
-						
-						<a title="In-App Purchase Info" name="task_In-App Purchase Info"></a>
-						<h3 class="subsubtitle task-title">In-App Purchase Info</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/identifier">&nbsp;&nbsp;identifier</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/relatedIdentifiers">&nbsp;&nbsp;relatedIdentifiers</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -253,64 +170,6 @@ access to all <CalStorePageItemCalendar> url that have the same <a href="#//api/
 	</span>
 	<span class="task-item-suffix">property</span>
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/purchased">&nbsp;&nbsp;purchased</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/beingPurchased">&nbsp;&nbsp;beingPurchased</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/purchaseWithCompletionHandler:">&ndash;&nbsp;purchaseWithCompletionHandler:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Price Information" name="task_Price Information"></a>
-						<h3 class="subsubtitle task-title">Price Information</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/priceInfo">&nbsp;&nbsp;priceInfo</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="Fetching Price Information" name="task_Fetching Price Information"></a>
-						<h3 class="subsubtitle task-title">Fetching Price Information</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/fetchingPriceInfo">&nbsp;&nbsp;fetchingPriceInfo</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/fetchPriceInfoWithCompletionHandler:">&ndash;&nbsp;fetchPriceInfoWithCompletionHandler:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/cancelFetchingPriceInfo">&ndash;&nbsp;cancelFetchingPriceInfo</a></code>
-	</span>
-	
-	
 </li>
 						</ul>
 						
@@ -323,114 +182,6 @@ access to all <CalStorePageItemCalendar> url that have the same <a href="#//api/
 					<div class="section section-methods">
 						<a title="Properties" name="properties"></a>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/beingPurchased" title="beingPurchased"></a>
-	<h3 class="subsubtitle method-title">beingPurchased</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>YES when a purchasing operation is currently being undertaken</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isBeingPurchased) BOOL beingPurchased</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStorePageItemCalendar.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/fetchingPriceInfo" title="fetchingPriceInfo"></a>
-	<h3 class="subsubtitle method-title">fetchingPriceInfo</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>YES when this object is busy fetching PriceInfo.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isFetchingPriceInfo) BOOL fetchingPriceInfo</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStorePageItemCalendar.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/identifier" title="identifier"></a>
-	<h3 class="subsubtitle method-title">identifier</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The identifier of the in-app purchase that this item is a part of.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *identifier</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStorePageItemCalendar.h</code><br />
-	</div>				
-	
-	
-</div>
 						
 						<div class="section-method">
 	<a name="//api/name/installed" title="installed"></a>
@@ -488,157 +239,6 @@ EventKit integration, use the <a href="../Classes/CalStoreEventKitController.htm
 	
 </div>
 						
-						<div class="section-method">
-	<a name="//api/name/priceInfo" title="priceInfo"></a>
-	<h3 class="subsubtitle method-title">priceInfo</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Information about the price of the in-app purchase that this item is a part of. When nil, use
-the <a href="#//api/name/fetchPriceInfoWithCompletionHandler:">fetchPriceInfoWithCompletionHandler:</a> method to fetch the information asynchronously.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CalStorePriceInfo *priceInfo</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="#//api/name/fetchPriceInfoWithCompletionHandler:">- fetchPriceInfoWithCompletionHandler:</a></p></code></li>
-			
-		</ul>
-	</div>
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStorePageItemCalendar.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/purchased" title="purchased"></a>
-	<h3 class="subsubtitle method-title">purchased</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>YES when the in-app purchase that this item is a part of, has been purchased
-by the user.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isPurchased) BOOL purchased</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>When this property is YES, this item can be <a href="#//api/name/installed">installed</a> using
-the <a href="../Classes/CalStoreInstallCalendarViewController.html">CalStoreInstallCalendarViewController</a>.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="../Classes/CalStoreInstallCalendarViewController.html">CalStoreInstallCalendarViewController</a></p></code></li>
-			
-		</ul>
-	</div>
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStorePageItemCalendar.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/relatedIdentifiers" title="relatedIdentifiers"></a>
-	<h3 class="subsubtitle method-title">relatedIdentifiers</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The set of in-app purchase identifiers for the same in-app purchase for other, related apps of the same vendor.
-Nil if not applicable.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSSet *relatedIdentifiers</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Some apps choose to have a different iPad an iPhone version of the same app. Since those are technically
-two different apps, they have different in-app purchase identifiers. However, for the user they appear as one app.
-This property will return the in-app purchase identifiers used by both apps for the same calendar item.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="../docs/Documentation/MultipleApps.html">MultipleApps</a>.markdown</p></code></li>
-			
-		</ul>
-	</div>
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStorePageItemCalendar.h</code><br />
-	</div>				
-	
-	
-</div>
-						
 					</div>
 					
 					
@@ -650,49 +250,13 @@ This property will return the in-app purchase identifiers used by both apps for 
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/cancelFetchingPriceInfo" title="cancelFetchingPriceInfo"></a>
-	<h3 class="subsubtitle method-title">cancelFetchingPriceInfo</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Cancels an ongoing fetch operation for PriceInfo.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)cancelFetchingPriceInfo</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStorePageItemCalendar.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/createUrlWithCompletionHandler:" title="createUrlWithCompletionHandler:"></a>
 	<h3 class="subsubtitle method-title">createUrlWithCompletionHandler:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>When this item has been <a href="#//api/name/purchased">purchased</a> by the user, use this method to create an URL to the calendar
+		<p>When this item has been purchased by the user, use this method to create an URL to the calendar
 ICS-file that can be <a href="#//api/name/installed">installed</a>.</p>
 	</div>		
 	
@@ -749,126 +313,6 @@ The block will be invoked on the main queue.</p></dd>
 	
 </div>
 						
-						<div class="section-method">
-	<a name="//api/name/fetchPriceInfoWithCompletionHandler:" title="fetchPriceInfoWithCompletionHandler:"></a>
-	<h3 class="subsubtitle method-title">fetchPriceInfoWithCompletionHandler:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Fetches PriceInfo for this object. This method should be called when the <a href="#//api/name/priceInfo">priceInfo</a> property
-is nil. When the fetch operation completes successfully, the <a href="#//api/name/priceInfo">priceInfo</a> property will be set
-with the fetched PriceInfo.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)fetchPriceInfoWithCompletionHandler:(CalStorePriceInfoCompletionHandler)<em>completionHandler</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completionHandler</em></dt>
-			<dd><p>block that will be invoked when the fetch operation finished (sucessfully or not).
-        The block will be invoked on the main queue.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>An ongoing fetch operation can be canceled using <a href="#//api/name/cancelFetchingPriceInfo">cancelFetchingPriceInfo</a>.</p><div class="note"><p><strong>Note:</strong> When <a href="#//api/name/fetchingPriceInfo">fetchingPriceInfo</a> is YES, an exception will be raised when calling this method.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="#//api/name/cancelFetchingPriceInfo">- cancelFetchingPriceInfo</a></p></code></li>
-			
-		</ul>
-	</div>
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStorePageItemCalendar.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/purchaseWithCompletionHandler:" title="purchaseWithCompletionHandler:"></a>
-	<h3 class="subsubtitle method-title">purchaseWithCompletionHandler:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Use this method to start a purchase operation for the in-app purchase that this
-item is a part of. During purchasing, the <a href="#//api/name/beingPurchased">beingPurchased</a> property will be yes.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)purchaseWithCompletionHandler:(CalStoreOrderCompletionHandler)<em>completionHandler</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completionHandler</em></dt>
-			<dd><p>the block to invoke when the purchase operation finished.
-                          When the success parameter of the block is YES, the purchase succeeded.
-                          However, always check the <a href="#//api/name/purchased">purchased</a> property of the item before
-                          trying to install the item.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Observe kCalStoreOrderStatusChangedNotification notifications and check the
-[userInfo[kCalStoreOrderStatusChangedIdentifierKey] isEqual:item.identifier] to
-see if any changes in this items state occured. If so, update your UI accordingly.</p><div class="note"><p><strong>Note:</strong> A purchase operation cannot be canceled by the app once it has been started.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStorePageItemCalendar.h</code><br />
-	</div>				
-	
-	
-</div>
-						
 					</div>
 					
 					
@@ -884,7 +328,7 @@ see if any changes in this items state occured. If so, update your UI accordingl
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 SchedJoules. All rights reserved. (Last updated: 2014-03-06)</span><br />
+						<p><span class="copyright">&copy; 2014 SchedJoules. All rights reserved. (Last updated: 2014-04-04)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

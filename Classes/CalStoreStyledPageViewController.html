@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>CalStoreEventKitController Class Reference</title>
+		<title>CalStoreStyledPageViewController Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">CalStoreEventKitController Class Reference</h1>
+				<h1 class="hideInXcode">CalStoreStyledPageViewController Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,16 +39,9 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/eventStore">&nbsp;&nbsp;&nbsp;&nbsp;eventStore</option>
-	
-	<option value="//api/name/useEventKit">&nbsp;&nbsp;&nbsp;&nbsp;useEventKit</option>
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
 	
 	
-	
-	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/sharedController">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedController</option>
 	
 	
 	
@@ -68,6 +61,8 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Delegate">Delegate</a></span></li>
+	
 </ul></li>
 
 
@@ -76,19 +71,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eventStore">eventStore</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/useEventKit">useEventKit</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
 	
 </ul></li>
 
 
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedController">sharedController</a></span></li>
-	
-</ul></li>
 
 
 
@@ -97,7 +84,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="CalStoreEventKitController Class Reference" name="top"></a>
+				<a title="CalStoreStyledPageViewController Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -106,7 +93,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">CalStoreEventKitController Class Reference</h1>
+						<h1 class="title title-header">CalStoreStyledPageViewController Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -114,10 +101,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
+	<td class="specification-value"><a href="../Classes/CalStoreBaseApiContentViewController.html">CalStoreBaseApiContentViewController</a> : UIViewController</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CalStoreEventKitController.h</td>
+	<td class="specification-value">CalStoreStyledPageViewController.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -127,36 +114,11 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Singleton object that links the CalendarStore to the EventKit framework.</p>
+						<p>ViewController that shows a &lsquo;StyledPage&rsquo;. A StyledPage uses custom UI (e.g. no tableview) to show the CalendarStore.</p>
 
-<p>The CalendarStore uses EventKit to show if calendars are installed by the user
-and to send notifications about when an EKCalendar has been added due to
-an installation by the user.</p>
-
-<p><strong>Installation Notifications</strong></p>
-
-<p>If the CalendarStore framework detects that an EKCalendar has been installed
-because of an installation from the framework, it will broadcast a
-<code>kCalStoreEKCalendarSubscriptionInstalledNotification</code> notification. The notification&rsquo;s
-<code>userInfo[kCalStoreEKCalendarSubscriptionInstalledCalendarIdentifierKey]</code> contains
-the calendarIdentifier of the EKCalendar that got installed.
-<code>userInfo[kCalStoreEKCalendarSubscriptionInstalledItemKey]</code> holds a reference to the
-<a href="../Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a> that got installed, if available.</p>
-
-<p>Calendar apps can observe this notification to ensure that the newly installed
-calendar will not be hidden, due to the user&rsquo;s calendar visibility settings.</p>
-
-<p><strong>Disabling EventKit Integration</strong></p>
-
-<p>However, using EventKit is optional. To opt-out of using EventKit, call:
-    <code>[</code>[CalStoreEventKitController sharedController]<code>](#//api/name/sharedController).</code>useEventKit<code> = NO;</code></p>
-
-<p><strong>Changing EventStore</strong></p>
-
-<p>If you already have an EKEventStore object in use in your app, you
-can let the CalendarStore framework use that EventStore by assigning
-it to the <a href="#//api/name/eventStore">eventStore</a> property. If non is supplied, an EKEventStore
-object will be created on demand.</p>
+<p>In the future, this will allow client-apps to show customly styled UI for the CalendarStore. In version 1, this
+ViewController can be presented to show a &ldquo;landingspage&rdquo; on iPad. This landingspage will show custom UI for popular
+items and will present sub-pages modally as a formsheet.</p>
 					</div>
 					
 					
@@ -168,25 +130,13 @@ object will be created on demand.</p>
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
+						<a title="Delegate" name="task_Delegate"></a>
 						
-						
-
+<h3 class="subsubtitle task-title">Delegate</h3>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/sharedController">+&nbsp;sharedController</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/eventStore">&nbsp;&nbsp;eventStore</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/useEventKit">&nbsp;&nbsp;useEventKit</a></code>
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -204,19 +154,18 @@ object will be created on demand.</p>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/eventStore" title="eventStore"></a>
-	<h3 class="subsubtitle method-title">eventStore</h3>
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The EventStore used by the CalendarStore framework. If the framework needs
-an EKEventStore object while non is set, it will be created.</p>
+		<p>The calendar-store delegate.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) EKEventStore *eventStore</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, unsafe_unretained) id&lt;CalStoreStyledPageViewControllerDelegate&gt; delegate</code></div>
 
     
 	
@@ -228,7 +177,7 @@ an EKEventStore object while non is set, it will be created.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> this property will be ignored if <a href="#//api/name/useEventKit">useEventKit</a> is NO.</p></div>
+		<p>The delegate must adopt the <a href="../Protocols/CalStoreStyledPageViewControllerDelegate.html">CalStoreStyledPageViewControllerDelegate</a> formal protocol.</p>
 	</div>
 	
 	
@@ -239,49 +188,7 @@ an EKEventStore object while non is set, it will be created.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreEventKitController.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/useEventKit" title="useEventKit"></a>
-	<h3 class="subsubtitle method-title">useEventKit</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Set to NO to disable any EventKit integration in the CalendarStore framework.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL useEventKit</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> the <a href="../Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a>.installed> property will no longer function,
-       nor will any <code>kCalStoreEKCalendarSubscriptionInstalledNotification</code> be sent.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreEventKitController.h</code><br />
+		<code class="declared-in-ref">CalStoreStyledPageViewController.h</code><br />
 	</div>				
 	
 	
@@ -290,53 +197,6 @@ an EKEventStore object while non is set, it will be created.</p>
 					</div>
 					
 					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/sharedController" title="sharedController"></a>
-	<h3 class="subsubtitle method-title">sharedController</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Gives the singleton controller object</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (instancetype)sharedController</code></div>
-
-    
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>the singleton controller used by the framework</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreEventKitController.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
 					
 					
 					

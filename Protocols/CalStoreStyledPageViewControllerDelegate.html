@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>CalStoreEventKitController Class Reference</title>
+		<title>CalStoreStyledPageViewControllerDelegate Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">CalStoreEventKitController Class Reference</h1>
+				<h1 class="hideInXcode">CalStoreStyledPageViewControllerDelegate Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -37,20 +37,15 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/eventStore">&nbsp;&nbsp;&nbsp;&nbsp;eventStore</option>
-	
-	<option value="//api/name/useEventKit">&nbsp;&nbsp;&nbsp;&nbsp;useEventKit</option>
 	
 	
 	
 	
-	<option value="class_methods">Class Methods</option>
+	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/sharedController">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedController</option>
+	<option value="//api/name/styledPageViewController:didChangeCountry:">&nbsp;&nbsp;&nbsp;&nbsp;- styledPageViewController:didChangeCountry:</option>
 	
-	
+	<option value="//api/name/styledPageViewController:willChangeCountry:">&nbsp;&nbsp;&nbsp;&nbsp;- styledPageViewController:willChangeCountry:</option>
 	
 	
 	
@@ -68,36 +63,32 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-</ul></li>
-
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eventStore">eventStore</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/useEventKit">useEventKit</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Changing Country">Changing Country</a></span></li>
 	
 </ul></li>
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedController">sharedController</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/styledPageViewController:didChangeCountry:">styledPageViewController:didChangeCountry:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/styledPageViewController:willChangeCountry:">styledPageViewController:willChangeCountry:</a></span></li>
 	
 </ul></li>
-
-
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="CalStoreEventKitController Class Reference" name="top"></a>
+				<a title="CalStoreStyledPageViewControllerDelegate Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -106,18 +97,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">CalStoreEventKitController Class Reference</h1>
+						<h1 class="title title-header">CalStoreStyledPageViewControllerDelegate Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
+	<td class="specification-title">Conforms to</td>
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CalStoreEventKitController.h</td>
+	<td class="specification-value">CalStoreStyledPageViewController.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -127,36 +118,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Singleton object that links the CalendarStore to the EventKit framework.</p>
-
-<p>The CalendarStore uses EventKit to show if calendars are installed by the user
-and to send notifications about when an EKCalendar has been added due to
-an installation by the user.</p>
-
-<p><strong>Installation Notifications</strong></p>
-
-<p>If the CalendarStore framework detects that an EKCalendar has been installed
-because of an installation from the framework, it will broadcast a
-<code>kCalStoreEKCalendarSubscriptionInstalledNotification</code> notification. The notification&rsquo;s
-<code>userInfo[kCalStoreEKCalendarSubscriptionInstalledCalendarIdentifierKey]</code> contains
-the calendarIdentifier of the EKCalendar that got installed.
-<code>userInfo[kCalStoreEKCalendarSubscriptionInstalledItemKey]</code> holds a reference to the
-<a href="../Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a> that got installed, if available.</p>
-
-<p>Calendar apps can observe this notification to ensure that the newly installed
-calendar will not be hidden, due to the user&rsquo;s calendar visibility settings.</p>
-
-<p><strong>Disabling EventKit Integration</strong></p>
-
-<p>However, using EventKit is optional. To opt-out of using EventKit, call:
-    <code>[</code>[CalStoreEventKitController sharedController]<code>](#//api/name/sharedController).</code>useEventKit<code> = NO;</code></p>
-
-<p><strong>Changing EventStore</strong></p>
-
-<p>If you already have an EKEventStore object in use in your app, you
-can let the CalendarStore framework use that EventStore by assigning
-it to the <a href="#//api/name/eventStore">eventStore</a> property. If non is supplied, an EKEventStore
-object will be created on demand.</p>
+						<p>The <code>CalStoreStyledPageViewControllerDelegate</code> protocol describes the interface <a href="../Classes/CalStoreStyledPageViewController.html">CalStoreStyledPageViewController</a>
+delegates must adopt to respond to events.</p>
 					</div>
 					
 					
@@ -168,27 +131,21 @@ object will be created on demand.</p>
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
+						<a title="Changing Country" name="task_Changing Country"></a>
 						
-						
-
+<h3 class="subsubtitle task-title">Changing Country</h3>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/sharedController">+&nbsp;sharedController</a></code>
+		<code><a href="#//api/name/styledPageViewController:willChangeCountry:">&ndash;&nbsp;styledPageViewController:willChangeCountry:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/eventStore">&nbsp;&nbsp;eventStore</a></code>
+		<code><a href="#//api/name/styledPageViewController:didChangeCountry:">&ndash;&nbsp;styledPageViewController:didChangeCountry:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/useEventKit">&nbsp;&nbsp;useEventKit</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -199,37 +156,50 @@ object will be created on demand.</p>
 					
 					
 					
+					
+					
+					
+					
 					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/eventStore" title="eventStore"></a>
-	<h3 class="subsubtitle method-title">eventStore</h3>
+	<a name="//api/name/styledPageViewController:didChangeCountry:" title="styledPageViewController:didChangeCountry:"></a>
+	<h3 class="subsubtitle method-title">styledPageViewController:didChangeCountry:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The EventStore used by the CalendarStore framework. If the framework needs
-an EKEventStore object while non is set, it will be created.</p>
+		<p>Called when the user changed the country of the store and after the changes are applied. The store will be refreshed.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) EKEventStore *eventStore</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)styledPageViewController:(CalStoreStyledPageViewController *)<em>viewController</em> didChangeCountry:(NSString *)<em>location</em></code></div>
 
     
 	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> this property will be ignored if <a href="#//api/name/useEventKit">useEventKit</a> is NO.</p></div>
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>viewController</em></dt>
+			<dd><p>the <a href="../Classes/CalStoreStyledPageViewController.html">CalStoreStyledPageViewController</a> the user interacted with.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>the new country the store changed to</p></dd>
+		</dl>
+		
 	</div>
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -239,88 +209,61 @@ an EKEventStore object while non is set, it will be created.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreEventKitController.h</code><br />
+		<code class="declared-in-ref">CalStoreStyledPageViewController.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/useEventKit" title="useEventKit"></a>
-	<h3 class="subsubtitle method-title">useEventKit</h3>
+	<a name="//api/name/styledPageViewController:willChangeCountry:" title="styledPageViewController:willChangeCountry:"></a>
+	<h3 class="subsubtitle method-title">styledPageViewController:willChangeCountry:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Set to NO to disable any EventKit integration in the CalendarStore framework.</p>
+		<p>Called when the user changed the country of the calendar store and before the changes will be applied. The return value
+of this method will be used as the new country.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL useEventKit</code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)styledPageViewController:(CalStoreStyledPageViewController *)<em>viewController</em> willChangeCountry:(NSString *)<em>location</em></code></div>
 
     
 	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> the <a href="../Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a>.installed> property will no longer function,
-       nor will any <code>kCalStoreEKCalendarSubscriptionInstalledNotification</code> be sent.</p></div>
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>viewController</em></dt>
+			<dd><p>the <a href="../Classes/CalStoreStyledPageViewController.html">CalStoreStyledPageViewController</a> the user interacted with.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>the new country the user wants to change to</p></dd>
+		</dl>
+		
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreEventKitController.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/sharedController" title="sharedController"></a>
-	<h3 class="subsubtitle method-title">sharedController</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Gives the singleton controller object</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (instancetype)sharedController</code></div>
-
-    
 	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>the singleton controller used by the framework</p>
+		<p>Return the country the Store should change to. If you don&rsquo;t want to override the country to a different value,
+return location or nil.</p>
 	</div>
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If implemented, you must return the new country code the store should change to. Return nil or <code>location</code> to change
+to the country the user just picked.</p>
+	</div>
 	
 	
 	
@@ -330,15 +273,13 @@ an EKEventStore object while non is set, it will be created.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreEventKitController.h</code><br />
+		<code class="declared-in-ref">CalStoreStyledPageViewController.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
-					
-					
 					
 					
                     
