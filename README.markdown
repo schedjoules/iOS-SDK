@@ -26,6 +26,33 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+### 1.1
+This release of the CalendarStore adds support for searching the store and an new iPad fullscreen store view. Fixes are included for reported issues and general enhancements.
+
+#### NEW
+- Added **Search** functionality via CalStoreSearchRequest and in CalStoreCalendarViewController
+- Added **CalStoreStyledPageViewController** for showing custom UI "landing-pages" on iPad
+- CalStoreCalendarViewController.**showsActionButtons** allows one to hide the country/restore buttons
+- CalStoreCalendarViewControllerDelegate allows to override to showing new view controllers after selecting items
+- CalStorePage.**pageType** and CalStorePage.**contentMode** added, to query pages about what kind of data they hold
+- CalStorePageItem.**categoryName** added
+- Added documentation guide about integrating with **EventKit**
+
+##### CHANGED
+- CalStoreWeatherCalendarViewController integrates the 'city' searchbar into the navigationbar on iOS7
+- CalStoreWeatherCalendarViewController now extends below the navigationbar on iOS7, for correct blurring
+- Introduced class CalStorePageItemPurchasable, holding shared purchasing information for "page" and "calendar" items
+  - CalStorePageItemPage and CalStorePageItemCalendar now inherit from CalStorePageItemPurchasable
+  - "Page" items now also have purchasing functionality, if canBePurchased is YES
+
+#### FIXED
+- Fixed an issue with CalStoreInstallCalendarViewController crashing due to an iOS7 race condition
+- Fixed an issue with iOS7 incorrectly hiding the separator lines for the 'Restore Purchases' button
+- CalStorePickCountryViewController performance enhancements during scrolling
+- CalStoreCalendarViewController now honors the showsCloseButton property
+
+
+
 ### 1.0.0
 
 - CalStoreCalendarStoreViewController will show the 'Close' button on each page it shows

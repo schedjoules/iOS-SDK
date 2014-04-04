@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4D6C525F-B025-43B4-B4AB-21D0B96EFE80</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SampleCalendarApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>386DEB9E-924C-400C-A9D3-E01BF48F6C8D</key>
+		<string>ssh://bitbucket.org/bikkelbroeders/calendarstore-framework.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Output/CalendarStore/Example/SampleCalendarApp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>386DEB9E-924C-400C-A9D3-E01BF48F6C8D</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://bitbucket.org/bikkelbroeders/calendarstore-framework.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>386DEB9E-924C-400C-A9D3-E01BF48F6C8D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>386DEB9E-924C-400C-A9D3-E01BF48F6C8D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CalendarStore</string>
+		</dict>
+	</array>
+</dict>
+</plist>
