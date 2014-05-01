@@ -26,6 +26,12 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+### 1.1.1
+Fixed:
+ - A potential crashing bug on iOS5 has been fixed
+ - Potentially Reachability duplicatr symbol issue has been resolved (thanks Alex!)
+ - Should now work well with WyPopoverController
+
 ### 1.1
 This release of the CalendarStore adds support for searching the store and an new iPad fullscreen store view. Fixes are included for reported issues and general enhancements.
 

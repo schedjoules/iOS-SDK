@@ -21,6 +21,12 @@
 
 @property (nonatomic, unsafe_unretained) id<CalStoreStyledPageViewControllerDelegate> delegate;
 
+
+// Searching is provided by this searchBar. The user of this viewController is responsible for adding it to the UI, using addSubview: or any other means.
+// If this view controller is presented in a UINavigationController, one way could be:
+//		vc.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:vc.searchBar]
+@property (nonatomic, strong) UISearchBar* searchBar; // Returns a default searchbar, if none set. When setting this property with a searchBar, its delegate will be overriden.
+
 @end
 
 
