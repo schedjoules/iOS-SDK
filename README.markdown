@@ -26,6 +26,14 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+Added:
+ - price preview popup
+ - store analytics (see the Analytics Programming Guide)
+ - CalStoreCalendarBundle class to get information about an in-app purchase bundle
+ 
+ Fixed:
+ - some iOS8 bugs
+
 ### 1.1.2
 Added:
  - CalStorePageItemHandlerDelegate protocol for overriding default actions
