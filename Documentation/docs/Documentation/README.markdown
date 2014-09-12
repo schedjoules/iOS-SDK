@@ -7,7 +7,10 @@ The CalendarStore.framework contains both a high level UI  API as well as a low 
 ## Requirements
 
 ### iOS version
-The CalendarStore will at least need iOS5 to function, it will fail gracefully on iOS 4.3. Anything before iOS 4.3 is not supported.
+The CalendarStore will at least need iOS5 to function. Anything before iOS5 is not supported.
+
+#### Weak Linking
+If you need to support iOS5 in your app, you must **weak link** the UIKit framework.
 
 ### Xcode
 Xcode 5 is required for the CalendarStore framework to work.
@@ -17,7 +20,7 @@ The CalendarStore framework supports the armv7, armv7s, arm64 and i386 (simulato
 
 
 ### User Interface
-The User Interface will adapt itself automatically to iOS6 style or iOS7 style, depending on the user's iOS version.
+The User Interface will adapt itself automatically to iOS6 style or iOS7+ style, depending on the user's iOS version.
 
 
 

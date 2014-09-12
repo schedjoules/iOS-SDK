@@ -26,4 +26,9 @@
 +(instancetype)requestWithSearchByProductIdentifier:(NSString*)productIdentifier; // In-App productIdentifier search, uses the [CalStoreController sharedController].locale as a locale (country)
 +(instancetype)requestWithSearchByProductIdentifier:(NSString*)productIdentifier locale:(NSString*)locale;
 
+
+
++(instancetype)requestWithSearchForCalendarsByProductIdentifier:(NSString*)productIdentifier; // In-App productIdentifier search, uses the [CalStoreController sharedController].locale as a locale (country)
++(instancetype)requestWithSearchForCalendarsByProductIdentifier:(NSString*)productIdentifier locale:(NSString*)locale;
+
 @end

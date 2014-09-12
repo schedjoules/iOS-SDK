@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 SchedJoules. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CalStoreBaseViewController.h"
 
 /*!
  @abstract Base class for ViewControllers that show API content.
  */
-@interface CalStoreBaseApiContentViewController : UIViewController
+@interface CalStoreBaseApiContentViewController : CalStoreBaseViewController
 
 @end
 

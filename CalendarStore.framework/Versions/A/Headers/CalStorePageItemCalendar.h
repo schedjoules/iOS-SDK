@@ -20,6 +20,11 @@ typedef void(^CalStoreFetchUrlCompletionHandler)(NSURL* url, NSError* error);
 // Should only be called when isPurchased is YES.
 -(void)createUrlWithCompletionHandler:(CalStoreFetchUrlCompletionHandler)completionHandler;
 
+// Call this to get the preview URL for this calendar, asynchronously. Be sure to handle errors.
+// The preview URL can be used to show a preview of the events in this calendar, it does not
+// necessarily has all the events of the real calendar.
+-(void)createPreviewUrlWithCompletionHandler:(CalStoreFetchUrlCompletionHandler)completionHandler;
+
 @end
 
 

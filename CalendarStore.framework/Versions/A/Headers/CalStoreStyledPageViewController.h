@@ -7,6 +7,7 @@
 //
 
 #import "CalStoreBaseApiContentViewController.h"
+#import "CalStorePageItemHandlerDelegate.h"
 
 @protocol CalStoreStyledPageViewControllerDelegate;
 
@@ -19,8 +20,8 @@
  */
 @interface CalStoreStyledPageViewController : CalStoreBaseApiContentViewController
 
-@property (nonatomic, unsafe_unretained) id<CalStoreStyledPageViewControllerDelegate> delegate;
-
+@property (nonatomic, weak) id<CalStoreStyledPageViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<CalStorePageItemHandlerDelegate> pageItemHandlerDelegate;
 
 // Searching is provided by this searchBar. The user of this viewController is responsible for adding it to the UI, using addSubview: or any other means.
 // If this view controller is presented in a UINavigationController, one way could be:

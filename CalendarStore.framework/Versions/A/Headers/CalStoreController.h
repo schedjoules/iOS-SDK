@@ -47,6 +47,20 @@
 
 @end
 
+
+/**
+ Analytics functionality.
+ */
+@interface CalStoreController (CalStoreAnalytics)
+
+@property (nonatomic, assign) BOOL optoutFromAnalytics; // if YES, anonymized analytics for the store will not be tracked. Defaults to NO.
+
+@end
+
+
+/**
+ Debugging functionality.
+ */
 @interface CalStoreController (CalStoreDebugging)
 
 @property (nonatomic, assign) CalStoreDebugLevel debugLevel; // defaults to CalStoreDebugLevelNone

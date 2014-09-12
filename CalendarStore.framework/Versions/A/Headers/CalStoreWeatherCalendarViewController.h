@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 SchedJoules. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CalStoreBaseViewController.h"
 #import "CalStorePageItemParameterizedCalendar.h"
+#import "CalStorePageItemHandlerDelegate.h"
 
 /*!
 	@abstract	ViewController that allows one to install a weather calendar.
@@ -17,8 +18,10 @@
 				guides the user to selecting appropriate options, such as a city,
 				purchasing the in-app purchase and installing a calendar.
  */
-@interface CalStoreWeatherCalendarViewController : UIViewController
+@interface CalStoreWeatherCalendarViewController : CalStoreBaseViewController
 
 @property (nonatomic, strong) CalStorePageItemParameterizedCalendar* parameterizedCalendar;
+
+@property (nonatomic, weak) id<CalStorePageItemHandlerDelegate> pageItemHandlerDelegate;
 
 @end

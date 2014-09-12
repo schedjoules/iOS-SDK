@@ -26,6 +26,12 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+### 1.1.2
+Added:
+ - CalStorePageItemHandlerDelegate protocol for overriding default actions
+ - CalStoreCalendarStoreViewController, CalStoreStyledPageViewController, CalStoreWeatherViewController now all have a pageItemHandlerDelegate property
+ - OverridingDefaultActions Programming Guide added to the documentation
+
 ### 1.1.1
 Fixed:
  - A potential crashing bug on iOS5 has been fixed

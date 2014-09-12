@@ -10,6 +10,7 @@
 
 @class CalStorePage;
 @class CalStorePageRequest;
+@protocol CalStorePageItemHandlerDelegate;
 
 @protocol CalStoreCalendarStoreViewControllerDelegate;
 
@@ -17,7 +18,9 @@
 
 @property (nonatomic, assign) BOOL showsCloseButton; // defaults to YES, will only show when not being a root view controller.
 @property (nonatomic, assign) BOOL showsActionButtons; // defaults to YES, will show controls for Restoring Purchases, Changing Countries and more.
-@property (nonatomic, unsafe_unretained) id<CalStoreCalendarStoreViewControllerDelegate> calendarStoreDelegate;
+
+@property (nonatomic, weak) id<CalStoreCalendarStoreViewControllerDelegate> calendarStoreDelegate;
+@property (nonatomic, weak) id<CalStorePageItemHandlerDelegate> pageItemHandlerDelegate;
 
 
 // initializors

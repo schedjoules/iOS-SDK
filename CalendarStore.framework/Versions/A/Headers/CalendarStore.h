@@ -22,6 +22,7 @@
 #import <CalendarStore/CalStoreCalendarStoreViewController.h>
 #import <CalendarStore/CalStoreWeatherCalendarViewController.h>
 #import <CalendarStore/CalStoreBaseApiContentViewController.h>
+#import <CalendarStore/CalStoreBaseViewController.h>
 #import <CalendarStore/CalStorePickCountryViewController.h>
 #import <CalendarStore/CalStoreStyledPageViewController.h>
 
@@ -36,6 +37,7 @@
 #import <CalendarStore/CalStorePageItemParameterizedCalendar.h>
 #import <CalendarStore/CalStorePageSection.h>
 #import <CalendarStore/CalStorePriceInfo.h>
+#import <CalendarStore/CalStoreCalendarBundle.h>
 #import <CalendarStore/CalStoreCalendarParameterOption.h>
 #import <CalendarStore/CalStoreCalendarParameterOptions.h>
 
@@ -46,6 +48,7 @@
 // requestors
 #import <CalendarStore/CalStorePageRequest.h>
 #import <CalendarStore/CalStoreSearchRequest.h>
+#import <CalendarStore/CalStoreCalendarBundleRequest.h>
 #import <CalendarStore/CalStoreWeatherCitiesWithinRegionRequest.h>
 #import <CalendarStore/CalStoreSupportedCountriesRequest.h>
 

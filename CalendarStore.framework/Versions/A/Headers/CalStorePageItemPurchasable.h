@@ -9,6 +9,8 @@
 #import "CalStorePageItem.h"
 #import "CalStorePriceInfo.h"
 
+@class CalStoreCalendarBundleRequest;
+
 /*!
  Abstract Base Class for items that _can be_ purchasable.
  
@@ -63,5 +65,15 @@ typedef void(^CalStorePriceInfoCompletionHandler)(CalStorePriceInfo* priceInfo, 
 @property (nonatomic, readonly, getter = isFetchingPriceInfo) BOOL fetchingPriceInfo;
 -(void)fetchPriceInfoWithCompletionHandler:(CalStorePriceInfoCompletionHandler)completionHandler;
 -(void)cancelFetchingPriceInfo;
+
+@end
+
+
+/*!
+ @abstract CalendarBundle Methods
+ */
+@interface CalStorePageItemPurchasable (CalStore_CalendarBundle)
+
+-(CalStoreCalendarBundleRequest*)calendarBundleRequest; // returns the request that can be used to get a CalStoreCalendarBundle for this purchasable. Can return nil if canBePurchased is NO.
 
 @end

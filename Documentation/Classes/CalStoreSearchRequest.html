@@ -52,6 +52,10 @@
 	
 	<option value="//api/name/requestWithSearchByProductIdentifier:locale:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithSearchByProductIdentifier:locale:</option>
 	
+	<option value="//api/name/requestWithSearchForCalendarsByProductIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithSearchForCalendarsByProductIdentifier:</option>
+	
+	<option value="//api/name/requestWithSearchForCalendarsByProductIdentifier:locale:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithSearchForCalendarsByProductIdentifier:locale:</option>
+	
 	<option value="//api/name/requestWithSearchQuery:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithSearchQuery:</option>
 	
 	<option value="//api/name/requestWithSearchQuery:locale:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithSearchQuery:locale:</option>
@@ -80,6 +84,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating ProductIdentifier Search Requests">Creating ProductIdentifier Search Requests</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Calendar Items Search Requests">Creating Calendar Items Search Requests</a></span></li>
+	
 </ul></li>
 
 
@@ -101,6 +107,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithSearchByProductIdentifier:">requestWithSearchByProductIdentifier:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithSearchByProductIdentifier:locale:">requestWithSearchByProductIdentifier:locale:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithSearchForCalendarsByProductIdentifier:">requestWithSearchForCalendarsByProductIdentifier:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithSearchForCalendarsByProductIdentifier:locale:">requestWithSearchForCalendarsByProductIdentifier:locale:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithSearchQuery:">requestWithSearchQuery:</a></span></li>
 	
@@ -148,7 +158,7 @@
 						<p>Requests a <a href="../Classes/CalStorePage.html">CalStorePage</a> with results from a search from the CalendarStore, using a block-based API.</p>
 
 <ul>
-<li>Create a request using one of the designated initializers, either for a free-text query or for a specific in-app purchase productIdentifier</li>
+<li>Create a request using one of the designated initializers, either for a free-text query, the top pages of a specific in-app purchase productIdentifier or the flattened list of calendars in an in-app purchase.</li>
 <li>fetch the page using fetchPageWithCompletionHandler:</li>
 </ul>
 
@@ -226,6 +236,26 @@ or regular pages: search result pages will have their <code>pageType</code> set 
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/requestWithSearchByProductIdentifier:locale:">+&nbsp;requestWithSearchByProductIdentifier:locale:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Creating Calendar Items Search Requests" name="task_Creating Calendar Items Search Requests"></a>
+						<h3 class="subsubtitle task-title">Creating Calendar Items Search Requests</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithSearchForCalendarsByProductIdentifier:">+&nbsp;requestWithSearchForCalendarsByProductIdentifier:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithSearchForCalendarsByProductIdentifier:locale:">+&nbsp;requestWithSearchForCalendarsByProductIdentifier:locale:</a></code>
 	</span>
 	
 	
@@ -339,7 +369,7 @@ or regular pages: search result pages will have their <code>pageType</code> set 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Creates a request for an in-app purchase search. Locale is taken from <a href="../Classes/CalStoreController.html#//api/name/sharedController"><code>[CalStoreController sharedController]</code></a>.</p>
+		<p>Creates a request for the top items of the pages in in-app purchase search. Locale is taken from <a href="../Classes/CalStoreController.html#//api/name/sharedController"><code>[CalStoreController sharedController]</code></a>.</p>
 	</div>		
 	
     
@@ -362,7 +392,7 @@ or regular pages: search result pages will have their <code>pageType</code> set 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>CalStoreSearchRequest that will request a page with the result of the given free-text search, if valid, <code>nil</code> otherwise.</p>
+		<p>CalStoreSearchRequest that will request a page with the result of the given in-app purchase search, if valid, <code>nil</code> otherwise.</p>
 	</div>
 	
 	
@@ -395,7 +425,7 @@ or regular pages: search result pages will have their <code>pageType</code> set 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Creates a request for an in-app purchase search. Locale is taken from <a href="../Classes/CalStoreController.html#//api/name/sharedController"><code>[CalStoreController sharedController]</code></a>.</p>
+		<p>Creates a request for the top items of the pages in in-app purchase search</p>
 	</div>		
 	
     
@@ -433,6 +463,123 @@ or regular pages: search result pages will have their <code>pageType</code> set 
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<div class="note"><p><strong>Note:</strong> this only creates a request, use fetchPageWithCompletionHandler: to start requesting the page.</p></div><p>The locale of a page defines how it is localized (e.g. in English, Spanish, Dutch).</p><p>Items being part of the specific in-app purchase will be returned</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CalStoreSearchRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithSearchForCalendarsByProductIdentifier:" title="requestWithSearchForCalendarsByProductIdentifier:"></a>
+	<h3 class="subsubtitle method-title">requestWithSearchForCalendarsByProductIdentifier:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a request for the calendars in an in-app purchase. Locale is taken from <a href="../Classes/CalStoreController.html#//api/name/sharedController"><code>[CalStoreController sharedController]</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithSearchForCalendarsByProductIdentifier:(NSString *)<em>productIdentifier</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>productIdentifier</em></dt>
+			<dd><p>the in-app productIdentifier to search the calendars for. Should not be <code>nil</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>CalStoreSearchRequest that will request a page with the calendars of the given in-app purchase search, if valid, <code>nil</code> otherwise.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> this only creates a request, use fetchPageWithCompletionHandler: to start requesting the page.</p></div><p>A flattenned page with items being the calendars of the specific in-app purchase will be returned</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CalStoreSearchRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithSearchForCalendarsByProductIdentifier:locale:" title="requestWithSearchForCalendarsByProductIdentifier:locale:"></a>
+	<h3 class="subsubtitle method-title">requestWithSearchForCalendarsByProductIdentifier:locale:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a request for the calendars in an in-app purchase. Locale is taken from <a href="../Classes/CalStoreController.html#//api/name/sharedController"><code>[CalStoreController sharedController]</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithSearchForCalendarsByProductIdentifier:(NSString *)<em>productIdentifier</em> locale:(NSString *)<em>locale</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>productIdentifier</em></dt>
+			<dd><p>the in-app productIdentifier to search the calendars for. Should not be <code>nil</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>locale</em></dt>
+			<dd><p>locale to get the page in, ISO 639-1 code, or en_US (style). Can be <code>nil</code>, in which case the CalStoreController&rsquo;s locale will be used.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>CalStoreSearchRequest that will request a page with the calendars of the given in-app purchase search, if valid, <code>nil</code> otherwise.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> this only creates a request, use fetchPageWithCompletionHandler: to start requesting the page.</p></div><p>The locale of a page defines how it is localized (e.g. in English, Spanish, Dutch).</p><p>A flattenned page with items being the calendars of the specific in-app purchase will be returned</p>
 	</div>
 	
 	
@@ -583,7 +730,7 @@ or regular pages: search result pages will have their <code>pageType</code> set 
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 SchedJoules. All rights reserved. (Last updated: 2014-05-01)</span><br />
+						<p><span class="copyright">&copy; 2014 SchedJoules. All rights reserved. (Last updated: 2014-09-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
