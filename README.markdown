@@ -26,6 +26,7 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+### 1.2
 Added:
  - price preview popup
  - store analytics (see the Analytics Programming Guide)
