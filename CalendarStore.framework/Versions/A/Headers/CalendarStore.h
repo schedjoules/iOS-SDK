@@ -24,6 +24,7 @@
 #import <CalendarStore/CalStoreBaseApiContentViewController.h>
 #import <CalendarStore/CalStoreBaseViewController.h>
 #import <CalendarStore/CalStorePickCountryViewController.h>
+#import <CalendarStore/CalStorePickLanguageViewController.h>
 #import <CalendarStore/CalStoreStyledPageViewController.h>
 
 // data model objects
@@ -44,6 +45,7 @@
 #import <CalendarStore/CalStoreWeatherCity.h>
 #import <CalendarStore/CalStoreCountry.h>
 #import <CalendarStore/CalStoreAvailableTranslation.h>
+#import <CalendarStore/CalStoreLanguage.h>
 
 // requestors
 #import <CalendarStore/CalStorePageRequest.h>
@@ -51,12 +53,15 @@
 #import <CalendarStore/CalStoreCalendarBundleRequest.h>
 #import <CalendarStore/CalStoreWeatherCitiesWithinRegionRequest.h>
 #import <CalendarStore/CalStoreSupportedCountriesRequest.h>
+#import <CalendarStore/CalStoreSupportedLanguagesRequest.h>
 
 @import StoreKit;				// for In-App Purchases
 @import EventKit;				// for EventKit tie-in
+@import EventKitUI;				// for EventKit tie-in
 @import MapKit;					// for Weather Calendars search
 @import CoreLocation;			// for Weather Calendars search.
 @import MessageUI;				// for the 'Give feedback' functionality
+@import Social;					// for the 'Give feedback' functionality
 @import SystemConfiguration;	// for Reachability networking code
 @import QuartzCore;				// for custom control rendering
 @import Accelerate;				// for image effect rendering

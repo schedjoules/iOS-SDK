@@ -45,9 +45,13 @@
 	
 	<option value="//api/name/calendarStoreViewController:didChangeCountry:">&nbsp;&nbsp;&nbsp;&nbsp;- calendarStoreViewController:didChangeCountry:</option>
 	
+	<option value="//api/name/calendarStoreViewController:didChangeLanguage:">&nbsp;&nbsp;&nbsp;&nbsp;- calendarStoreViewController:didChangeLanguage:</option>
+	
 	<option value="//api/name/calendarStoreViewController:shouldShowViewController:afterSelectingItem:">&nbsp;&nbsp;&nbsp;&nbsp;- calendarStoreViewController:shouldShowViewController:afterSelectingItem:</option>
 	
 	<option value="//api/name/calendarStoreViewController:willChangeCountry:">&nbsp;&nbsp;&nbsp;&nbsp;- calendarStoreViewController:willChangeCountry:</option>
+	
+	<option value="//api/name/calendarStoreViewController:willChangeLanguage:">&nbsp;&nbsp;&nbsp;&nbsp;- calendarStoreViewController:willChangeLanguage:</option>
 	
 	<option value="//api/name/calendarStoreViewControllerDidClose:">&nbsp;&nbsp;&nbsp;&nbsp;- calendarStoreViewControllerDidClose:</option>
 	
@@ -71,6 +75,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Changing Country">Changing Country</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Changing Language">Changing Language</a></span></li>
+	
 </ul></li>
 
 
@@ -85,9 +91,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calendarStoreViewController:didChangeCountry:">calendarStoreViewController:didChangeCountry:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calendarStoreViewController:didChangeLanguage:">calendarStoreViewController:didChangeLanguage:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calendarStoreViewController:shouldShowViewController:afterSelectingItem:">calendarStoreViewController:shouldShowViewController:afterSelectingItem:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calendarStoreViewController:willChangeCountry:">calendarStoreViewController:willChangeCountry:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calendarStoreViewController:willChangeLanguage:">calendarStoreViewController:willChangeLanguage:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calendarStoreViewControllerDidClose:">calendarStoreViewControllerDidClose:</a></span></li>
 	
@@ -171,6 +181,26 @@ delegates must adopt to respond to events.</p>
 	</span>
 	
 	
+</li>
+						</ul>
+						
+						
+						<a title="Changing Language" name="task_Changing Language"></a>
+						<h3 class="subsubtitle task-title">Changing Language</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/calendarStoreViewController:willChangeLanguage:">&ndash;&nbsp;calendarStoreViewController:willChangeLanguage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/calendarStoreViewController:didChangeLanguage:">&ndash;&nbsp;calendarStoreViewController:didChangeLanguage:</a></code>
+	</span>
+	
+	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/calendarStoreViewController:shouldShowViewController:afterSelectingItem:">&ndash;&nbsp;calendarStoreViewController:shouldShowViewController:afterSelectingItem:</a></code>
@@ -221,6 +251,57 @@ delegates must adopt to respond to events.</p>
 		<dl class="argument-def parameter-def">
 			<dt><em>location</em></dt>
 			<dd><p>the new country the store changed to</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CalStoreCalendarStoreViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/calendarStoreViewController:didChangeLanguage:" title="calendarStoreViewController:didChangeLanguage:"></a>
+	<h3 class="subsubtitle method-title">calendarStoreViewController:didChangeLanguage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the user changed the language of the store and after the changes are applied. The store will be refreshed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)calendarStoreViewController:(CalStoreCalendarStoreViewController *)<em>calendarStoreViewController</em> didChangeLanguage:(NSString *)<em>language</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>calendarStoreViewController</em></dt>
+			<dd><p>the <a href="../Classes/CalStoreCalendarStoreViewController.html">CalStoreCalendarStoreViewController</a> the user interacted with.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>language</em></dt>
+			<dd><p>the new language the store changed to</p></dd>
 		</dl>
 		
 	</div>
@@ -378,6 +459,70 @@ to the country the user just picked.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/calendarStoreViewController:willChangeLanguage:" title="calendarStoreViewController:willChangeLanguage:"></a>
+	<h3 class="subsubtitle method-title">calendarStoreViewController:willChangeLanguage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the user changed the language of the calendar store and before the changes will be applied. The return value
+of this method will be used as the new language.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)calendarStoreViewController:(CalStoreCalendarStoreViewController *)<em>calendarStoreViewController</em> willChangeLanguage:(NSString *)<em>language</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>calendarStoreViewController</em></dt>
+			<dd><p>the <a href="../Classes/CalStoreCalendarStoreViewController.html">CalStoreCalendarStoreViewController</a> the user interacted with.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>language</em></dt>
+			<dd><p>the new language the user wants to change to</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Return the language the Store should change to. If you don&rsquo;t want to override the language to a different value,
+return langauge or nil.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If implemented, you must return the new language code the store should change to. Return nil or <code>language</code> to change
+to the country the user just picked.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CalStoreCalendarStoreViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/calendarStoreViewControllerDidClose:" title="calendarStoreViewControllerDidClose:"></a>
 	<h3 class="subsubtitle method-title">calendarStoreViewControllerDidClose:</h3>
 	
@@ -444,7 +589,7 @@ defined, the <a href="../Classes/CalStoreCalendarStoreViewController.html">CalSt
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 SchedJoules. All rights reserved. (Last updated: 2014-09-12)</span><br />
+						<p><span class="copyright">&copy; 2014 SchedJoules. All rights reserved. (Last updated: 2014-10-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

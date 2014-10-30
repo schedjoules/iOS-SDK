@@ -26,6 +26,13 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+### 1.2.1
+Added:
+ - Language options
+
+Fixed:
+ - Incorrect bar at the top of screen on ioS8 for price popup no longer shows up
+
 ### 1.2
 Added:
  - price preview popup

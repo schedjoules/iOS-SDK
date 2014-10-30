@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Has price information about an in-app purchase.
+ * for an item.
+ */
 @interface CalStorePriceInfo : NSObject <NSCopying>
 
 @property (nonatomic, readonly) NSDecimalNumber* price;

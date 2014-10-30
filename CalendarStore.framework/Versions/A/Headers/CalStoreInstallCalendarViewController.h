@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CalStorePageItemCalendar.h"
+#import "CalStorePageItemHandlerDelegate.h"
 
 /*!
 	@abstract	A ViewController to install a purchased calendar.
@@ -29,6 +30,7 @@
 @interface CalStoreInstallCalendarViewController : UINavigationController
 
 @property (nonatomic, strong) CalStorePageItemCalendar* calendarItem; // calendarItem.isPurchased must be YES. Raises an Exception otherwise
+@property (nonatomic, weak) id<CalStorePageItemHandlerDelegate> pageItemHandlerDelegate;
 
 // calendarItem.isPurchased must be YES. Returns nil otherwise.
 +(instancetype)viewControllerWithCalendarItem:(CalStorePageItemCalendar*)calendarItem;

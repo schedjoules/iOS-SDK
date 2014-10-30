@@ -43,6 +43,10 @@
 -(NSString*)calendarStoreViewController:(CalStoreCalendarStoreViewController*)calendarStoreViewController willChangeCountry:(NSString*)location; // return the new location (or nil to use the given location)
 -(void)calendarStoreViewController:(CalStoreCalendarStoreViewController*)calendarStoreViewController didChangeCountry:(NSString*)location;
 
+// language changing
+-(NSString*)calendarStoreViewController:(CalStoreCalendarStoreViewController*)calendarStoreViewController willChangeLanguage:(NSString*)language; // return the new language (or nil to use the given language)
+-(void)calendarStoreViewController:(CalStoreCalendarStoreViewController*)calendarStoreViewController didChangeLanguage:(NSString*)language;
+
 // Called when a CalStorePageItem is selected by the user and a ViewController will be 'shown' (either presented or pushed). Return YES to invoke default behavior or NO if you
 // want to take over showing the viewController or item.
 -(BOOL)calendarStoreViewController:(CalStoreCalendarStoreViewController*)calendarStoreViewController shouldPresentViewController:(UIViewController*)viewController afterSelectingItem:(CalStorePageItem*)pageItem;

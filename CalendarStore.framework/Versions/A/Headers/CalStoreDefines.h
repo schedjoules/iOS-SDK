@@ -51,6 +51,12 @@ extern const NSInteger CalStoreErrorUrlNotAllParametersAreSupplied;
 
 extern NSString* const CalStoreErrorHttpStatusCodeKey; // NSNumber (integerValue)
 
+//=====================================
+// posted when network activity started / stopped
+//=====================================
+extern NSString* const kCalStoreNetworkActivityStartedNotification;
+extern NSString* const kCalStoreNetworkActivityStoppedNotification;
+
 
 // ====================================
 // AuthorizationToken

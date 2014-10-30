@@ -67,6 +67,19 @@ extern NSString* const kCalStoreStartPageItemId; // the item id of the starting 
 // creates a request for the start page, locale and location can be defined manually. Convenience for -[requestWithItemId:kCalStoreStartPageItemId locale:location:]
 +(instancetype)requestWithStartPageWithLocale:(NSString*)locale location:(NSString*)location;
 
+
+// creates a request for a page which returns the number of top items
++(instancetype)requestWithNumberOfTopItems:(NSUInteger)numberOfTopItems;
++(instancetype)requestWithNumberOfTopItems:(NSUInteger)numberOfTopItems locale:(NSString*)locale location:(NSString*)location;
+
+// creates a request for a page which returns the number of new items
++(instancetype)requestWithNumberOfNewItems:(NSUInteger)numberOfNewItems;
++(instancetype)requestWithNumberOfNewItems:(NSUInteger)numberOfNewItems locale:(NSString*)locale;
+
+// creates a request for ap age which returns the number of next items
++(instancetype)requestWithNumberOfUpcomingItems:(NSUInteger)numberOfUpcomingItems;
++(instancetype)requestWithNumberOfUpcomingItems:(NSUInteger)numberOfUpcomingItems locale:(NSString*)locale;
+
 @end
 
 

@@ -40,4 +40,7 @@
 -(NSString*)styledPageViewController:(CalStoreStyledPageViewController*)viewController willChangeCountry:(NSString*)location; // return the new location (or nil to use the given location)
 -(void)styledPageViewController:(CalStoreStyledPageViewController*)viewController didChangeCountry:(NSString*)location;
 
+-(NSString*)styledPageViewController:(CalStoreStyledPageViewController*)viewController willChangeLanguage:(NSString*)locale; // return the new locale (or nil to use the given locale)
+-(void)styledPageViewController:(CalStoreStyledPageViewController*)viewController didChangeLanguage:(NSString*)locale;
+
 @end

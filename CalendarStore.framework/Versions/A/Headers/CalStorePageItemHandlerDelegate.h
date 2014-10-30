@@ -98,6 +98,22 @@ typedef void(^CalStorePageItemHandlerDelegateCallback)(UIViewController* viewCon
 -(BOOL)shouldInstallCalendarForItem:(CalStorePageItemCalendar*)pageItem
 					   withCallback:(CalStorePageItemHandlerDelegateCallback)showViewControllerCallback;
 
+// should installs or purchase an item, depending on the item state.
+-(BOOL)shouldInstallOrPurchaseCalendarForItem:(CalStorePageItemCalendar*)pageItem
+								 withCallback:(CalStorePageItemHandlerDelegateCallback)showViewControllerCallback;
+
+// handle when an item is being purchased. Default does nothing
+-(BOOL)shouldHandleBeingPurchasedForItem:(CalStorePageItemPurchasable*)pageItem
+							withCallback:(CalStorePageItemHandlerDelegateCallback)showViewControllerCallback;
+
+// handle when an item is already installed. Default does nothing
+-(BOOL)shouldHandleInstalledCalendarForItem:(CalStorePageItemCalendar*)pageItem
+							   withCallback:(CalStorePageItemHandlerDelegateCallback)showViewControllerCallback;
+
+// handle when an item got successfully installed. Default does nothing.
+-(BOOL)shouldHandleSucceededCalendarInstallationForItem:(CalStorePageItemCalendar*)pageItem
+										   withCallback:(CalStorePageItemHandlerDelegateCallback)showViewControllerCallback;
+
 // 'Install' a page. Typically presents the page inside a UINavigationController.
 // Currently, UI classes don't support installing or purchasing pages.
 -(BOOL)shouldInstallPageForItem:(CalStorePageItemPage*)pageItem
