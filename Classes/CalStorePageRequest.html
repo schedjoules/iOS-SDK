@@ -56,6 +56,18 @@
 	
 	<option value="//api/name/requestWithItemId:locale:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithItemId:locale:</option>
 	
+	<option value="//api/name/requestWithNumberOfNewItems:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithNumberOfNewItems:</option>
+	
+	<option value="//api/name/requestWithNumberOfNewItems:locale:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithNumberOfNewItems:locale:</option>
+	
+	<option value="//api/name/requestWithNumberOfTopItems:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithNumberOfTopItems:</option>
+	
+	<option value="//api/name/requestWithNumberOfTopItems:locale:location:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithNumberOfTopItems:locale:location:</option>
+	
+	<option value="//api/name/requestWithNumberOfUpcomingItems:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithNumberOfUpcomingItems:</option>
+	
+	<option value="//api/name/requestWithNumberOfUpcomingItems:locale:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithNumberOfUpcomingItems:locale:</option>
+	
 	<option value="//api/name/requestWithPageItem:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithPageItem:</option>
 	
 	<option value="//api/name/requestWithStartPage">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithStartPage</option>
@@ -99,6 +111,12 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Requests">Creating Requests</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Requests for Top Items">Creating Requests for Top Items</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Requests for New items">Creating Requests for New items</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Requests for Upcoming items">Creating Requests for Upcoming items</a></span></li>
+	
 </ul></li>
 
 
@@ -124,6 +142,18 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithItemId:">requestWithItemId:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithItemId:locale:">requestWithItemId:locale:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithNumberOfNewItems:">requestWithNumberOfNewItems:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithNumberOfNewItems:locale:">requestWithNumberOfNewItems:locale:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithNumberOfTopItems:">requestWithNumberOfTopItems:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithNumberOfTopItems:locale:location:">requestWithNumberOfTopItems:locale:location:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithNumberOfUpcomingItems:">requestWithNumberOfUpcomingItems:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithNumberOfUpcomingItems:locale:">requestWithNumberOfUpcomingItems:locale:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithPageItem:">requestWithPageItem:</a></span></li>
 	
@@ -329,6 +359,66 @@ CalStorePageRequest* request = [CalStorePageRequest requestWithPageItem:];
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/requestWithPageItem:">+&nbsp;requestWithPageItem:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Creating Requests for Top Items" name="task_Creating Requests for Top Items"></a>
+						<h3 class="subsubtitle task-title">Creating Requests for Top Items</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithNumberOfTopItems:">+&nbsp;requestWithNumberOfTopItems:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithNumberOfTopItems:locale:location:">+&nbsp;requestWithNumberOfTopItems:locale:location:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Creating Requests for New items" name="task_Creating Requests for New items"></a>
+						<h3 class="subsubtitle task-title">Creating Requests for New items</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithNumberOfNewItems:">+&nbsp;requestWithNumberOfNewItems:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithNumberOfNewItems:locale:">+&nbsp;requestWithNumberOfNewItems:locale:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Creating Requests for Upcoming items" name="task_Creating Requests for Upcoming items"></a>
+						<h3 class="subsubtitle task-title">Creating Requests for Upcoming items</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithNumberOfUpcomingItems:">+&nbsp;requestWithNumberOfUpcomingItems:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithNumberOfUpcomingItems:locale:">+&nbsp;requestWithNumberOfUpcomingItems:locale:</a></code>
 	</span>
 	
 	
@@ -584,6 +674,362 @@ CalStorePageRequest* request = [CalStorePageRequest requestWithPageItem:];
 		<dl class="argument-def parameter-def">
 			<dt><em>itemId</em></dt>
 			<dd><p>the <a href="#//api/name/itemId">itemId</a> of the page to request. Cannot be nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>locale</em></dt>
+			<dd><p>locale to get the page in, ISO 639-1 code, or en_US (style). Can be nil, in which case the CalStoreController&rsquo;s locale will be used.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>CalStorePageRequest that will request the page with the given parameters if valid, nil otherwise.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The locale of a page defines how it is localized (e.g. in English, Spanish, Dutch).</p><div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchPageWithCompletionHandler:">fetchPageWithCompletionHandler:</a> to start requesting the page.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CalStorePageRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithNumberOfNewItems:" title="requestWithNumberOfNewItems:"></a>
+	<h3 class="subsubtitle method-title">requestWithNumberOfNewItems:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a request for a page that has the newly added items. Locale will be taken from <a href="../Classes/CalStoreController.html#//api/name/sharedController"><code>[CalStoreController sharedController]</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithNumberOfNewItems:(NSUInteger)<em>numberOfNewItems</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfNewItems</em></dt>
+			<dd><p>the number of new items that should be returned</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>CalStorePageRequest that will request the page with the given parameters if valid, nil otherwise.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The locale of a page defines how it is localized (e.g. in English, Spanish, Dutch).</p><div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchPageWithCompletionHandler:">fetchPageWithCompletionHandler:</a> to start requesting the page.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CalStorePageRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithNumberOfNewItems:locale:" title="requestWithNumberOfNewItems:locale:"></a>
+	<h3 class="subsubtitle method-title">requestWithNumberOfNewItems:locale:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a request for a page that has the newly added items. Locale can be defined manually.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithNumberOfNewItems:(NSUInteger)<em>numberOfNewItems</em> locale:(NSString *)<em>locale</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfNewItems</em></dt>
+			<dd><p>the number of new items that should be returned</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>locale</em></dt>
+			<dd><p>locale to get the page in, ISO 639-1 code, or en_US (style). Can be nil, in which case the CalStoreController&rsquo;s locale will be used.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>CalStorePageRequest that will request the page with the given parameters if valid, nil otherwise.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The locale of a page defines how it is localized (e.g. in English, Spanish, Dutch).</p><div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchPageWithCompletionHandler:">fetchPageWithCompletionHandler:</a> to start requesting the page.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CalStorePageRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithNumberOfTopItems:" title="requestWithNumberOfTopItems:"></a>
+	<h3 class="subsubtitle method-title">requestWithNumberOfTopItems:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a request for a page that has the top sold items. Locale and location will be taken from <a href="../Classes/CalStoreController.html#//api/name/sharedController"><code>[CalStoreController sharedController]</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithNumberOfTopItems:(NSUInteger)<em>numberOfTopItems</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfTopItems</em></dt>
+			<dd><p>the number of top items that should be returned</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>CalStorePageRequest that will request the page with the given parameters if valid, nil otherwise.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The locale of a page defines how it is localized (e.g. in English, Spanish, Dutch).</p><div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchPageWithCompletionHandler:">fetchPageWithCompletionHandler:</a> to start requesting the page.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CalStorePageRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithNumberOfTopItems:locale:location:" title="requestWithNumberOfTopItems:locale:location:"></a>
+	<h3 class="subsubtitle method-title">requestWithNumberOfTopItems:locale:location:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a request for a page that has the top sold items. Locale and location can be defined manually.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithNumberOfTopItems:(NSUInteger)<em>numberOfTopItems</em> locale:(NSString *)<em>locale</em> location:(NSString *)<em>location</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfTopItems</em></dt>
+			<dd><p>the number of new items that should be returned</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>locale</em></dt>
+			<dd><p>locale to get the page in, ISO 639-1 code, or en_US (style). Can be nil, in which case the CalStoreController&rsquo;s locale will be used.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>the location of the start page, ISO3166 code. Can be nil, in which case the CalStoreController&rsquo;s location will be used.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>CalStorePageRequest that will request the page with the given parameters if valid, nil otherwise.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The locale of a page defines how it is localized (e.g. in English, Spanish, Dutch).</p><div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchPageWithCompletionHandler:">fetchPageWithCompletionHandler:</a> to start requesting the page.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CalStorePageRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithNumberOfUpcomingItems:" title="requestWithNumberOfUpcomingItems:"></a>
+	<h3 class="subsubtitle method-title">requestWithNumberOfUpcomingItems:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a request for a page that has the upcoming items. Locale will be taken from <a href="../Classes/CalStoreController.html#//api/name/sharedController"><code>[CalStoreController sharedController]</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithNumberOfUpcomingItems:(NSUInteger)<em>numberOfUpcomingItems</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfUpcomingItems</em></dt>
+			<dd><p>the number of upcoming items that should be returned</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>CalStorePageRequest that will request the page with the given parameters if valid, nil otherwise.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The locale of a page defines how it is localized (e.g. in English, Spanish, Dutch).</p><div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchPageWithCompletionHandler:">fetchPageWithCompletionHandler:</a> to start requesting the page.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CalStorePageRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithNumberOfUpcomingItems:locale:" title="requestWithNumberOfUpcomingItems:locale:"></a>
+	<h3 class="subsubtitle method-title">requestWithNumberOfUpcomingItems:locale:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a request for a page that has the upcoming items. Locale can be defined manually.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithNumberOfUpcomingItems:(NSUInteger)<em>numberOfUpcomingItems</em> locale:(NSString *)<em>locale</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfUpcomingItems</em></dt>
+			<dd><p>the number of upcoming items that should be returned</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -943,7 +1389,7 @@ CalStorePageRequest* request = [CalStorePageRequest requestWithPageItem:];
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 SchedJoules. All rights reserved. (Last updated: 2014-09-12)</span><br />
+						<p><span class="copyright">&copy; 2014 SchedJoules. All rights reserved. (Last updated: 2014-10-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
