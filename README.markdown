@@ -26,6 +26,10 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+### 1.2.3
+Added:
+ - add French and German
+
 ### 1.2.2
 Added:
  - sales statistics support
