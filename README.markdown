@@ -26,6 +26,13 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+### 1.2.4
+Added:
+ - separate country and language selector
+
+Fixed:
+ - solve iOS7 add swipe
+
 ### 1.2.3
 Added:
  - add French and German
