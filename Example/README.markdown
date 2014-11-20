@@ -20,7 +20,7 @@ In SJAppDelegate.h, provide your own `AuthorizationToken` in the line that is co
 
 	// [CalStoreController sharedController].authorizationToken = <# Your AuthorizationToken Here #>;
 	
-If you don't have an AuthorizationToken, contact [info@schedjoules.com](info@schedjoules.com) . 
+If you don't have an AuthorizationToken, contact [support@schedjoules.com](support@schedjoules.com) . 
 	
 
 ## Enable In-App Purchases Optionally
