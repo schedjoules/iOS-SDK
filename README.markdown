@@ -26,6 +26,14 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+### 1.3.0
+Added:
+ - 11 languages: pt, ko, nb, ru, da, es, it, ja, sv, zh, tr
+
+### 1.2.5
+Fixed:
+ - German translation
+
 ### 1.2.4
 Added:
  - separate country and language selector
