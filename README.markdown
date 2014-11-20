@@ -16,7 +16,7 @@ See more at [http://www.schedjoules.com](http://www.schedjoules.com) .
  - Profit!!
 
 ## AuthorizationToken
-You will need an AuthorizationToken to use the CalendarStore. Obtain one from [info@schedjoules.com](info@schedjoules.com). 
+You will need an AuthorizationToken to use the CalendarStore. Obtain one from support@schedjoules.com. 
 
 ## License & Copyright
 You are allowed to use this framework, it's documentation, bundle resources and examples for the integration of the CalendarStore in your own app only.

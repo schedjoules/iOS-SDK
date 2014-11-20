@@ -30,15 +30,15 @@ To get the CalendarStore.framework up and running, you need to add the Framework
 ### Framework
 First, drag **CalendarStore.framework** into your project, under the "Frameworks" folder.
 
-![Drag CalendarStore.framework into your project](docs/Documentation/Readme-Images/CalStore-AddFramework.png =260x452)
+![Drag CalendarStore.framework into your project](Readme-Images/CalStore-AddFramework.png =260x452)
  
 ### Bundle
 Next, drag **CalendarStore.bundle** into your project. This bundle contains the resources used by the Calendar Store.
 
-![Drag CalendarStore.framework into your project](docs/Documentation/Readme-Images/CalStore-AddBundle.png =254x460)
+![Drag CalendarStore.framework into your project](Readme-Images/CalStore-AddBundle.png =254x460)
 
 ### AuthorizationToken
-Add your **own AuthorizationToken** to the project's Info.plist file under the `CalendarStoreAuthorizationToken` key. If you don't have an AuthorizationToken, you can request one via [support@schedjoules.com](mailto:support@schedjoules.com) . 
+Add your **own AuthorizationToken** to the project's Info.plist file under the `CalendarStoreAuthorizationToken` key. If you don't have an AuthorizationToken, you can request one via support@schedjoules.com . 
 
 It's also possible to set your AuthorizationToken in code:
 
@@ -47,7 +47,7 @@ It's also possible to set your AuthorizationToken in code:
 		[CalStoreController sharedController].authorizationToken = <# Your AuthorizationToken Here #>;
 	}
 
-![Drag CalendarStore.framework into your project](docs/Documentation/Readme-Images/CalStore-AddAuthorizationToken.png =800x400)
+![Drag CalendarStore.framework into your project](Readme-Images/CalStore-AddAuthorizationToken.png =800x400)
 
 ### Set Feedback E-mail
 Optionally, set the e-mailaddress that your users can send feedback to. If you don't set it, it will default to support@schedjoules.com. Add your own support e-mailaddress to the project's Info.plist file under the `CalendarStoreFeedbackEmailAddress` key. 
