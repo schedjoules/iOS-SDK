@@ -26,6 +26,14 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+### 1.3.3
+Updated:
+ - Settings headers
+
+### 1.3.2
+Updated:
+ - Swedish & German translation
+
 ### 1.3.1
 Added:
  - Finnish translation
