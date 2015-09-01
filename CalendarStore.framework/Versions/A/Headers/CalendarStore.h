@@ -14,6 +14,7 @@
 
 // controllers
 #import <CalendarStore/CalStoreController.h>
+#import <CalendarStore/CalStoreController+Intro.h>
 #import <CalendarStore/CalStoreStoreKitController.h>
 #import <CalendarStore/CalStoreEventKitController.h>
 

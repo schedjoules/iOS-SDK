@@ -26,6 +26,17 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+### 1.4.1
+Updated:
+ - migrated to iOS9 SDK with Bitcode enabled
+ - iOS7 required as minimum SDK
+ 
+ Added:
+ - optional intro walkthrough to display on first app start
+ 
+ Fixed:
+ - a bug in the SalesStatisticsManager which could cause crashes
+
 ### 1.3.3
 Updated:
  - Settings headers

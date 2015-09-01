@@ -1,161 +1,119 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>CalStoreCalendarBundleRequest Class Reference</title>
-		<meta id="xcode-display" name="xcode-display" content="render"/>
-		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
-		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 963)" />
-	</head>
-	<body>
-		<header id="top_header">
-			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">CalendarStore </a></h1>
-				<a id="developerHome" href="../index.html">SchedJoules</a>
-			</div>
+<head>
+	<meta charset="utf-8">
+
+	<title>CalStoreCalendarBundleRequest Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
 			
-			<div id="title" role="banner">
-				<h1 class="hideInXcode">CalStoreCalendarBundleRequest Class Reference</h1>
-			</div>
-			<ul id="headerButtons" role="toolbar">
-				<li id="toc_button">
-					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
-				</li>
-				<li id="jumpto_button" role="navigation">
-					<select id="jumpTo">
+			<h1 id="library-title">
+				<a href="../index.html">CalendarStore </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">SchedJoules</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
 	<option value="overview">Overview</option>
 	
-	
+
 	
 	
 	<option value="tasks">Tasks</option>
 	
 	
+
 	
 	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/authorizationToken">authorizationToken</option>
+		
+		<option value="//api/name/fetching">fetching</option>
+		
+		<option value="//api/name/productIdentifier">productIdentifier</option>
+		
+	</optgroup>
 	
-	<option value="properties">Properties</option>
+
 	
-	<option value="//api/name/authorizationToken">&nbsp;&nbsp;&nbsp;&nbsp;authorizationToken</option>
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/requestWithProductIdentifier:">+ requestWithProductIdentifier:</option>
+		
+		<option value="//api/name/requestWithProductIdentifier:locale:">+ requestWithProductIdentifier:locale:</option>
+		
+	</optgroup>
 	
-	<option value="//api/name/fetching">&nbsp;&nbsp;&nbsp;&nbsp;fetching</option>
+
 	
-	<option value="//api/name/productIdentifier">&nbsp;&nbsp;&nbsp;&nbsp;productIdentifier</option>
-	
-	
-	
-	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/requestWithProductIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithProductIdentifier:</option>
-	
-	<option value="//api/name/requestWithProductIdentifier:locale:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithProductIdentifier:locale:</option>
-	
-	
-	
-	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/cancel">&nbsp;&nbsp;&nbsp;&nbsp;- cancel</option>
-	
-	<option value="//api/name/fetchCalendarBundleWithCompletionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchCalendarBundleWithCompletionHandler:</option>
-	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/cancel">- cancel</option>
+		
+		<option value="//api/name/fetchCalendarBundleWithCompletionHandler:">- fetchCalendarBundleWithCompletionHandler:</option>
+		
+	</optgroup>
 	
 	
 </select>
-				</li>
-			</ul>
-		</header>
-		<nav id="tocContainer" class="isShowingTOC">
-			<ul id="toc" role="tree">
-				
-<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
 
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">CalStoreCalendarBundleRequest Class Reference</h1>
 
-
-
-<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Authorization">Authorization</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Fetching the Bundle">Fetching the Bundle</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Cancelling">Cancelling</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Requests">Creating Requests</a></span></li>
-	
-</ul></li>
-
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/authorizationToken">authorizationToken</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetching">fetching</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/productIdentifier">productIdentifier</a></span></li>
-	
-</ul></li>
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithProductIdentifier:">requestWithProductIdentifier:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithProductIdentifier:locale:">requestWithProductIdentifier:locale:</a></span></li>
-	
-</ul></li>
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancel">cancel</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchCalendarBundleWithCompletionHandler:">fetchCalendarBundleWithCompletionHandler:</a></span></li>
-	
-</ul></li>
-
-
-			</ul>
-		</nav>
-		<article>
-			<div id="contents" class="isShowingTOC" role="main">
-				<a title="CalStoreCalendarBundleRequest Class Reference" name="top"></a>
-				<div class="main-navigation navigation-top">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="header">
-					<div class="section-header">
-						<h1 class="title title-header">CalStoreCalendarBundleRequest Class Reference</h1>
-					</div>		
-				</div>
-				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
+	<th>Inherits from</th>
+	<td>NSObject</td>
 </tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">NSCopying<br />NSMutableCopying</td>
+	<th>Conforms to</th>
+	<td>NSCopying<br />NSMutableCopying</td>
 </tr><tr>
-	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CalStoreCalendarBundleRequest.h</td>
+	<th>Declared in</th>
+	<td>CalStoreCalendarBundleRequest.h</td>
 </tr>
 						</tbody></table></div>
 					
-                    
+
                     
 					
 					<div class="section section-overview">
@@ -175,559 +133,438 @@ or regular pages: search result pages will have their <code>pageType</code> set 
 					</div>
 					
 					
-					
+
 					
 					
 					<div class="section section-tasks">
 						<a title="Tasks" name="tasks"></a>
-						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
-						
-						
-						<h3 class="subsubtitle task-title">Other Methods</h3>
 
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/productIdentifier">&nbsp;&nbsp;productIdentifier</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
 						
-						
-						<a title="Authorization" name="task_Authorization"></a>
-						<h3 class="subsubtitle task-title">Authorization</h3>
+						<h2 class="task-title">Other Methods</h2>
 
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/authorizationToken">&nbsp;&nbsp;authorizationToken</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="Fetching the Bundle" name="task_Fetching the Bundle"></a>
-						<h3 class="subsubtitle task-title">Fetching the Bundle</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/fetchCalendarBundleWithCompletionHandler:">&ndash;&nbsp;fetchCalendarBundleWithCompletionHandler:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/fetching">&nbsp;&nbsp;fetching</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="Cancelling" name="task_Cancelling"></a>
-						<h3 class="subsubtitle task-title">Cancelling</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Creating Requests" name="task_Creating Requests"></a>
-						<h3 class="subsubtitle task-title">Creating Requests</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/requestWithProductIdentifier:">+&nbsp;requestWithProductIdentifier:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/requestWithProductIdentifier:locale:">+&nbsp;requestWithProductIdentifier:locale:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-					</div>
-					
-					
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/authorizationToken" title="authorizationToken"></a>
-	<h3 class="subsubtitle method-title">authorizationToken</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The AuthorizationToken being used for this request. Defaults to <code>[</code>[CalStoreController sharedController]<code>](../Classes/CalStoreController.html#//api/name/sharedController).authorizationToken</code>.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *authorizationToken</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="../Classes/CalStoreController.html">CalStoreController</a></p></code></li>
-			
-		</ul>
-	</div>
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/fetching" title="fetching"></a>
-	<h3 class="subsubtitle method-title">fetching</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Yes iff the request is busy fetching the bundle</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, getter=isFetching, readonly) BOOL fetching</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
+						<div class="task-list">
+							<div class="section-method">
 	<a name="//api/name/productIdentifier" title="productIdentifier"></a>
-	<h3 class="subsubtitle method-title">productIdentifier</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The productIdentifier for this search, if this is an in-app purchase productIdentifier search request. <code>nil</code>, otherwise.</p>
-	</div>		
-	
-    
+	<h3 class="method-title"><code><a href="#//api/name/productIdentifier">&nbsp;&nbsp;productIdentifier</a></code>
+</h3>
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *productIdentifier</code></div>
+	<div class="method-info">
+		<div class="pointy-thing"></div>
 
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Only available when requestWithSearchByProductIdentifier: or requestWithSearchByProductIdentifier:locale: has been used.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/requestWithProductIdentifier:" title="requestWithProductIdentifier:"></a>
-	<h3 class="subsubtitle method-title">requestWithProductIdentifier:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Creates a request for a bundle by its <a href="#//api/name/productIdentifier">productIdentifier</a>, locale is are taken from <a href="../Classes/CalStoreController.html#//api/name/sharedController"><code>[CalStoreController sharedController]</code></a>.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithProductIdentifier:(NSString *)<em>productIdentifier</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>productIdentifier</em></dt>
-			<dd><p>the <a href="#//api/name/productIdentifier">productIdentifier</a> of the in-app purchase to get the bundle for. Cannot be nil.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>CalStoreCalendarBundleRequest that will request the bundle with the given <a href="#//api/name/productIdentifier">productIdentifier</a> if valid, nil otherwise.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchCalendarBundleWithCompletionHandler:">fetchCalendarBundleWithCompletionHandler:</a> to start requesting the bundle.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/requestWithProductIdentifier:locale:" title="requestWithProductIdentifier:locale:"></a>
-	<h3 class="subsubtitle method-title">requestWithProductIdentifier:locale:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Creates a request for a bundle by its <a href="#//api/name/productIdentifier">productIdentifier</a> and a specific locale.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithProductIdentifier:(NSString *)<em>productIdentifier</em> locale:(NSString *)<em>locale</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>productIdentifier</em></dt>
-			<dd><p>the <a href="#//api/name/productIdentifier">productIdentifier</a> of the in-app purchase to get the bundle for. Cannot be nil.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>locale</em></dt>
-			<dd><p>locale to get the bundle in, ISO 639-1 code, or en_US (style). Can be nil, in which case the CalStoreController&rsquo;s locale will be used.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>CalStoreCalendarBundleRequest that will request the bundle with the given <a href="#//api/name/productIdentifier">productIdentifier</a> if valid, nil otherwise.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchCalendarBundleWithCompletionHandler:">fetchCalendarBundleWithCompletionHandler:</a> to start requesting the bundle.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/cancel" title="cancel"></a>
-	<h3 class="subsubtitle method-title">cancel</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Cancels this fetch request</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)cancel</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/fetchCalendarBundleWithCompletionHandler:" title="fetchCalendarBundleWithCompletionHandler:"></a>
-	<h3 class="subsubtitle method-title">fetchCalendarBundleWithCompletionHandler:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Fetched the requested bundle asynchronously.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)fetchCalendarBundleWithCompletionHandler:(CalStoreCalendarBundleRequestCompletionHandler)<em>completionHandler</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completionHandler</em></dt>
-			<dd><p>block that will be invoked on the main queue if the fetch operation finishes. Check the error parameter
-of the block to see if the request succeeded.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-                    
-                    
-                    
-                    
-
-				</div>
-				<div class="main-navigation navigation-bottom">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="footer">
-					<hr />
-					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 SchedJoules. All rights reserved. (Last updated: 2014-11-27)</span><br />
-						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
-						
-					</div>
-				</div>
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The productIdentifier for this search, if this is an in-app purchase productIdentifier search request. <code>nil</code>, otherwise.</p>
 			</div>
-		</article>
-		<script type="text/javascript">
-			function jumpToChange()
-			{
-				window.location.hash = this.options[this.selectedIndex].value;
-			}
 			
-			function toggleTOC()
-			{
-				var contents = document.getElementById('contents');
-				var tocContainer = document.getElementById('tocContainer');
-				
-				if (this.getAttribute('class') == 'open')
-				{
-					this.setAttribute('class', '');
-					contents.setAttribute('class', '');
-					tocContainer.setAttribute('class', '');
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *productIdentifier</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Only available when requestWithSearchByProductIdentifier: or requestWithSearchByProductIdentifier:locale: has been used.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Authorization" name="task_Authorization"></a>
+						<h2 class="task-title">Authorization</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/authorizationToken" title="authorizationToken"></a>
+	<h3 class="method-title"><code><a href="#//api/name/authorizationToken">&nbsp;&nbsp;authorizationToken</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The AuthorizationToken being used for this request. Defaults to <code>[</code>[CalStoreController sharedController]<code>](../Classes/CalStoreController.html#//api/name/sharedController).authorizationToken</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *authorizationToken</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
 					
-					window.name = "hideTOC";
-				}
-				else
-				{
-					this.setAttribute('class', 'open');
-					contents.setAttribute('class', 'isShowingTOC');
-					tocContainer.setAttribute('class', 'isShowingTOC');
+					<li><code><p><a href="../Classes/CalStoreController.html">CalStoreController</a></p></code></li>
 					
-					window.name = "";
-				}
-				return false;
-			}
+				</ul>
+			</div>
 			
-			function toggleTOCEntryChildren(e)
-			{
-				e.stopPropagation();
-				var currentClass = this.getAttribute('class');
-				if (currentClass == 'children') {
-					this.setAttribute('class', 'children open');
-				}
-				else if (currentClass == 'children open') {
-					this.setAttribute('class', 'children');
-				}
-				return false;
-			}
+
 			
-			function tocEntryClick(e)
-			{
-				e.stopPropagation();
-				return true;
-			}
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code></p>
+			</div>
 			
-			function init()
-			{
-				var selectElement = document.getElementById('jumpTo');
-				selectElement.addEventListener('change', jumpToChange, false);
-				
-				var tocButton = document.getElementById('table_of_contents');
-				tocButton.addEventListener('click', toggleTOC, false);
-				
-				var taskTreeItem = document.getElementById('task_treeitem');
-				if (taskTreeItem.getElementsByTagName('li').length > 0)
-				{
-					taskTreeItem.setAttribute('class', 'children');
-					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
-				}
-				
-				var tocList = document.getElementById('toc');
-				
-				var tocEntries = tocList.getElementsByTagName('li');
-				for (var i = 0; i < tocEntries.length; i++) {
-					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
-				}
-				
-				var tocLinks = tocList.getElementsByTagName('a');
-				for (var i = 0; i < tocLinks.length; i++) {
-					tocLinks[i].addEventListener('click', tocEntryClick, false);
-				}
-				
-				if (window.name == "hideTOC") {
-					toggleTOC.call(tocButton);
-				}
-			}
 			
-			window.onload = init;
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Fetching the Bundle" name="task_Fetching the Bundle"></a>
+						<h2 class="task-title">Fetching the Bundle</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/fetchCalendarBundleWithCompletionHandler:" title="fetchCalendarBundleWithCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchCalendarBundleWithCompletionHandler:">&ndash;&nbsp;fetchCalendarBundleWithCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
-			// If showing in Xcode, hide the TOC and Header
-			if (navigator.userAgent.match(/xcode/i)) {
-				document.getElementById("contents").className = "hideInXcode"
-				document.getElementById("tocContainer").className = "hideInXcode"
-				document.getElementById("top_header").className = "hideInXcode"
-			}
 			
-		</script>
-	</body>
+			<div class="method-subsection brief-description">
+				<p>Fetched the requested bundle asynchronously.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchCalendarBundleWithCompletionHandler:(CalStoreCalendarBundleRequestCompletionHandler)<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>block that will be invoked on the main queue if the fetch operation finishes. Check the error parameter
+of the block to see if the request succeeded.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetching" title="fetching"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetching">&nbsp;&nbsp;fetching</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Yes iff the request is busy fetching the bundle</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, getter=isFetching, readonly) BOOL fetching</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Cancelling" name="task_Cancelling"></a>
+						<h2 class="task-title">Cancelling</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/cancel" title="cancel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancels this fetch request</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Creating Requests" name="task_Creating Requests"></a>
+						<h2 class="task-title">Creating Requests</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/requestWithProductIdentifier:" title="requestWithProductIdentifier:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestWithProductIdentifier:">+&nbsp;requestWithProductIdentifier:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a request for a bundle by its <a href="#//api/name/productIdentifier">productIdentifier</a>, locale is are taken from <a href="../Classes/CalStoreController.html#//api/name/sharedController"><code>[CalStoreController sharedController]</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithProductIdentifier:(NSString *)<em>productIdentifier</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>productIdentifier</code></th>
+						<td><p>the <a href="#//api/name/productIdentifier">productIdentifier</a> of the in-app purchase to get the bundle for. Cannot be nil.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>CalStoreCalendarBundleRequest that will request the bundle with the given <a href="#//api/name/productIdentifier">productIdentifier</a> if valid, nil otherwise.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchCalendarBundleWithCompletionHandler:">fetchCalendarBundleWithCompletionHandler:</a> to start requesting the bundle.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestWithProductIdentifier:locale:" title="requestWithProductIdentifier:locale:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestWithProductIdentifier:locale:">+&nbsp;requestWithProductIdentifier:locale:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a request for a bundle by its <a href="#//api/name/productIdentifier">productIdentifier</a> and a specific locale.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithProductIdentifier:(NSString *)<em>productIdentifier</em> locale:(NSString *)<em>locale</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>productIdentifier</code></th>
+						<td><p>the <a href="#//api/name/productIdentifier">productIdentifier</a> of the in-app purchase to get the bundle for. Cannot be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>locale</code></th>
+						<td><p>locale to get the bundle in, ISO 639-1 code, or en_US (style). Can be nil, in which case the CalStoreController&rsquo;s locale will be used.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>CalStoreCalendarBundleRequest that will request the bundle with the given <a href="#//api/name/productIdentifier">productIdentifier</a> if valid, nil otherwise.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchCalendarBundleWithCompletionHandler:">fetchCalendarBundleWithCompletionHandler:</a> to start requesting the bundle.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarBundleRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 SchedJoules. All rights reserved. Updated: 2015-08-31</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
 </html>

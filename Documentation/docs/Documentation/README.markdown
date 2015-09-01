@@ -7,10 +7,7 @@ The CalendarStore.framework contains both a high level UI  API as well as a low 
 ## Requirements
 
 ### iOS version
-The CalendarStore will at least need iOS5 to function. Anything before iOS5 is not supported.
-
-#### Weak Linking
-If you need to support iOS5 in your app, you must **weak link** the UIKit framework.
+The CalendarStore will at least need iOS7 to function.
 
 ### Xcode
 Xcode 5 is required for the CalendarStore framework to work.
@@ -58,6 +55,16 @@ It's also possible to set your own support e-mailaddress in code:
 	{
 		[CalStoreController sharedController].authorizationToken = <# Your AuthorizationToken Here #>;
 		[CalStoreController sharedController].feedbackEmailAddress = <# Your Support Email Here #>;
+	}
+
+### Show Intro Walkthrough
+Optionally, you can show a walkthrough for the Calendar Store. 
+
+	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+	{
+		[CalStoreController sharedController].authorizationToken = <# Your AuthorizationToken Here #>;
+		[CalStoreController sharedController].feedbackEmailAddress = <# Your Support Email Here #>;
+		[CalStoreController sharedController] presentModalIntroFromViewController:self.window.rootViewController];
 	}
 
 ### Done!
