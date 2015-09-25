@@ -26,7 +26,6 @@
 #import <CalendarStore/CalStoreBaseViewController.h>
 #import <CalendarStore/CalStorePickCountryViewController.h>
 #import <CalendarStore/CalStorePickLanguageViewController.h>
-#import <CalendarStore/CalStoreStyledPageViewController.h>
 
 // data model objects
 #import <CalendarStore/CalStoreObject.h>

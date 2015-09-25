@@ -3,22 +3,22 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>GettingStarted Document</title>
+	<title></title>
 
-	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+	
 </head>
 <body class="appledoc">
 	<header>
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../../index.html">CalendarStore </a>
+				<a href="index.html">CalendarStore </a>
 			</h1>
 
 			<p id="developer-home">
-				<a href="../../index.html">SchedJoules</a>
+				<a href="index.html">SchedJoules</a>
 			</p>
 			
 		</div>
@@ -28,7 +28,7 @@
 		<div class="container">
 			<nav>
 				<ul id="header-buttons" role="toolbar">
-					<li><a href="../../index.html">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -38,104 +38,15 @@
 		<div id="overview-contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">GettingStarted Document</h1>
+					<h1 class="title"></h1>
 
-					<h2>Getting Started</h2>
-
-<p>To get the CalendarStore.framework up and running, you need to add the Framework and the Bundle to your project and then set your AuthorizationToken.</p>
-
-<h3>Framework</h3>
-
-<p>First, drag <strong>CalendarStore.framework</strong> into your project, under the &ldquo;Frameworks&rdquo; folder.</p>
-
-<p>!<a href="Readme-Images/CalStore-AddFramework.png">Drag CalendarStore.framework into your project</a></p>
-
-<h3>Bundle</h3>
-
-<p>Next, drag <strong>CalendarStore.bundle</strong> into your project. This bundle contains the resources used by the Calendar Store.</p>
-
-<p>!<a href="Readme-Images/CalStore-AddBundle.png">Drag CalendarStore.framework into your project</a></p>
-
-<h3>AuthorizationToken</h3>
-
-<p>Add your <strong>own AuthorizationToken</strong> to the project&rsquo;s Info.plist file under the <code>CalendarStoreAuthorizationToken</code> key. If you don&rsquo;t have an AuthorizationToken, you can request one via support@schedjoules.com.</p>
-
-<p>It&rsquo;s also possible to set your AuthorizationToken in code:</p>
-
-<pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    [CalStoreController sharedController].authorizationToken = &lt;# Your AuthorizationToken Here #&gt;;
-}
-</code></pre>
-
-<p>!<a href="Readme-Images/CalStore-AddAuthorizationToken.png">Drag CalendarStore.framework into your project</a></p>
-
-<h3>Set Feedback E-mail</h3>
-
-<p>Optionally, set the e-mailaddress that your users can send feedback to. If you don&rsquo;t set it, it will default to support@schedjoules.com. Add your own support e-mailaddress to the project&rsquo;s Info.plist file under the <code>CalendarStoreFeedbackEmailAddress</code> key.</p>
-
-<p>It&rsquo;s also possible to set your own support e-mailaddress in code:</p>
-
-<pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    [CalStoreController sharedController].authorizationToken = &lt;# Your AuthorizationToken Here #&gt;;
-    [CalStoreController sharedController].feedbackEmailAddress = &lt;# Your Support Email Here #&gt;;
-}
-</code></pre>
-
-<h3>Done!</h3>
-
-<p>The CalendarStore.framework now successfully has been integrated into your project.</p>
-
-<h2>In-App Purchases</h2>
-
-<h3>Enabling In-App Purchases for your App</h3>
-
-<p>Since The CalendarStore uses In-App purchases, you&rsquo;ll need to enable In-App Purchases for your app. You can read more on how to do so in Apple&rsquo;s Documentation on this subject: <a href="https://developer.apple.com/library/ios/technotes/tn2259/_index.html">https://developer.apple.com/library/ios/technotes/tn2259/_index.html</a>.</p>
-
-<h3>Uploading In-App Purchases for your App</h3>
-
-<h4>Initial Upload</h4>
-
-<p>With your AuthorizationToken, you also got an <strong>ITMSP</strong> file. This file contains all In-App purchases for the Calendar Store  that need to be uploaded to Apple. By doubleclicking on the file, <strong>Application Loader</strong> will launch.</p>
-
-<ol>
-<li>Log in to Application Loader</li>
-<li>Deliver your In-App purchases to the store</li>
-<li>When Submitting an update of your app with the Calendar Store framework, make sure you&rsquo;ll also submit the In-App Purchases</li>
-</ol>
-
-
-<p>For more info on Application Loader, see <a href="https://itunesconnect.apple.com/docs/UsingApplicationLoader.pdf">https://itunesconnect.apple.com/docs/UsingApplicationLoader.pdf</a>.</p>
-
-<h4>Updates for In-App Purchases</h4>
-
-<p>From time to time, SchedJoules will add or alter the In-App purchases in the CalendarStore. You will receive a new <strong>ITMSP</strong> file with new and changed In-App purchases, which you can deliver to iTunes Connect using <strong>Application Loader</strong>. After delivering the new In-App purchases, be sure to <strong>Submit for Review</strong> all new In-App purchases on iTunes Connect.</p>
-
-<h2>Showing The CalendarStore, the easy way</h2>
-
-<p>All it takes to show the CalendarStore is 3 lines of code. First, include the CalendarStore.h header:</p>
-
-<pre><code>#import &lt;CalendarStore/CalendarStore.h&gt;
-</code></pre>
-
-<p>Next, to launch the Store, present an instance of the CalStoreCalendarStoreViewController. The best place to do this is when a user taps on special &ldquo;Launch Calendar Store&rdquo; button.</p>
-
-<pre><code>CalStoreCalendarStoreViewController* vc = [CalStoreCalendarStoreViewController calendarStoreViewController];
-[self presentViewController:vc animated:YES completion:nil];
-</code></pre>
-
-<h2>Going the Extra Mile: the Low-Level API</h2>
-
-<p>If you want more control over how the Calendar Store is displayed, you can use the low-level API of the Calendar Store. This API is also used by the <a href="../../Classes/CalStoreCalendarStoreViewController.html"><code>CalStoreCalendarStoreViewController</code></a> class. The low-level API exists of objects modelling the CalendarStore data. Check out the documentation on the <a href="../../Classes/CalStorePage.html"><code>CalStorePage</code></a> and <a href="../../Classes/CalStorePageRequest.html"><code>CalStorePageRequest</code></a> classes to get started.</p>
+					
 
 					<footer>
 						<div class="footer-copyright">
 							
-							<p class="copyright">Copyright &copy; 2015 SchedJoules. All rights reserved. Updated: 2015-08-31</p>
+							<p class="copyright">Copyright &copy; 2015 SchedJoules. All rights reserved. Updated: 2015-09-25</p>
 							
-							
-							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
 							
 						</div>
 					</footer>
@@ -144,6 +55,6 @@
 		</div>
 	</article>
 
-	<script src="../../js/script.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

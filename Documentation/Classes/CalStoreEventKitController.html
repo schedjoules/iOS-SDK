@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>CalStoreEventKitController Class Reference</title>
+	<title></title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+	
 </head>
 <body class="appledoc">
 	<header>
@@ -43,35 +43,9 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
-	<option value="overview">Overview</option>
-	
 
 	
-	
-	<option value="tasks">Tasks</option>
-	
-	
 
-	
-	
-	<optgroup label="Properties">
-		
-		<option value="//api/name/eventStore">eventStore</option>
-		
-		<option value="//api/name/useEventKit">useEventKit</option>
-		
-	</optgroup>
-	
-
-	
-	<optgroup label="Class Methods">
-		
-		<option value="//api/name/sharedController">+ sharedController</option>
-		
-	</optgroup>
-	
-
-	
 	
 </select>
 						</label>
@@ -85,228 +59,22 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">CalStoreEventKitController Class Reference</h1>
+					<h1 class="title"></h1>
 
-					
-					<div class="section section-specification"><table cellspacing="0"><tbody>
-						<tr>
-	<th>Inherits from</th>
-	<td>NSObject</td>
-</tr><tr>
-	<th>Declared in</th>
-	<td>CalStoreEventKitController.h</td>
-</tr>
-						</tbody></table></div>
 					
 
                     
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Singleton object that links the CalendarStore to the EventKit framework.</p>
 
-<p>The CalendarStore uses EventKit to show if calendars are installed by the user
-and to send notifications about when an EKCalendar has been added due to
-an installation by the user.</p>
-
-<p><strong>Installation Notifications</strong></p>
-
-<p>If the CalendarStore framework detects that an EKCalendar has been installed
-because of an installation from the framework, it will broadcast a
-<code>kCalStoreEKCalendarSubscriptionInstalledNotification</code> notification. The notification&rsquo;s
-<code>userInfo[kCalStoreEKCalendarSubscriptionInstalledCalendarIdentifierKey]</code> contains
-the calendarIdentifier of the EKCalendar that got installed.
-<code>userInfo[kCalStoreEKCalendarSubscriptionInstalledItemKey]</code> holds a reference to the
-<a href="../Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a> that got installed, if available.</p>
-
-<p>Calendar apps can observe this notification to ensure that the newly installed
-calendar will not be hidden, due to the user&rsquo;s calendar visibility settings.</p>
-
-<p><strong>Disabling EventKit Integration</strong></p>
-
-<p>However, using EventKit is optional. To opt-out of using EventKit, call:
-    <code>[</code>[CalStoreEventKitController sharedController]<code>](#//api/name/sharedController).</code>useEventKit<code> = NO;</code></p>
-
-<p><strong>Changing EventStore</strong></p>
-
-<p>If you already have an EKEventStore object in use in your app, you
-can let the CalendarStore framework use that EventStore by assigning
-it to the <a href="#//api/name/eventStore">eventStore</a> property. If non is supplied, an EKEventStore
-object will be created on demand.</p>
-					</div>
-					
-					
-
-					
-					
-					<div class="section section-tasks">
-						<a title="Tasks" name="tasks"></a>
-						
-
-						
-						
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/sharedController" title="sharedController"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sharedController">+&nbsp;sharedController</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Gives the singleton controller object</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (instancetype)sharedController</code></div>
-
-		    
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>the singleton controller used by the framework</p>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CalStoreEventKitController.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/eventStore" title="eventStore"></a>
-	<h3 class="method-title"><code><a href="#//api/name/eventStore">&nbsp;&nbsp;eventStore</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The EventStore used by the CalendarStore framework. If the framework needs
-an EKEventStore object while non is set, it will be created.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) EKEventStore *eventStore</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<div class="note"><p><strong>Note:</strong> this property will be ignored if <a href="#//api/name/useEventKit">useEventKit</a> is NO.</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CalStoreEventKitController.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/useEventKit" title="useEventKit"></a>
-	<h3 class="method-title"><code><a href="#//api/name/useEventKit">&nbsp;&nbsp;useEventKit</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Set to NO to disable any EventKit integration in the CalendarStore framework.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL useEventKit</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<div class="note"><p><strong>Note:</strong> the <a href="../Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a>.installed> property will no longer function,
-       nor will any <code>kCalStoreEKCalendarSubscriptionInstalledNotification</code> be sent.</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CalStoreEventKitController.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-					</div>
-					
 					
 
                     
-                    
-          
 				</main>
 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 SchedJoules. All rights reserved. Updated: 2015-08-31</p>
+						<p class="copyright">Copyright &copy; 2015 SchedJoules. All rights reserved. Updated: 2015-09-25</p>
 						
-						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
 						
 					</div>
 				</footer>

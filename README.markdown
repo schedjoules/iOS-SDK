@@ -26,11 +26,17 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
+### 1.4.2
+Updated:
+ - removed CGBundleExecutable Key 
+ - removed deprecated CalStoreStylePageViewController 
+ - built with Bitcode enabled
+
 ### 1.4.1
 Updated:
- - migrated to iOS9 SDK with Bitcode enabled
+ - migrated to iOS9 SDK 
  - iOS7 required as minimum SDK
- 
+
  Added:
  - optional intro walkthrough to display on first app start
  
