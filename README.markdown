@@ -9,11 +9,8 @@ This repository contains the CalendarStore framework for iOS. The CalendarStore 
  - Examine the example app "SampleCalendarApp"
  
 ### And then:
- - Mail us at support@schedjoules.com and we'll provide you with your API key.
+ - Mail us at hello@schedjoules.com and we'll provide you with your API key.
  - Integrate the SchedJoules CalendarStore.framework within 5 minutes in your own app
-
-## AuthorizationToken
-You will need an AuthorizationToken to use the CalendarStore. Obtain one from support@schedjoules.com. 
 
 ## License & Copyright
 You are allowed to use this framework, it's documentation, bundle resources and examples for the integration of the CalendarStore in your own app only.
