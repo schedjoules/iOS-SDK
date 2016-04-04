@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>CalStoreController Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CalendarStore </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">SchedJoules</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/authorizationToken">authorizationToken</option>
+		
+		<option value="//api/name/debugLevel">debugLevel</option>
+		
+		<option value="//api/name/feedbackEmailAddress">feedbackEmailAddress</option>
+		
+		<option value="//api/name/libraryVersion">libraryVersion</option>
+		
+		<option value="//api/name/locale">locale</option>
+		
+		<option value="//api/name/location">location</option>
+		
+		<option value="//api/name/optoutFromAnalytics">optoutFromAnalytics</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/sharedController">+ sharedController</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">CalStoreController Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>CalStoreController.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Singleton controller for the Calendar Store.
+The controller manages &ldquo;global&rdquo; data and integrates
+with StoreKit.</p>
+
+<p>Since all API request need an <a href="#//api/name/authorizationToken">authorizationToken</a>,
+the controller manages it. All CalStore API classes will
+use this controller&rsquo;s <a href="#//api/name/authorizationToken">authorizationToken</a>, unless another
+authorization token is specifically provided.</p>
+
+<p>The authorization token can be added to the Info.plist
+under the <code>CalendarStoreAuthorizationToken</code> key, or
+can be supplied in code using the <a href="#//api/name/authorizationToken">setAuthorizationToken:</a>
+setter.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Getting an Instance" name="task_Getting an Instance"></a>
+						<h2 class="task-title">Getting an Instance</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sharedController" title="sharedController"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedController">+&nbsp;sharedController</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The singleton shared CalendarStore controller. Used by all other clases.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (CalStoreController *)sharedController</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>the singleton shared controller object</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method always returns the same, single object.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Authorization" name="task_Authorization"></a>
+						<h2 class="task-title">Authorization</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/authorizationToken" title="authorizationToken"></a>
+	<h3 class="method-title"><code><a href="#//api/name/authorizationToken">&nbsp;&nbsp;authorizationToken</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The AuthorizationToken to use for all API requests by default. Defaults to <code>CalendarStoreAuthorizationToken</code> from the Main
+bundle&rsquo;s Info.plist</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *authorizationToken</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Localization and Internationalization" name="task_Localization and Internationalization"></a>
+						<h2 class="task-title">Localization and Internationalization</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/locale" title="locale"></a>
+	<h3 class="method-title"><code><a href="#//api/name/locale">&nbsp;&nbsp;locale</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The locale used for the Calendar Store and API requests, ISO 639-1 code, or en_US (style).
+Defaults to current locale.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *locale</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/location" title="location"></a>
+	<h3 class="method-title"><code><a href="#//api/name/location">&nbsp;&nbsp;location</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The location used for the Calendar Store and API requests, ISO_3166 code.
+Defaults to current <a href="#//api/name/locale">locale</a>.
+setting the location will persist accross sessions.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *location</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Feedback Form Settings" name="task_Feedback Form Settings"></a>
+						<h2 class="task-title">Feedback Form Settings</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/feedbackEmailAddress" title="feedbackEmailAddress"></a>
+	<h3 class="method-title"><code><a href="#//api/name/feedbackEmailAddress">&nbsp;&nbsp;feedbackEmailAddress</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The to email-address used for the &lsquo;Give Feedback&rsquo; form.
+Defaults to support@schedjoules.com .</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *feedbackEmailAddress</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Analytics" name="task_Analytics"></a>
+						<h2 class="task-title">Analytics</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/optoutFromAnalytics" title="optoutFromAnalytics"></a>
+	<h3 class="method-title"><code><a href="#//api/name/optoutFromAnalytics">&nbsp;&nbsp;optoutFromAnalytics</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>If set to YES, the CalendarStore will opt-out from collecting anonimized analytics about page visits. Defaults to NO.
+This property is not persistent.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL optoutFromAnalytics</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The CalendarStore can collect anonimized page visit statistics if this property is set to NO. <a href="../docs/Documentation/Analytics.html">Analytics</a>
+are completely anonymous and are only used for optimizing the store.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Debugging" name="task_Debugging"></a>
+						<h2 class="task-title">Debugging</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/debugLevel" title="debugLevel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/debugLevel">&nbsp;&nbsp;debugLevel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Controls what the CalendarStore framework classes will output using NSLog(). Defaults to CalStoreDebugLevelNone</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CalStoreDebugLevel debugLevel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/libraryVersion" title="libraryVersion"></a>
+	<h3 class="method-title"><code><a href="#//api/name/libraryVersion">&nbsp;&nbsp;libraryVersion</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The version of the CalendarStore library.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *libraryVersion</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 SchedJoules. All rights reserved. Updated: 2016-03-31</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
