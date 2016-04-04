@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>CalendarStore Reference</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="index.html">CalendarStore </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="index.html">SchedJoules</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="hierarchy.html">Hierarchy</a></li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview-contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">CalendarStore Reference</h1>
+
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1>SchedJoules iOS CalendarStore.framework</h1>
+
+<p>With this framework you can easily integrate the SchedJoules Calendar Store in your iOS app, with only a couple lines of code.</p>
+
+<h2>Overview</h2>
+
+<p>The CalendarStore.framework contains both a high level UI  API as well as a low level object API. The high level API allows one to quickly integrate the Calendar Store into your app, while the low level API gives complete control over the data.</p>
+
+<h2>Requirements</h2>
+
+<h3>iOS version</h3>
+
+<p>The CalendarStore will at least need iOS7 to function.</p>
+
+<h3>Xcode</h3>
+
+<p>Xcode 7 is required for the CalendarStore framework to work.</p>
+
+<h3>Architectures</h3>
+
+<p>The CalendarStore framework supports the armv7, armv7s, arm64 and i386 (simulator), x86_64 (simulator) architectures. Armv6 is not supported.</p>
+
+<h2>Getting Started</h2>
+
+<p>To get the CalendarStore.framework up and running, you need to add the Framework and the Bundle to your project and then set your AuthorizationToken.</p>
+
+<h3>Framework</h3>
+
+<p>First, drag <strong>CalendarStore.framework</strong> into your project, under the &ldquo;Frameworks&rdquo; folder.</p>
+
+<p><img src="docs/Readme-Images/CalStore-AddFramework.png" height="452" width="260" alt="Drag CalendarStore.framework into your project" /></p>
+
+<h3>Bundle</h3>
+
+<p>Next, drag <strong>CalendarStore.bundle</strong> into your project. This bundle contains the resources used by the Calendar Store.</p>
+
+<p><img src="docs/Readme-Images/CalStore-AddBundle.png" height="460" width="254" alt="Drag CalendarStore.framework into your project" /></p>
+
+<h3>AuthorizationToken</h3>
+
+<p>Add your <strong>own AuthorizationToken</strong> to the project&rsquo;s Info.plist file under the <code>CalendarStoreAuthorizationToken</code> key. If you don&rsquo;t have an AuthorizationToken, you can request one via support@schedjoules.com .</p>
+
+<p>It&rsquo;s also possible to set your AuthorizationToken in code:</p>
+
+<pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [CalStoreController sharedController].authorizationToken = &lt;# Your AuthorizationToken Here #&gt;;
+}
+</code></pre>
+
+<p><img src="docs/Readme-Images/CalStore-AddAuthorizationToken.png" height="461" width="923" alt="Drag CalendarStore.framework into your project" /></p>
+
+<h3>Set Feedback E-mail</h3>
+
+<p>Optionally, set the e-mailaddress that your users can send feedback to. If you don&rsquo;t set it, it will default to support@schedjoules.com. Add your own support e-mailaddress to the project&rsquo;s Info.plist file under the <code>CalendarStoreFeedbackEmailAddress</code> key.</p>
+
+<p>It&rsquo;s also possible to set your own support e-mailaddress in code:</p>
+
+<pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [CalStoreController sharedController].authorizationToken = &lt;# Your AuthorizationToken Here #&gt;;
+    [CalStoreController sharedController].feedbackEmailAddress = &lt;# Your Support Email Here #&gt;;
+}
+</code></pre>
+
+<h3>Done!</h3>
+
+<p>The CalendarStore.framework now successfully has been integrated into your project.</p>
+
+<h2>In-App Purchases</h2>
+
+<p>The CalendarStore uses In-App Purchases to provide access to the calendar feeds for users. Since API v2.0 auto-renewable subscriptions are used rather than indivual Non-Consumable In-App Purchases. Prior to enabling In-App Purchases in your App, you need to configure your App in iTunes Connect.
+Follow the instructions in the <a href="docs/Documentation/SubscriptionSetupGuide.html">Subscription Setup Guide</a>.</p>
+
+<h3>Enabling In-App Purchases for your App</h3>
+
+<p>Since The CalendarStore uses auto-renewable subscriptions as In-App purchases, you&rsquo;ll need to enable In-App Purchases for your app. You can read more on how to do so in Apple&rsquo;s Documentation on this subject: <a href="https://developer.apple.com/library/ios/technotes/tn2259/_index.html">https://developer.apple.com/library/ios/technotes/tn2259/_index.html</a>.</p>
+
+<h2>Showing The CalendarStore, the easy way</h2>
+
+<p>All it takes to show the CalendarStore is 3 lines of code. First, include the CalendarStore.h header:</p>
+
+<pre><code>#import &lt;CalendarStore/CalendarStore.h&gt;
+</code></pre>
+
+<p>Next, to launch the Store, present an instance of the <a href="Classes/CalStoreCalendarStoreViewController.html">CalStoreCalendarStoreViewController</a>. The best place to do this is when a user taps on special &ldquo;Launch Calendar Store&rdquo; button.</p>
+
+<pre><code>CalStoreCalendarStoreViewController* vc = [CalStoreCalendarStoreViewController calendarStoreViewController];
+[self presentViewController:vc animated:YES completion:nil];
+</code></pre>
+
+<h3>Show Intro Walkthrough</h3>
+
+<p>Optionally, you can show a walkthrough for the Calendar Store.</p>
+
+<pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [CalStoreController sharedController].authorizationToken = &lt;# Your AuthorizationToken Here #&gt;;
+    [CalStoreController sharedController].feedbackEmailAddress = &lt;# Your Support Email Here #&gt;;
+    [CalStoreController sharedController] presentModalIntroFromViewController:self.window.rootViewController];
+}
+</code></pre>
+
+<h3>Subscription Intro</h3>
+
+<p>Optionally, you can adjust the subscription purchase UI.</p>
+
+<p>By default, the CalendarStore will present an intro screen prior to the subscription purchase. You can turn it off by setting:</p>
+
+<pre><code>    [CalStoreController sharedController].useDefaultSubscriptionIntro = NO;
+</code></pre>
+
+<p>You can set a custom ViewController for the subscription intro, by passing the ViewControllers name. The ViewController must conform the CalStoreSubscriptionIntro protocol.
+If a invalid ViewController is passed, the CalendarStore won&rsquo;t show an intro.</p>
+
+<pre><code>    [CalStoreController sharedController].subscriptionIntroViewController = @"CalStoreSubscriptionDefaultIntroViewController";
+</code></pre>
+
+<h3>Intro theming</h3>
+
+<p>The intro walkthrough and subscription intro can by themed by setting a custom CalStoreColorConfiguration</p>
+
+<pre><code>    CalStoreColorConfiguration* colorConfiguration = [CalStoreColorConfiguration defaultConfiguration];
+    colorConfiguration.inverseTextColor = [UIColor whiteColor];
+    [CalStoreController sharedController].introColorConfiguration = colorConfiguration;
+</code></pre>
+
+<h2>Going the Extra Mile: the Low-Level API</h2>
+
+<p>If you want more control over how the Calendar Store is displayed, you can use the low-level API of the Calendar Store. This API is also used by the <a href="Classes/CalStoreCalendarStoreViewController.html"><code>CalStoreCalendarStoreViewController</code></a> class. The low-level API exists of objects modelling the CalendarStore data. Check out the documentation on the <a href="Classes/CalStorePage.html"><code>CalStorePage</code></a> and <a href="Classes/CalStorePageRequest.html"><code>CalStorePageRequest</code></a> classes to get started.</p>
+						
+						
+					</div>
+					
+
+					<div class="index-container">
+						
+						<div class="index-column">
+							<h2 class="index-title">Programming Guides</h2>
+							<ul>
+								
+								<li><a href="docs/Documentation/Analytics.html">Analytics</a></li>
+								
+								<li><a href="docs/Documentation/EventKitIntegration.html">EventKitIntegration</a></li>
+								
+								<li><a href="docs/Documentation/MultipleApps.html">MultipleApps</a></li>
+								
+								<li><a href="docs/Documentation/OverridingDefaultActions.html">OverridingDefaultActions</a></li>
+								
+								<li><a href="docs/Documentation/SubscriptionSetupGuide.html">SubscriptionSetupGuide</a></li>
+								
+							</ul>
+						</div>
+						
+
+						
+						<div class="index-column">
+							<h2 class="index-title">Class References</h2>
+							<ul>
+								
+								<li><a href="Classes/CalStoreAvailableTranslation.html">CalStoreAvailableTranslation</a></li>
+								
+								<li><a href="Classes/CalStoreBaseApiContentViewController.html">CalStoreBaseApiContentViewController</a></li>
+								
+								<li><a href="Classes/CalStoreBaseViewController.html">CalStoreBaseViewController</a></li>
+								
+								<li><a href="Classes/CalStoreCalendarBundle.html">CalStoreCalendarBundle</a></li>
+								
+								<li><a href="Classes/CalStoreCalendarBundleRequest.html">CalStoreCalendarBundleRequest</a></li>
+								
+								<li><a href="Classes/CalStoreCalendarParameterOption.html">CalStoreCalendarParameterOption</a></li>
+								
+								<li><a href="Classes/CalStoreCalendarParameterOptions.html">CalStoreCalendarParameterOptions</a></li>
+								
+								<li><a href="Classes/CalStoreCalendarStoreViewController.html">CalStoreCalendarStoreViewController</a></li>
+								
+								<li><a href="Classes/CalStoreController.html">CalStoreController</a></li>
+								
+								<li><a href="Classes/CalStoreCountry.html">CalStoreCountry</a></li>
+								
+								<li><a href="Classes/CalStoreError.html">CalStoreError</a></li>
+								
+								<li><a href="Classes/CalStoreEventKitController.html">CalStoreEventKitController</a></li>
+								
+								<li><a href="Classes/CalStoreIcon.html">CalStoreIcon</a></li>
+								
+								<li><a href="Classes/CalStoreInstallCalendarViewController.html">CalStoreInstallCalendarViewController</a></li>
+								
+								<li><a href="Classes/CalStoreLanguage.html">CalStoreLanguage</a></li>
+								
+								<li><a href="Classes/CalStoreObject.html">CalStoreObject</a></li>
+								
+								<li><a href="Classes/CalStorePage.html">CalStorePage</a></li>
+								
+								<li><a href="Classes/CalStorePageItem.html">CalStorePageItem</a></li>
+								
+								<li><a href="Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a></li>
+								
+								<li><a href="Classes/CalStorePageItemPage.html">CalStorePageItemPage</a></li>
+								
+								<li><a href="Classes/CalStorePageItemParameterizedCalendar.html">CalStorePageItemParameterizedCalendar</a></li>
+								
+								<li><a href="Classes/CalStorePageItemPurchasable.html">CalStorePageItemPurchasable</a></li>
+								
+								<li><a href="Classes/CalStorePageRequest.html">CalStorePageRequest</a></li>
+								
+								<li><a href="Classes/CalStorePageSection.html">CalStorePageSection</a></li>
+								
+								<li><a href="Classes/CalStorePickCountryViewController.html">CalStorePickCountryViewController</a></li>
+								
+								<li><a href="Classes/CalStorePickLanguageViewController.html">CalStorePickLanguageViewController</a></li>
+								
+								<li><a href="Classes/CalStorePriceInfo.html">CalStorePriceInfo</a></li>
+								
+								<li><a href="Classes/CalStoreSearchRequest.html">CalStoreSearchRequest</a></li>
+								
+								<li><a href="Classes/CalStoreStoreKitController.html">CalStoreStoreKitController</a></li>
+								
+								<li><a href="Classes/CalStoreStyledPageViewController.html">CalStoreStyledPageViewController</a></li>
+								
+								<li><a href="Classes/CalStoreSubscription.html">CalStoreSubscription</a></li>
+								
+								<li><a href="Classes/CalStoreSupportedCountriesRequest.html">CalStoreSupportedCountriesRequest</a></li>
+								
+								<li><a href="Classes/CalStoreSupportedLanguagesRequest.html">CalStoreSupportedLanguagesRequest</a></li>
+								
+								<li><a href="Classes/CalStoreWeatherCalendarViewController.html">CalStoreWeatherCalendarViewController</a></li>
+								
+								<li><a href="Classes/CalStoreWeatherCitiesWithinRegionRequest.html">CalStoreWeatherCitiesWithinRegionRequest</a></li>
+								
+								<li><a href="Classes/CalStoreWeatherCity.html">CalStoreWeatherCity</a></li>
+								
+							</ul>
+						</div>
+						
+
+						
+						<div class="index-column">
+							
+							<h2 class="index-title">Protocol References</h2>
+							<ul>
+								
+								<li><a href="Protocols/CalStoreCalendarStoreViewControllerDelegate.html">CalStoreCalendarStoreViewControllerDelegate</a></li>
+								
+								<li><a href="Protocols/CalStorePageItemHandlerDelegate.html">CalStorePageItemHandlerDelegate</a></li>
+								
+								<li><a href="Protocols/CalStoreStyledPageViewControllerDelegate.html">CalStoreStyledPageViewControllerDelegate</a></li>
+								
+							</ul>
+							
+
+							
+
+							
+						</div>
+						
+					</div>
+
+					<footer>
+						<div class="footer-copyright">
+							
+							<p class="copyright">Copyright &copy; 2016 SchedJoules. All rights reserved. Updated: 2016-03-31</p>
+							
+							
+							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+							
+						</div>
+					</footer>
+				</main>
+			</div>
+		</div>
+	</article>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

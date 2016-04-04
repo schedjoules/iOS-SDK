@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>CalStoreCalendarStoreViewController Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CalendarStore </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">SchedJoules</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/calendarStoreDelegate">calendarStoreDelegate</option>
+		
+		<option value="//api/name/pageItemHandlerDelegate">pageItemHandlerDelegate</option>
+		
+		<option value="//api/name/showsActionButtons">showsActionButtons</option>
+		
+		<option value="//api/name/showsCloseButton">showsCloseButton</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/calendarStoreViewController">+ calendarStoreViewController</option>
+		
+		<option value="//api/name/calendarStoreViewControllerWithPage:">+ calendarStoreViewControllerWithPage:</option>
+		
+		<option value="//api/name/calendarStoreViewControllerWithPageRequest:">+ calendarStoreViewControllerWithPageRequest:</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">CalStoreCalendarStoreViewController Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>UINavigationController</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>CalStoreCalendarStoreViewController.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>ViewController that will present a CalendarStore UI to the user.</p>
+
+<p>This ViewController should be presented modally and will handle
+all interaction and API requests for you.</p>
+
+<p>To quickly get a CalendarStore up and running, define your
+AuthorizationToken and present an instance of this ViewController.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Creating ViewControllers" name="task_Creating ViewControllers"></a>
+						<h2 class="task-title">Creating ViewControllers</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/calendarStoreViewController" title="calendarStoreViewController"></a>
+	<h3 class="method-title"><code><a href="#//api/name/calendarStoreViewController">+&nbsp;calendarStoreViewController</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a new CalStoreCalendarStoreViewController that shows the start page of the CalendarStore</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)calendarStoreViewController</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The created CalStoreCalendarStoreViewController that will show the start page of the CalendarStore</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> This is usually the designated initializor.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarStoreViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/calendarStoreViewControllerWithPage:" title="calendarStoreViewControllerWithPage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/calendarStoreViewControllerWithPage:">+&nbsp;calendarStoreViewControllerWithPage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a new CalStoreCalendarStoreViewController that shows a <a href="../Classes/CalStorePage.html">CalStorePage</a> object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)calendarStoreViewControllerWithPage:(CalStorePage *)<em>page</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>page</code></th>
+						<td><p>The page to show</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The created CalStoreCalendarStoreViewController that will show the given page</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> use only when you have a specific page you want to show, otherwise use the <a href="#//api/name/calendarStoreViewController">[CalStoreCalendarStoreViewController calendarStoreViewController]</a> initializor.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarStoreViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/calendarStoreViewControllerWithPageRequest:" title="calendarStoreViewControllerWithPageRequest:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/calendarStoreViewControllerWithPageRequest:">+&nbsp;calendarStoreViewControllerWithPageRequest:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a new CalStoreCalendarStoreViewController that loads a page from a <a href="../Classes/CalStorePageRequest.html">CalStorePageRequest</a> and shows the page.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)calendarStoreViewControllerWithPageRequest:(CalStorePageRequest *)<em>pageRequest</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pageRequest</code></th>
+						<td><p>the request object to fetch the page to show from</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The created CalStoreCalendarStoreViewController that will load the page from the given request</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> use only when you have a specific page request you want to show, otherwise use the <a href="#//api/name/calendarStoreViewController">[CalStoreCalendarStoreViewController calendarStoreViewController]</a> initializor.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarStoreViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Showing Button" name="task_Showing Button"></a>
+						<h2 class="task-title">Showing Button</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/showsCloseButton" title="showsCloseButton"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showsCloseButton">&nbsp;&nbsp;showsCloseButton</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>If YES, a close button will be shown which will dismiss the viewcontroller if the <a href="#//api/name/calendarStoreDelegate">calendarStoreDelegate</a> is not
+set or does not respond to calendarStoreViewControllerDidClose: method. Otherwise the delegate is responsible
+for dismissing the viewcontroller. Defaults to YES.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL showsCloseButton</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>No close button will be shown if this view controller is not presented modally.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarStoreViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showsActionButtons" title="showsActionButtons"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showsActionButtons">&nbsp;&nbsp;showsActionButtons</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>If YES, the first page of this viewcontroller will show buttons to show subscription information, Restore Purchases and change the Country. Default to YES.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL showsActionButtons</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> Apps need to have at least one Restore Purchases button in their main UI on a logical place, to pass Apple&rsquo;s AppReview. Set
+this property to NO only when not showing this viewcontroller as your main calendar store UI.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarStoreViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Delegate" name="task_Delegate"></a>
+						<h2 class="task-title">Delegate</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/calendarStoreDelegate" title="calendarStoreDelegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/calendarStoreDelegate">&nbsp;&nbsp;calendarStoreDelegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The calendar-store delegate.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;CalStoreCalendarStoreViewControllerDelegate&gt; calendarStoreDelegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The delegate must adopt the <a href="../Protocols/CalStoreCalendarStoreViewControllerDelegate.html">CalStoreCalendarStoreViewControllerDelegate</a> formal protocol.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarStoreViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Responding To PageItem actions" name="task_Responding To PageItem actions"></a>
+						<h2 class="task-title">Responding To PageItem actions</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/pageItemHandlerDelegate" title="pageItemHandlerDelegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pageItemHandlerDelegate">&nbsp;&nbsp;pageItemHandlerDelegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pageItem handler delegate allows to override the actions that are performed when the user
+interacts with a PageItem (e.g. installing an item).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;CalStorePageItemHandlerDelegate&gt; pageItemHandlerDelegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The delegate must adopt the <a href="../Protocols/CalStorePageItemHandlerDelegate.html">CalStorePageItemHandlerDelegate</a> formal protocol.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCalendarStoreViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 SchedJoules. All rights reserved. Updated: 2016-03-31</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
