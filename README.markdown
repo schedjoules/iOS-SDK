@@ -3,36 +3,36 @@
 ## Introduction
 This repository contains the CalendarStore framework for iOS. The CalendarStore framework gives you the possibilities to quickly integrate a working CalendarStore in your app with 3 lines of code or to build your own CalendarStore UI with SchedJoules's data.
 
+See more at [http://www.schedjoules.com](http://www.schedjoules.com) . 
+
 ## Getting Started
  - Download CalendarStore.zip or checkout the repository
  - Read the Documentation at [http://schedjoules.github.io/iOS-SDK/](http://schedjoules.github.io/iOS-SDK/)
  - Examine the example app "SampleCalendarApp"
  
 ### And then:
- - Mail us at hello@schedjoules.com and we'll provide you with your API key.
+ - Get an AuthorizationToken for your app
  - Integrate the SchedJoules CalendarStore.framework within 5 minutes in your own app
+ - Happy users!!
+
+## AuthorizationToken
+You will need an AuthorizationToken to use the CalendarStore. Obtain one from support@schedjoules.com. 
 
 ## License & Copyright
 You are allowed to use this framework, it's documentation, bundle resources and examples for the integration of the CalendarStore in your own app only.
 
+**Copyright © SchedJoules 2016.**
+
+
 ## Version History
 
-### 1.4.2
-Updated:
- - removed CGBundleExecutable Key 
- - removed deprecated CalStoreStylePageViewController 
- - built with Bitcode enabled
+### 2.0
+Introduction auto-renewable subscriptions to replace all In-App-Purchases.
+Check the updated documention to make a smooth transition.
 
-### 1.4.1
-Updated:
- - migrated to iOS9 SDK 
- - iOS7 required as minimum SDK
-
- Added:
- - optional intro walkthrough to display on first app start
- 
- Fixed:
- - a bug in the SalesStatisticsManager which could cause crashes
+### 1.4
+Added:
+ - Intro walkthrough
 
 ### 1.3.3
 Updated:

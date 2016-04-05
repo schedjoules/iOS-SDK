@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>CalendarStore Reference</title>
 
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
 </head>
 <body class="appledoc">
 	<header>
@@ -38,7 +38,7 @@
 		<div id="overview-contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">CalendarStore Reference</h1>
 
 					
 					<div class="section section-overview index-overview">
@@ -60,15 +60,11 @@
 
 <h3>Xcode</h3>
 
-<p>Xcode 5 is required for the CalendarStore framework to work.</p>
+<p>Xcode 7 is required for the CalendarStore framework to work.</p>
 
 <h3>Architectures</h3>
 
 <p>The CalendarStore framework supports the armv7, armv7s, arm64 and i386 (simulator), x86_64 (simulator) architectures. Armv6 is not supported.</p>
-
-<h3>User Interface</h3>
-
-<p>The User Interface will adapt itself automatically to iOS6 style or iOS7+ style, depending on the user&rsquo;s iOS version.</p>
 
 <h2>Getting Started</h2>
 
@@ -78,13 +74,13 @@
 
 <p>First, drag <strong>CalendarStore.framework</strong> into your project, under the &ldquo;Frameworks&rdquo; folder.</p>
 
-<p>!<a href="Readme-Images/CalStore-AddFramework.png">Drag CalendarStore.framework into your project</a></p>
+<p><img src="docs/Readme-Images/CalStore-AddFramework.png" height="452" width="260" alt="Drag CalendarStore.framework into your project" /></p>
 
 <h3>Bundle</h3>
 
 <p>Next, drag <strong>CalendarStore.bundle</strong> into your project. This bundle contains the resources used by the Calendar Store.</p>
 
-<p>!<a href="Readme-Images/CalStore-AddBundle.png">Drag CalendarStore.framework into your project</a></p>
+<p><img src="docs/Readme-Images/CalStore-AddBundle.png" height="460" width="254" alt="Drag CalendarStore.framework into your project" /></p>
 
 <h3>AuthorizationToken</h3>
 
@@ -98,7 +94,7 @@
 }
 </code></pre>
 
-<p>!<a href="Readme-Images/CalStore-AddAuthorizationToken.png">Drag CalendarStore.framework into your project</a></p>
+<p><img src="docs/Readme-Images/CalStore-AddAuthorizationToken.png" height="461" width="923" alt="Drag CalendarStore.framework into your project" /></p>
 
 <h3>Set Feedback E-mail</h3>
 
@@ -113,6 +109,32 @@
 }
 </code></pre>
 
+<h3>Done!</h3>
+
+<p>The CalendarStore.framework now successfully has been integrated into your project.</p>
+
+<h2>In-App Purchases</h2>
+
+<p>The CalendarStore uses In-App Purchases to provide access to the calendar feeds for users. Since API v2.0 auto-renewable subscriptions are used rather than indivual Non-Consumable In-App Purchases. Prior to enabling In-App Purchases in your App, you need to configure your App in iTunes Connect.
+Follow the instructions in the <a href="docs/Documentation/SubscriptionSetupGuide.html">Subscription Setup Guide</a>.</p>
+
+<h3>Enabling In-App Purchases for your App</h3>
+
+<p>Since The CalendarStore uses auto-renewable subscriptions as In-App purchases, you&rsquo;ll need to enable In-App Purchases for your app. You can read more on how to do so in Apple&rsquo;s Documentation on this subject: <a href="https://developer.apple.com/library/ios/technotes/tn2259/_index.html">https://developer.apple.com/library/ios/technotes/tn2259/_index.html</a>.</p>
+
+<h2>Showing The CalendarStore, the easy way</h2>
+
+<p>All it takes to show the CalendarStore is 3 lines of code. First, include the CalendarStore.h header:</p>
+
+<pre><code>#import &lt;CalendarStore/CalendarStore.h&gt;
+</code></pre>
+
+<p>Next, to launch the Store, present an instance of the <a href="Classes/CalStoreCalendarStoreViewController.html">CalStoreCalendarStoreViewController</a>. The best place to do this is when a user taps on special &ldquo;Launch Calendar Store&rdquo; button.</p>
+
+<pre><code>CalStoreCalendarStoreViewController* vc = [CalStoreCalendarStoreViewController calendarStoreViewController];
+[self presentViewController:vc animated:YES completion:nil];
+</code></pre>
+
 <h3>Show Intro Walkthrough</h3>
 
 <p>Optionally, you can show a walkthrough for the Calendar Store.</p>
@@ -125,46 +147,28 @@
 }
 </code></pre>
 
-<h3>Done!</h3>
+<h3>Subscription Intro</h3>
 
-<p>The CalendarStore.framework now successfully has been integrated into your project.</p>
+<p>Optionally, you can adjust the subscription purchase UI.</p>
 
-<h2>In-App Purchases</h2>
+<p>By default, the CalendarStore will present an intro screen prior to the subscription purchase. You can turn it off by setting:</p>
 
-<h3>Enabling In-App Purchases for your App</h3>
-
-<p>Since The CalendarStore uses In-App purchases, you&rsquo;ll need to enable In-App Purchases for your app. You can read more on how to do so in Apple&rsquo;s Documentation on this subject: <a href="https://developer.apple.com/library/ios/technotes/tn2259/_index.html">https://developer.apple.com/library/ios/technotes/tn2259/_index.html</a>.</p>
-
-<h3>Uploading In-App Purchases for your App</h3>
-
-<h4>Initial Upload</h4>
-
-<p>With your AuthorizationToken, you also got an <strong>ITMSP</strong> file. This file contains all In-App purchases for the Calendar Store  that need to be uploaded to Apple. By doubleclicking on the file, <strong>Application Loader</strong> will launch.</p>
-
-<ol>
-<li>Log in to Application Loader</li>
-<li>Deliver your In-App purchases to the store</li>
-<li>When Submitting an update of your app with the Calendar Store framework, make sure you&rsquo;ll also submit the In-App Purchases</li>
-</ol>
-
-
-<p>For more info on Application Loader, see <a href="https://itunesconnect.apple.com/docs/UsingApplicationLoader.pdf">https://itunesconnect.apple.com/docs/UsingApplicationLoader.pdf</a>.</p>
-
-<h4>Updates for In-App Purchases</h4>
-
-<p>From time to time, SchedJoules will add or alter the In-App purchases in the CalendarStore. You will receive a new <strong>ITMSP</strong> file with new and changed In-App purchases, which you can deliver to iTunes Connect using <strong>Application Loader</strong>. After delivering the new In-App purchases, be sure to <strong>Submit for Review</strong> all new In-App purchases on iTunes Connect.</p>
-
-<h2>Showing The CalendarStore, the easy way</h2>
-
-<p>All it takes to show the CalendarStore is 3 lines of code. First, include the CalendarStore.h header:</p>
-
-<pre><code>#import &lt;CalendarStore/CalendarStore.h&gt;
+<pre><code>    [CalStoreController sharedController].useDefaultSubscriptionIntro = NO;
 </code></pre>
 
-<p>Next, to launch the Store, present an instance of the CalStoreCalendarStoreViewController. The best place to do this is when a user taps on special &ldquo;Launch Calendar Store&rdquo; button.</p>
+<p>You can set a custom ViewController for the subscription intro, by passing the ViewControllers name. The ViewController must conform the CalStoreSubscriptionIntro protocol.
+If a invalid ViewController is passed, the CalendarStore won&rsquo;t show an intro.</p>
 
-<pre><code>CalStoreCalendarStoreViewController* vc = [CalStoreCalendarStoreViewController calendarStoreViewController];
-[self presentViewController:vc animated:YES completion:nil];
+<pre><code>    [CalStoreController sharedController].subscriptionIntroViewController = @"CalStoreSubscriptionDefaultIntroViewController";
+</code></pre>
+
+<h3>Intro theming</h3>
+
+<p>The intro walkthrough and subscription intro can by themed by setting a custom CalStoreColorConfiguration</p>
+
+<pre><code>    CalStoreColorConfiguration* colorConfiguration = [CalStoreColorConfiguration defaultConfiguration];
+    colorConfiguration.inverseTextColor = [UIColor whiteColor];
+    [CalStoreController sharedController].introColorConfiguration = colorConfiguration;
 </code></pre>
 
 <h2>Going the Extra Mile: the Low-Level API</h2>
@@ -178,18 +182,18 @@
 					<div class="index-container">
 						
 						<div class="index-column">
-							<h2 class="index-title"></h2>
+							<h2 class="index-title">Programming Guides</h2>
 							<ul>
 								
 								<li><a href="docs/Documentation/Analytics.html">Analytics</a></li>
 								
 								<li><a href="docs/Documentation/EventKitIntegration.html">EventKitIntegration</a></li>
 								
-								<li><a href="docs/Documentation/GettingStarted.html">GettingStarted</a></li>
-								
 								<li><a href="docs/Documentation/MultipleApps.html">MultipleApps</a></li>
 								
 								<li><a href="docs/Documentation/OverridingDefaultActions.html">OverridingDefaultActions</a></li>
+								
+								<li><a href="docs/Documentation/SubscriptionSetupGuide.html">SubscriptionSetupGuide</a></li>
 								
 							</ul>
 						</div>
@@ -197,7 +201,7 @@
 
 						
 						<div class="index-column">
-							<h2 class="index-title"></h2>
+							<h2 class="index-title">Class References</h2>
 							<ul>
 								
 								<li><a href="Classes/CalStoreAvailableTranslation.html">CalStoreAvailableTranslation</a></li>
@@ -260,6 +264,8 @@
 								
 								<li><a href="Classes/CalStoreStyledPageViewController.html">CalStoreStyledPageViewController</a></li>
 								
+								<li><a href="Classes/CalStoreSubscription.html">CalStoreSubscription</a></li>
+								
 								<li><a href="Classes/CalStoreSupportedCountriesRequest.html">CalStoreSupportedCountriesRequest</a></li>
 								
 								<li><a href="Classes/CalStoreSupportedLanguagesRequest.html">CalStoreSupportedLanguagesRequest</a></li>
@@ -277,7 +283,7 @@
 						
 						<div class="index-column">
 							
-							<h2 class="index-title"></h2>
+							<h2 class="index-title">Protocol References</h2>
 							<ul>
 								
 								<li><a href="Protocols/CalStoreCalendarStoreViewControllerDelegate.html">CalStoreCalendarStoreViewControllerDelegate</a></li>
@@ -299,8 +305,10 @@
 					<footer>
 						<div class="footer-copyright">
 							
-							<p class="copyright">Copyright &copy; 2015 SchedJoules. All rights reserved. Updated: 2015-09-25</p>
+							<p class="copyright">Copyright &copy; 2016 SchedJoules. All rights reserved. Updated: 2016-03-31</p>
 							
+							
+							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
 							
 						</div>
 					</footer>

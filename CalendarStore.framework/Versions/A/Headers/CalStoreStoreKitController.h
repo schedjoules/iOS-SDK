@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "CalStoreDefines.h"
+#import <StoreKit/StoreKit.h>
 
-typedef void(^CalStoreStoreKitCompletionHandler)(BOOL succeeded, NSError* error);
+typedef void(^CalStoreStoreKitCompletionHandler)(BOOL succeeded, NSError* error, SKPaymentTransaction* transaction);
 
 /*!
 	@abstract	Controller that ties the CalendarStore into Apple's StoreKit framework
@@ -44,7 +45,15 @@ typedef void(^CalStoreStoreKitCompletionHandler)(BOOL succeeded, NSError* error)
 
 // restoring already ordered products
 -(void)restorePurchasesWithCompletionHandler:(CalStoreStoreKitCompletionHandler)completionHandler;
+
+//unregister the controller to finish communication with the AppStore
+-(void)terminate;
+
+-(void)setIsRestoring:(BOOL)restoring;
 @property (nonatomic, readonly, getter = isRestoring) BOOL restoring;
+
+-(void)setIsRegistering:(BOOL)registering;
+@property (nonatomic, readonly, getter = isRegistering) BOOL registering;
 
 
 // If YES, iCloud will be used to sync purchasing information between two apps of the same vendor. See documentation on MultipleApps for more information.

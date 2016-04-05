@@ -17,5 +17,6 @@
 @property (nonatomic, readonly) NSDecimalNumber* price;
 @property (nonatomic, readonly) NSLocale* priceLocale;
 @property (nonatomic, readonly) NSString* localizedDisplayPrice;
+@property (nonatomic, readonly) NSString* currencyCode;
 
 @end

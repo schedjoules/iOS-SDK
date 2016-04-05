@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>CalStorePageItemPurchasable Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
 </head>
 <body class="appledoc">
 	<header>
@@ -43,9 +43,51 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/beingPurchased">beingPurchased</option>
+		
+		<option value="//api/name/canBePurchased">canBePurchased</option>
+		
+		<option value="//api/name/fetchingPriceInfo">fetchingPriceInfo</option>
+		
+		<option value="//api/name/priceInfo">priceInfo</option>
+		
+		<option value="//api/name/productIdentifier">productIdentifier</option>
+		
+		<option value="//api/name/purchased">purchased</option>
+		
+		<option value="//api/name/relatedProductIdentifiers">relatedProductIdentifiers</option>
+		
+	</optgroup>
+	
 
 	
 
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/calendarBundleRequest">- calendarBundleRequest</option>
+		
+		<option value="//api/name/cancelFetchingPriceInfo">- cancelFetchingPriceInfo</option>
+		
+		<option value="//api/name/fetchPriceInfoWithCompletionHandler:">- fetchPriceInfoWithCompletionHandler:</option>
+		
+		<option value="//api/name/purchaseWithCompletionHandler:">- purchaseWithCompletionHandler:</option>
+		
+	</optgroup>
+	
 	
 </select>
 						</label>
@@ -59,22 +101,694 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">CalStorePageItemPurchasable Class Reference</h1>
 
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/CalStorePageItem.html">CalStorePageItem</a> : <a href="../Classes/CalStoreObject.html">CalStoreObject</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>CalStorePageItemPurchasable.h</td>
+</tr>
+						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Abstract Base Class for items that <em>can be</em> <a href="#//api/name/purchased">purchased</a> by the user. Check the <a href="#//api/name/canBePurchased">canBePurchased</a>
+flag to check if the item is actually purchasable, since some items might not have in-app identifiers
+associated with them.</p>
 
+<p>Objects of this class can be <a href="#//api/name/purchased">purchased</a> by the user. After an object has
+been <a href="#//api/name/purchased">purchased</a>, the user can either install all calendars of the <a href="../Classes/CalStorePageItemPage.html">CalStorePageItemPage</a> or install
+the <a href="../Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a>.</p>
+
+<p><strong>In-App Purchases</strong>
+Since SDK v2.0 this class is used for the auto-renewable subscriptions. CalStoreSubscription will remain the only instance of CalStorePageItemPurchasable.
+To check the status of the subscription query the shared subscription with [CalStoreSubscriptionHandler sharedSubscription]</p>
+
+<p><strong>Purchasing and Installing</strong></p>
+
+<p>To give the user access to this items content, use the following steps:</p>
+
+<ol>
+<li>Observe the <code>kCalStoreOrderStatusChangedNotification</code> notification for state changes
+about this item&rsquo;s state. Update your UI accordingly.</li>
+<li>Check if the <a href="#//api/name/purchased">purchased</a> property of the <a href="../Classes/CalStoreSubscription.html">CalStoreSubscription</a> is YES and <a href="#//api/name/beingPurchased">beingPurchased</a> does not indicate a purchase is currently in progress.</li>
+<li>If not, start an async purchase operation using <a href="#//api/name/purchaseWithCompletionHandler:">purchaseWithCompletionHandler:</a> for the <a href="../Classes/CalStoreSubscription.html">CalStoreSubscription</a> and
+in the completion handler show errors to the user when needed.</li>
+<li>During purchasing, the <a href="#//api/name/beingPurchased">beingPurchased</a> property will return YES to indicate a purchase is in progress.</li>
+<li>If the completionHandler indicated success, check the <a href="#//api/name/purchased">purchased</a> property again.</li>
+<li>If it returns YES, then the calendar can be installed using the <a href="../Classes/CalStoreInstallCalendarViewController.html">CalStoreInstallCalendarViewController</a> in case of <a href="../Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a>.
+ In case of a <a href="../Classes/CalStorePageItemPage.html">CalStorePageItemPage</a>, the user can install any of the items of that page.</li>
+</ol>
+
+
+<p>Use the <a href="#//api/name/canBePurchased">canBePurchased</a> property to see if an item can actually
+be <a href="#//api/name/purchased">purchased</a> using the in-app purchasing system.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="In-App Purchase Info" name="task_In-App Purchase Info"></a>
+						<h2 class="task-title">In-App Purchase Info</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/productIdentifier" title="productIdentifier"></a>
+	<h3 class="method-title"><code><a href="#//api/name/productIdentifier">&nbsp;&nbsp;productIdentifier</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The identifier of the in-app purchase that this item is a part of.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *productIdentifier</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStorePageItemPurchasable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/relatedProductIdentifiers" title="relatedProductIdentifiers"></a>
+	<h3 class="method-title"><code><a href="#//api/name/relatedProductIdentifiers">&nbsp;&nbsp;relatedProductIdentifiers</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The set of in-app purchase identifiers for the same in-app purchase for other, related apps of the same vendor.
+Nil if not applicable.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSSet *relatedProductIdentifiers</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Some apps choose to have a different iPad an iPhone version of the same app. Since those are technically
+two different apps, they have different in-app purchase identifiers. However, for the user they appear as one app.
+This property will return the in-app purchase identifiers used by both apps for the same item.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../docs/Documentation/MultipleApps.html">MultipleApps</a>.markdown</p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStorePageItemPurchasable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Store Integration" name="task_Store Integration"></a>
+						<h2 class="task-title">Store Integration</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/canBePurchased" title="canBePurchased"></a>
+	<h3 class="method-title"><code><a href="#//api/name/canBePurchased">&nbsp;&nbsp;canBePurchased</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>YES when this object can actually be <a href="#//api/name/purchased">purchased</a>. Items can be <a href="#//api/name/purchased">purchased</a>
+if they have a valid <a href="#//api/name/productIdentifier">productIdentifier</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=canBePurchased) BOOL canBePurchased</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Items can be <a href="#//api/name/purchased">purchased</a> when they have a valid In-App purchase <a href="#//api/name/productIdentifier">productIdentifier</a>.  <a href="../Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a> items
+   are generally always purchasable, while <a href="../Classes/CalStorePageItemPage.html">CalStorePageItemPage</a> items are only purchasable if the items of the page it links to,
+   are all part of the same in-app purchase.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/CalStorePageItemPage.html">CalStorePageItemPage</a></p></code></li>
+					
+					<li><code><p><a href="../Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStorePageItemPurchasable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/purchased" title="purchased"></a>
+	<h3 class="method-title"><code><a href="#//api/name/purchased">&nbsp;&nbsp;purchased</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>YES when the in-app purchase that this item is a part of, has been purchased
+by the user.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isPurchased) BOOL purchased</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>When this property is YES, this item can be installed using
+the <a href="../Classes/CalStoreInstallCalendarViewController.html">CalStoreInstallCalendarViewController</a>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/CalStoreInstallCalendarViewController.html">CalStoreInstallCalendarViewController</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStorePageItemPurchasable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/beingPurchased" title="beingPurchased"></a>
+	<h3 class="method-title"><code><a href="#//api/name/beingPurchased">&nbsp;&nbsp;beingPurchased</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>YES when a purchasing operation is currently being undertaken</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isBeingPurchased) BOOL beingPurchased</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStorePageItemPurchasable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/purchaseWithCompletionHandler:" title="purchaseWithCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/purchaseWithCompletionHandler:">&ndash;&nbsp;purchaseWithCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Use this method to start a purchase operation for the in-app purchase that this
+item is a part of. During purchasing, the <a href="#//api/name/beingPurchased">beingPurchased</a> property will be yes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)purchaseWithCompletionHandler:(CalStoreOrderCompletionHandler)<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>the block to invoke when the purchase operation finished.
+When the success parameter of the block is YES, the purchase succeeded.
+However, always check the <a href="#//api/name/purchased">purchased</a> property of the item before
+trying to install the item. For <a href="../Classes/CalStorePageItemPage.html">CalStorePageItemPage</a> items, present a <a href="../Classes/CalStoreCalendarStoreViewController.html">CalStoreCalendarStoreViewController</a>
+after the purchase was successful, to allow the user to install any of the items.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Observe kCalStoreOrderStatusChangedNotification notifications and check the
+[userInfo[kCalStoreOrderStatusChangedIdentifierKey] isEqual:item.identifier] to
+see if any changes in this items state occured. If so, update your UI accordingly.</p><div class="note"><p><strong>Note:</strong> A purchase operation cannot be canceled by the app once it has been started.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStorePageItemPurchasable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Getting Bundle Information" name="task_Getting Bundle Information"></a>
+						<h2 class="task-title">Getting Bundle Information</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/calendarBundleRequest" title="calendarBundleRequest"></a>
+	<h3 class="method-title"><code><a href="#//api/name/calendarBundleRequest">&ndash;&nbsp;calendarBundleRequest</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets the <a href="../Classes/CalStoreCalendarBundleRequest.html">CalStoreCalendarBundleRequest</a> that can be used to fetch
+the <a href="../Classes/CalStoreCalendarBundle.html">CalStoreCalendarBundle</a> that holds information about this purchasable
+item.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CalStoreCalendarBundleRequest *)calendarBundleRequest</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The request that can be used to fetch the <a href="../Classes/CalStoreCalendarBundle.html">CalStoreCalendarBundle</a> with information about this purchasable. Can be nil if <a href="#//api/name/canBePurchased">canBePurchased</a> is NO.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStorePageItemPurchasable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Price Information" name="task_Price Information"></a>
+						<h2 class="task-title">Price Information</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/priceInfo" title="priceInfo"></a>
+	<h3 class="method-title"><code><a href="#//api/name/priceInfo">&nbsp;&nbsp;priceInfo</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Information about the price of the in-app purchase that this item is a part of. When nil, use
+the <a href="#//api/name/fetchPriceInfoWithCompletionHandler:">fetchPriceInfoWithCompletionHandler:</a> method to fetch the information asynchronously.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CalStorePriceInfo *priceInfo</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/fetchPriceInfoWithCompletionHandler:">- fetchPriceInfoWithCompletionHandler:</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStorePageItemPurchasable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Fetching Price Information" name="task_Fetching Price Information"></a>
+						<h2 class="task-title">Fetching Price Information</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/fetchingPriceInfo" title="fetchingPriceInfo"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchingPriceInfo">&nbsp;&nbsp;fetchingPriceInfo</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>YES when this object is busy fetching PriceInfo.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isFetchingPriceInfo) BOOL fetchingPriceInfo</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStorePageItemPurchasable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchPriceInfoWithCompletionHandler:" title="fetchPriceInfoWithCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchPriceInfoWithCompletionHandler:">&ndash;&nbsp;fetchPriceInfoWithCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetches PriceInfo for this object. This method should be called when the <a href="#//api/name/priceInfo">priceInfo</a> property
+is nil. When the fetch operation completes successfully, the <a href="#//api/name/priceInfo">priceInfo</a> property will be set
+with the fetched PriceInfo.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchPriceInfoWithCompletionHandler:(CalStorePriceInfoCompletionHandler)<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>block that will be invoked when the fetch operation finished (sucessfully or not).
+The block will be invoked on the main queue.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>An ongoing fetch operation can be canceled using <a href="#//api/name/cancelFetchingPriceInfo">cancelFetchingPriceInfo</a>.</p><div class="note"><p><strong>Note:</strong> When <a href="#//api/name/fetchingPriceInfo">fetchingPriceInfo</a> is YES, an exception will be raised when calling this method.</p></div>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/cancelFetchingPriceInfo">- cancelFetchingPriceInfo</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStorePageItemPurchasable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelFetchingPriceInfo" title="cancelFetchingPriceInfo"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelFetchingPriceInfo">&ndash;&nbsp;cancelFetchingPriceInfo</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancels an ongoing fetch operation for PriceInfo.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelFetchingPriceInfo</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStorePageItemPurchasable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
 					
 
                     
+                    
+          
 				</main>
 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 SchedJoules. All rights reserved. Updated: 2015-09-25</p>
+						<p class="copyright">Copyright &copy; 2016 SchedJoules. All rights reserved. Updated: 2016-03-31</p>
 						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
 						
 					</div>
 				</footer>

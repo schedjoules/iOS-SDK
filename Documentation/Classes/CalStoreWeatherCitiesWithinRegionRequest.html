@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>CalStoreWeatherCitiesWithinRegionRequest Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
 </head>
 <body class="appledoc">
 	<header>
@@ -43,9 +43,51 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
-
+	<option value="overview">Overview</option>
 	
 
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/authorizationToken">authorizationToken</option>
+		
+		<option value="//api/name/fetching">fetching</option>
+		
+		<option value="//api/name/northEastCoordinate">northEastCoordinate</option>
+		
+		<option value="//api/name/region">region</option>
+		
+		<option value="//api/name/southWestCoordinate">southWestCoordinate</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/requestWithNorthEastCoordinate:southWestCoordinate:">+ requestWithNorthEastCoordinate:southWestCoordinate:</option>
+		
+		<option value="//api/name/requestWithRegion:">+ requestWithRegion:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/cancel">- cancel</option>
+		
+		<option value="//api/name/fetchCitiesWithCompletionHandler:">- fetchCitiesWithCompletionHandler:</option>
+		
+	</optgroup>
+	
 	
 </select>
 						</label>
@@ -59,22 +101,555 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">CalStoreWeatherCitiesWithinRegionRequest Class Reference</h1>
 
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>CalStoreWeatherCitiesWithinRegionRequest.h</td>
+</tr>
+						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Requests cities for which weather calendars are available from the CalendarStore API.</p>
+					</div>
+					
+					
 
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Creating" name="task_Creating"></a>
+						<h2 class="task-title">Creating</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/requestWithRegion:" title="requestWithRegion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestWithRegion:">+&nbsp;requestWithRegion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a new request for cities withing a specific <a href="#//api/name/region">region</a></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithRegion:(MKCoordinateRegion)<em>region</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>region</code></th>
+						<td><p>the <a href="#//api/name/region">region</a> to get cities for</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>CalStoreWeatherCitiesWithinRegionRequest that will request cities within the given <a href="#//api/name/region">region</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchCitiesWithCompletionHandler:">fetchCitiesWithCompletionHandler:</a> to start requesting the page.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreWeatherCitiesWithinRegionRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestWithNorthEastCoordinate:southWestCoordinate:" title="requestWithNorthEastCoordinate:southWestCoordinate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestWithNorthEastCoordinate:southWestCoordinate:">+&nbsp;requestWithNorthEastCoordinate:southWestCoordinate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a new request for cities withing a specific rectangle bounded by the northEast and southWest corner</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)requestWithNorthEastCoordinate:(CLLocationCoordinate2D)<em>northEast</em> southWestCoordinate:(CLLocationCoordinate2D)<em>southWest</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>northEast</code></th>
+						<td><p>the north-east corner of the <a href="#//api/name/region">region</a> cities should be requested for</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>southWest</code></th>
+						<td><p>the south-west corner of the <a href="#//api/name/region">region</a> cities should be requested for</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>CalStoreWeatherCitiesWithinRegionRequest that will request cities within the given <a href="#//api/name/region">region</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> this only creates a request, use <a href="#//api/name/fetchCitiesWithCompletionHandler:">fetchCitiesWithCompletionHandler:</a> to start requesting the page.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreWeatherCitiesWithinRegionRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Region" name="task_Region"></a>
+						<h2 class="task-title">Region</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/region" title="region"></a>
+	<h3 class="method-title"><code><a href="#//api/name/region">&nbsp;&nbsp;region</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The region for which this request will find cities</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) MKCoordinateRegion region</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreWeatherCitiesWithinRegionRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/northEastCoordinate" title="northEastCoordinate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/northEastCoordinate">&nbsp;&nbsp;northEastCoordinate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The northEast corner <a href="#//api/name/region">region</a> for which this request will find cities</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CLLocationCoordinate2D northEastCoordinate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>makes up <a href="#//api/name/region">region</a> together with the <a href="#//api/name/southWestCoordinate">southWestCoordinate</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/southWestCoordinate">@property southWestCoordinate</a></p></code></li>
+					
+					<li><code><p><a href="#//api/name/region">@property region</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreWeatherCitiesWithinRegionRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/southWestCoordinate" title="southWestCoordinate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/southWestCoordinate">&nbsp;&nbsp;southWestCoordinate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The southWest corner <a href="#//api/name/region">region</a> for which this request will find cities</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CLLocationCoordinate2D southWestCoordinate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>makes up <a href="#//api/name/region">region</a> together with the <a href="#//api/name/northEastCoordinate">northEastCoordinate</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/northEastCoordinate">@property northEastCoordinate</a></p></code></li>
+					
+					<li><code><p><a href="#//api/name/region">@property region</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreWeatherCitiesWithinRegionRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Authorization" name="task_Authorization"></a>
+						<h2 class="task-title">Authorization</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/authorizationToken" title="authorizationToken"></a>
+	<h3 class="method-title"><code><a href="#//api/name/authorizationToken">&nbsp;&nbsp;authorizationToken</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The AuthorizationToken being used for this request. Defaults to <code>[</code>[CalStoreController sharedController]<code>](../Classes/CalStoreController.html#//api/name/sharedController).authorizationToken</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *authorizationToken</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/CalStoreController.html">CalStoreController</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreWeatherCitiesWithinRegionRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Fetching Cities" name="task_Fetching Cities"></a>
+						<h2 class="task-title">Fetching Cities</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/fetching" title="fetching"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetching">&nbsp;&nbsp;fetching</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>YES iff this object is busy fetching cities.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, getter=isFetching, readonly) BOOL fetching</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreWeatherCitiesWithinRegionRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancel" title="cancel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancels an ongoing request</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreWeatherCitiesWithinRegionRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchCitiesWithCompletionHandler:" title="fetchCitiesWithCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchCitiesWithCompletionHandler:">&ndash;&nbsp;fetchCitiesWithCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetches the requested cities asynchronously.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchCitiesWithCompletionHandler:(CalStoreWeatherCitiesWithinRegionRequestCompletionHandler)<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>block that will be invoked on the main queue if the fetch operation finishes. Check the error parameter
+of the block to see if the request succeeded. Cities will be returned as an array of <a href="../Classes/CalStoreWeatherCity.html">CalStoreWeatherCity</a> objects.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreWeatherCitiesWithinRegionRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
 					
 
                     
+                    
+          
 				</main>
 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 SchedJoules. All rights reserved. Updated: 2015-09-25</p>
+						<p class="copyright">Copyright &copy; 2016 SchedJoules. All rights reserved. Updated: 2016-03-31</p>
 						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
 						
 					</div>
 				</footer>

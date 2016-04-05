@@ -8,6 +8,7 @@
 
 #import "CalStorePageItem.h"
 #import "CalStorePriceInfo.h"
+#import <StoreKit/StoreKit.h>
 
 @class CalStoreCalendarBundleRequest;
 
@@ -32,7 +33,7 @@
 
 
 // notifications send out if purchasing information changes
-typedef void(^CalStoreOrderCompletionHandler)(BOOL succeeded, NSError* error);
+typedef void(^CalStoreOrderCompletionHandler)(BOOL succeeded, NSError* error, SKPaymentTransaction* transaction);
 extern NSString* const kCalStoreOrderStatusChangedNotification;
 extern NSString* const kCalStoreOrderStatusChangedIdentifierKey;
 extern NSString* const kCalStoreRestoringPurchasesStatusChangedNotification;

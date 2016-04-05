@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CalStoreDefines.h"
+#import "CalStoreColorConfiguration.h"
 
 /*!
 	@abstract	Singleton controller for the Calendar Store.
@@ -40,6 +41,12 @@
 @property (nonatomic, strong) NSString* locale; // the locale used for the Calendar Store, ISO 639-1 code, or en_US (style). Defaults to current locale
 @property (nonatomic, strong) NSString* location; // the location used for the Calendar Store, ISO_3166 code. Defaults to current locale.
 												  // setting the location will persist accross sessions.
+
+//Subscription setup
+@property (nonatomic, assign) BOOL usePaidSubscription; // YES, if the users have to pay for subscriptions. NO, if the access to calendars remain free. Defaults to YES
+@property (nonatomic, assign) BOOL useDefaultSubscriptionIntro; // YES, the CalendarStore should present a default intro screen, informing the user about the subscription details. NO, if you want to use your own intro. Defaults to YES
+@property (nonatomic, assign) NSString* subscriptionIntroViewController; //The filename for your custom subscription intro ViewController. Requires useDefaultSubscriptionIntro set to NO.
+@property (nonatomic, strong) CalStoreColorConfiguration* introColorConfiguration; //Color theming for the app and subscription intro.
 
 @property (nonatomic, strong) NSString* feedbackEmailAddress; // defaults to CalendarStoreFeedbackEmailAddress from the  Main bundle's Info.plist, if defined, otherwise to 'support@schedjoules.com'.
 
