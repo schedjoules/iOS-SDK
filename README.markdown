@@ -26,7 +26,7 @@ You are allowed to use this framework, it's documentation, bundle resources and 
 
 ## Version History
 
-### 2.0
+### 2.0.0
 Introduction auto-renewable subscriptions to replace all In-App-Purchases.
 Check the updated documention to make a smooth transition.
 
