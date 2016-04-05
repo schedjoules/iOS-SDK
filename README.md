@@ -13,6 +13,7 @@ See more at [http://www.schedjoules.com](http://www.schedjoules.com) .
 ### And then:
  - Get an AuthorizationToken for your app
  - Integrate the SchedJoules CalendarStore.framework within 5 minutes in your own app
+ - Add Automatically Renewable Subscriptions In-App Purchases to [Connect](https://github.com/schedjoules/iOS-SDK/blob/master/connect.md)
  - Happy users!!
 
 ## AuthorizationToken
