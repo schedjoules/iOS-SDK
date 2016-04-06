@@ -1,11 +1,14 @@
-##Submit auto-renewable subscriptions to Connect
+##Submit auto-renewable subscriptions to iTunes Connect
 Unfortunately it is not possible to use Apple's Application Uploader to add subscriptions to Connect, so you manually have to add auto-renewable subscriptions to Connect.
 
 To get the information you need to enter in Connect go to:
 
-    curl 'https://api.schedjoules.com/apps/renewable_subscriptions.html' -v -H 'Authorization: Token token="{YOUR_API_KEY}"'
 
-Alternatively you can visit https://api.schedjoules.com/apps/renewable_subscriptions for the JSON representation.
+```
+HTML: curl 'https://api.schedjoules.com/apps/renewable_subscriptions.html' -v -H 'Authorization: Token token="{YOUR_API_KEY}"'
+
+JSON: curl 'https://api.schedjoules.com/apps/renewable_subscriptions' -v -H 'Authorization: Token token="{YOUR_API_KEY}"'
+```
 
 **How to submit an auto-renewable subscription:**
 * Go to iTunes Connect
