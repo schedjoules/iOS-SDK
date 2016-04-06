@@ -1,9 +1,7 @@
 # SchedJoules' CalendarStore Framework for iOS
 
 ## Introduction
-This repository contains the CalendarStore framework for iOS. The CalendarStore framework gives you the possibilities to quickly integrate a working CalendarStore in your app with 3 lines of code or to build your own CalendarStore UI with SchedJoules's data.
-
-See more at [http://www.schedjoules.com](http://www.schedjoules.com) . 
+This repository contains the CalendarStore framework for iOS. The CalendarStore framework gives you the possibilities to quickly integrate a working CalendarStore in your app with 3 lines of code or to build your own CalendarStore UI with SchedJoules's data. Read more at [http://www.schedjoules.com](http://www.schedjoules.com) . 
 
 ## Getting Started
  - Download [CalendarStore.zip](https://github.com/schedjoules/iOS-SDK/blob/master/CalendarStore.zip) or checkout this repository
