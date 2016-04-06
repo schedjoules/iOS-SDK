@@ -28,7 +28,7 @@ If you don't have an AuthorizationToken/API key, contact support@schedjoules.com
 ### BundleIdentifier
 If you want to experiment with In-App purchases, you need to change the BundleIdentifier of this app to your own app's BundleIdentifier and use that In-App enabled provisioning profile. 
 
-### In-App purchases  file
+### In-App purchases
 Add Automatically Renewable Subscriptions to iTunes Connect by following the [instructions](https://github.com/schedjoules/iOS-SDK/blob/master/connect.md). You will get error if no In-App purchases are present
 
 ### Test User
