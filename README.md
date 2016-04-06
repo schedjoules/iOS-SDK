@@ -6,30 +6,20 @@ This repository contains the CalendarStore framework for iOS. The CalendarStore 
 See more at [http://www.schedjoules.com](http://www.schedjoules.com) . 
 
 ## Getting Started
- - Download CalendarStore.zip or checkout the repository
+ - Download [CalendarStore.zip](https://github.com/schedjoules/iOS-SDK/blob/master/CalendarStore.zip) or checkout this repository
  - Read the Documentation at [http://schedjoules.github.io/iOS-SDK/](http://schedjoules.github.io/iOS-SDK/)
- - Examine the example app "SampleCalendarApp"
+ - Examine the example app [SampleCalendarApp](https://github.com/schedjoules/iOS-SDK/tree/master/Example)
  
 ### And then:
- - Get an AuthorizationToken for your app
+ - Mail us at support@schedjoules.com and we'll provide you with your API key
  - Integrate the SchedJoules CalendarStore.framework within 5 minutes in your own app
- - Add Automatically Renewable Subscriptions In-App Purchases to [Connect](https://github.com/schedjoules/iOS-SDK/blob/master/connect.md)
- - Happy users!!
-
-## AuthorizationToken
-You will need an AuthorizationToken to use the CalendarStore. Obtain one from support@schedjoules.com. 
-
-## License & Copyright
-You are allowed to use this framework, it's documentation, bundle resources and examples for the integration of the CalendarStore in your own app only.
-
-**Copyright © SchedJoules 2016.**
-
+ - Add Automatically Renewable Subscriptions to iTunes Connect by following the [instructions](https://github.com/schedjoules/iOS-SDK/blob/master/connect.md)
+ - Et voila!!
 
 ## Version History
 
 ### 2.0.0
 Introduction auto-renewable subscriptions to replace all In-App-Purchases.
-Check the updated documention to make a smooth transition.
 
 ### 1.4
 Added:
@@ -123,9 +113,12 @@ This release of the CalendarStore adds support for searching the store and an ne
 - CalStorePickCountryViewController performance enhancements during scrolling
 - CalStoreCalendarViewController now honors the showsCloseButton property
 
-
-
 ### 1.0.0
 
 - CalStoreCalendarStoreViewController will show the 'Close' button on each page it shows
 - Fixed a crash when tapping on the (+)-button instead of the tablecell, when adding weather calendars
+
+## License & Copyright
+You are allowed to use this framework, it's documentation, bundle resources and examples for the integration of the CalendarStore in your own app only.
+
+**Copyright © SchedJoules 2016.**
