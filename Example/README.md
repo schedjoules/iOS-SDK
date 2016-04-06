@@ -1,6 +1,6 @@
 # Sample Calendar App with CalendarStore integration
 
-This is a small sample app that shows how to integrate the CalendarStore framework into an "actual" Calendar app. The app shows a list of upcoming EKEvent's in a UITableView and integrates with the CalendarStore. The app provides extensive documentation on
+This is a small sample app that shows how to integrate the CalendarStore framework into an "actual" Calendar app. The app shows a list of upcoming EKEvent's in a UITableView and integrates with the CalendarStore. 
 
 The app shows how to do the following things:
 
