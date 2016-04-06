@@ -6,7 +6,7 @@ This repository contains the CalendarStore framework for iOS. The CalendarStore 
 ## 5 minute install
  - Download [CalendarStore.zip](https://github.com/schedjoules/iOS-SDK/blob/master/CalendarStore.zip) or checkout this repository
  - Read the Documentation at [http://schedjoules.github.io/iOS-SDK/](http://schedjoules.github.io/iOS-SDK/)
-- Integrate the SchedJoules CalendarStore.framework within 5 minutes in your own app with the API key we provided you. Mail us at support@schedjoules.com to request you personal API key if you don't have any yet. Until then you can use the test API key 0443a55244bb2b6224fd48e0416f0d9c
+ - Integrate the SchedJoules CalendarStore.framework within 5 minutes in your own app with the API key we provided you. Mail us at support@schedjoules.com to request you personal API key if you don't have any yet. Until then you can use the test API key 0443a55244bb2b6224fd48e0416f0d9c
  - Add Automatically Renewable Subscriptions to iTunes Connect by following the [instructions](https://github.com/schedjoules/iOS-SDK/blob/master/connect.md)
  - Et voila!
 
