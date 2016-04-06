@@ -20,7 +20,7 @@ In SJAppDelegate.h, provide your own `AuthorizationToken` in the line that is co
 
 	// [CalStoreController sharedController].authorizationToken = <# Your AuthorizationToken Here #>;
 	
-If you don't have an AuthorizationToken/API key, contact support@schedjoules.com. 
+Contact us at support@schedjoules.com if you don't have an AuthorizationToken/API key. 
 	
 
 ## Enable In-App Purchases Optionally
@@ -29,7 +29,7 @@ If you don't have an AuthorizationToken/API key, contact support@schedjoules.com
 If you want to experiment with In-App purchases, you need to change the BundleIdentifier of this app to your own app's BundleIdentifier and use that In-App enabled provisioning profile. 
 
 ### In-App purchases
-Add Automatically Renewable Subscriptions to iTunes Connect by following the [instructions](https://github.com/schedjoules/iOS-SDK/blob/master/connect.md). You will get error if no In-App purchases are present
+Add Automatically Renewable Subscriptions to iTunes Connect by following the [instructions](https://github.com/schedjoules/iOS-SDK/blob/master/connect.md). You will get an error if no In-App purchases are present.
 
 ### Test User
 Create a test user on iTunes Connect for the In-App SandBox. Now, **log out of the App Store** on your device in Settings > iTunes & App Stores: tap on your username to log out. Finally, start purchasing an item in the CalendarStore and **log in with your test user**.
