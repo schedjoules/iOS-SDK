@@ -13,7 +13,7 @@ JSON: curl 'https://api.schedjoules.com/apps/renewable_subscriptions' -v -H 'Aut
 **How to submit an auto-renewable subscription:**
 * Go to iTunes Connect
 * Select the app you want to add subscriptions to
-* Make sure you have a privacy policy in place and add the link to it. You can use ours as an example http://www.schedjoules.com/privacy-policy/
+* Make sure you have a privacy policy in place and add the link to it. You can use ours as an example https://www.schedjoules.com/privacy-policy/
 * Press 'Features' in top bar. You are now on the In-App Purchases tab
 * Press 'View Shared Secret' and send that secret to us. We'll use it to validate the purchase and expiration date of the subscription
 
