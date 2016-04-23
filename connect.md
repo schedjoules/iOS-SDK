@@ -17,7 +17,7 @@ JSON: curl 'https://api.schedjoules.com/apps/renewable_subscriptions' -v -H 'Aut
 * Press 'Features' in top bar. You are now on the In-App Purchases tab
 * Press 'View Shared Secret' and send that secret to us. We'll use it to validate the purchase date and expiration date of the subscriptions
 
-**Add auto-renwable subscription to Connect:**
+**Add auto-renewable subscription to Connect:**
 * Press '+' to add an IAP
 * Select 'Automatically Renewable Subscriptions’
 * Enter the information you find on https://api.schedjoules.com/apps/renewable_subscriptions.html.
