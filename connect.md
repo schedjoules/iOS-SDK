@@ -1,5 +1,5 @@
 ##Submit auto-renewable subscriptions to iTunes Connect
-Unfortunately it is not possible to use Apple's Application Uploader to add subscriptions to Connect, so you manually have to add auto-renewable subscriptions to Connect.
+It's not possible to use Apple's Application Uploader to add subscriptions to Connect, so you manually have to add auto-renewable subscriptions to Connect.
 
 To get the information you need to enter in Connect go to:
 
@@ -10,18 +10,17 @@ HTML: curl 'https://api.schedjoules.com/apps/renewable_subscriptions.html' -v -H
 JSON: curl 'https://api.schedjoules.com/apps/renewable_subscriptions' -v -H 'Authorization: Token token="{YOUR_API_KEY}"'
 ```
 
-**How to submit an auto-renewable subscription:**
+**Prepare your app for auto-renewable subscriptions:**
 * Go to iTunes Connect
 * Select the app you want to add subscriptions to
 * Make sure you have a privacy policy in place and add the link to it. You can use ours as an example https://www.schedjoules.com/privacy-policy/
 * Press 'Features' in top bar. You are now on the In-App Purchases tab
-* Press 'View Shared Secret' and send that secret to us. We'll use it to validate the purchase and expiration date of the subscription
+* Press 'View Shared Secret' and send that secret to us. We'll use it to validate the purchase date and expiration date of the subscriptions
 
-**For every subscription do the following:**
+**Add auto-renwable subscription to Connect:**
 * Press '+' to add an IAP
 * Select 'Automatically Renewable Subscriptions’
 * Enter the information you find on https://api.schedjoules.com/apps/renewable_subscriptions.html.
-* Repeat this for all auto-renewable subscriptions if you want to add various priced subscriptions.
 
 NOTES:
 * The identifier can't be changed in Connect, so if you make an error here, let us know so we can update our side.
