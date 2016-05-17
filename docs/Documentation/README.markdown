@@ -28,8 +28,9 @@ Next, drag **CalendarStore.bundle** into your project. This bundle contains the 
 
 ![Drag CalendarStore.framework into your project](docs/Readme-Images/CalStore-AddBundle.png =254x460)
 
-### AuthorizationToken
-Add your **own AuthorizationToken** to the project's Info.plist file under the `CalendarStoreAuthorizationToken` key. If you don't have an AuthorizationToken, you can request one via support@schedjoules.com . 
+### AuthorizationToken and AppId
+
+Add your **own AuthorizationToken** and your **own Apple ID** to the project's Info.plist file under the `CalendarStoreAuthorizationToken` key and the `CalStoreiTunesAppId` key. If you don't have an AuthorizationToken, you can request one via support@schedjoules.com . 
 
 It's also possible to set your AuthorizationToken in code:
 
