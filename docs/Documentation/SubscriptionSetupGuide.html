@@ -1,48 +1,50 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-	<meta charset="utf-8">
-
-	<title>SubscriptionSetupGuide Document</title>
-
-	<link rel="stylesheet" href="../../css/style.css">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
-</head>
-<body class="appledoc">
-	<header>
-		<div class="container" class="hide-in-xcode">
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SubscriptionSetupGuide Document</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../../index.html">CalendarStore </a></h1>
+				<a id="developerHome" href="../../index.html">SchedJoules</a>
+			</div>
 			
-			<h1 id="library-title">
-				<a href="../../index.html">CalendarStore </a>
-			</h1>
+			<div id="title" role="banner">
+				<h1 class="hideInXcode" id="pageTitleHeader">SubscriptionSetupGuide Document</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<a title="SubscriptionSetupGuide Document" name="top"></a>
+			<div id="overview_contents" role="main">
+				<div id="container">	
+					<h2>Introducing auto-renewable subscriptions</h2>
 
-			<p id="developer-home">
-				<a href="../../index.html">SchedJoules</a>
-			</p>
-			
-		</div>
-	</header>
+<p>We are switching from selling sets of calendars with single in-app purchases to auto-renewable subscriptions with access to all available calendars, including a 1 month free trial. We did this for the following reasons:
+* Recurring revenue stream
+* Higher ARPU
+* User engagement
+* Operational sustainability</p>
 
-	<aside>
-		<div class="container">
-			<nav>
-				<ul id="header-buttons" role="toolbar">
-					<li><a href="../../index.html">Home</a></li>
-				</ul>
-			</nav>
-		</div>
-	</aside>
+<p>You can start testing our SDK with auto-renewable subscriptions. The SDK will be added to your Basecamp project.</p>
 
-	<article>
-		<div id="overview-contents" class="container">
-			<div id="content">
-				<main role="main">
-					<h1 class="title">SubscriptionSetupGuide Document</h1>
+<h2>Smart pricing</h2>
+
+<p>You can A/B(C/etc) test subscription prices with smart pricing when you add various priced subscriptions to Connect like 0,99 USD, 1,99 USD 3,99 USD and 9,99 USD p/y. Testing of these different prices will give you a better idea of the price that gives you the highest revenue, so after you&rsquo;re done testing all users will pay the optimal price from that moment on. Users that bought the subscription for a different price will continue to pay this price until they end their subscription.</p>
+
+<h2>Migration from in-app purchases to auto-renewable subscriptions</h2>
+
+<p>Users that have bought an in-app purchase in the past will continue to have access to the content in that purchase, both in the app as in their calendar. An in-app purchase for country holidays will always be available while the in-app purchase for a current football season will last until the end of the season. When the new season starts this user will be prompted to buy an auto-renewable subscription.</p>
 
 <h2>Submit auto-renewable subscriptions to Connect</h2>
 
-<p>It's not possible to use Apple's Application Uploader to add subscriptions to Connect, so you manually have to add auto-renewable subscriptions to Connect.</p>
+<p>Unfortunately it is not possible to use Apple&rsquo;s Application Uploader to add subscriptions to Connect, so you manually have to add auto-renewable subscriptions to Connect.</p>
 
 <p>To get the information you need to enter in Connect go to:</p>
 
@@ -51,17 +53,18 @@
 
 <p>Alternatively you can visit <a href="https://api.schedjoules.com/apps/renewable">https://api.schedjoules.com/apps/renewable</a>_subscriptions for the JSON representation.</p>
 
-<p><strong>Prepare your app for auto-renewable subscriptions:</strong>
+<p><strong>How to submit an auto-renewable subscription:</strong>
 * Go to iTunes Connect
 * Select the app you want to add subscriptions to
 * Make sure you have a privacy policy in place and add the link to it. You can use ours as an example <a href="http://www.schedjoules.com/privacy-policy/">http://www.schedjoules.com/privacy-policy/</a>
 * Press &lsquo;Features&rsquo; in top bar. You are now on the In-App Purchases tab
 * Press &lsquo;View Shared Secret&rsquo; and send that secret to us. We&rsquo;ll use it to validate the purchase and expiration date of the subscription</p>
 
-<p><strong>Add auto-renewable subscription to Connect:</strong>
+<p><strong>For every subscription do the following:</strong>
 * Press &lsquo;+&rsquo; to add an IAP
 * Select &lsquo;Automatically Renewable Subscriptions’
 * Enter the information you find on <a href="https://api.schedjoules.com/apps/renewable_subscriptions.html.">https://api.schedjoules.com/apps/renewable_subscriptions.html.</a>
+* Repeat this for all auto-renewable subscriptions if you want to add various priced subscriptions.</p>
 
 <p>NOTES:
 * The identifier can&rsquo;t be changed in Connect, so if you make an error here, let us know so we can update our side.
@@ -95,22 +98,18 @@
 <p>Click &lsquo;Prepare for Submission&rsquo; and add the following text to the Notes field under &lsquo;App Review Information&rsquo; to request Apple to disable the &ldquo;Share Your Information&rdquo; dialog" in the subscription purchase flow:</p>
 
 <p><em>I hereby want to request to disable the &ldquo;Share Your Information&rdquo; dialog for our application ID [NUMBER]. In your documentation you also state that there&rsquo;s an option for Auto Renewing subscriptions to &ldquo;Offer a marketing opt-in incentived&rdquo; - yes/no. This setting controls whether the user will be provided a bonus free period for sharing their information. This option is not available however.</em></p>
-
-					<footer>
-						<div class="footer-copyright">
-							
-							<p class="copyright">Copyright &copy; 2016 SchedJoules. All rights reserved. Updated: 2016-03-31</p>
-							
-							
-							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
-							
-						</div>
-					</footer>
-				</main>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2016 SchedJoules. All rights reserved. (Last updated: 2016-05-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					
+					</div>
+				</div>
 			</div>
-		</div>
-	</article>
-
-	<script src="../../js/script.js"></script>
-</body>
+		</article>
+	</body>
 </html>
