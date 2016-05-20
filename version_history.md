@@ -1,5 +1,8 @@
 ## Version History
 
+### 2.0.1
+Fixed missing isFetchingImage selector
+
 ### 2.0.0
 Introduction auto-renewable subscriptions to replace all In-App-Purchases.
 
