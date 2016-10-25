@@ -38,8 +38,8 @@ Specifically, your Application Description has to include:
 
 **Add the following text at the end of your Application Description**
 
-*Access to Calendar Store for 1 year*<br/>
-*With a yearly subscription you get full and ongoing access to the Calendar Store including (live) updates in your calendar. A subscription always starts with a one-month free trial, so you can try before you buy. 1 year subscriptions for the Calendar Store start at $0.99. Payment will be charged to your iTunes Account at confirmation of purchase and after the 1 month free trial. Subscriptions automatically renew unless auto-renew is turned off at least 24-hours before the end of the current period. Your account will be charged for renewal within 24-hours prior to the end of the current 1 year period. You can turn off auto-renew at any time from your iTunes account settings. Cancellation of the current active subscription period is not allowed.*
+*► Access to all available calendars for 1 year*<br/>
+*With a yearly subscription you get full and ongoing access to all available calendars including (live) updates in your calendar. A subscription always starts with a one-month free trial, so you can try before you buy. A subscription costs $1.99 per year. Payment will be charged to your iTunes Account at confirmation of purchase and after the 1 month free trial.The subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period. Your account will be charged for renewal within 24-hours prior to the end of the current 1 year period. You can turn off auto-renew at any time from your iTunes account settings. Cancellation of the current active subscription period is not allowed.*
 
 *Find the full terms and conditions, and our privacy policy, at [url] and [url] respectively.*
 
