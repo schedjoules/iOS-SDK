@@ -1,5 +1,10 @@
 ## Version History
 
+### 2.1.0
+Update intro screens
+Fix bug that prevented some users from subscribing to calendars after free trial period ended
+Fix bug that caused some users receiving erroneous notifications
+
 ### 2.0.1
 Fixed missing isFetchingImage selector
 

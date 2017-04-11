@@ -15,4 +15,4 @@ Note: before you get started you can also examine the example app [SampleCalenda
 ## License & Copyright
 You are allowed to use this framework, it's documentation, bundle resources and examples for the integration of the CalendarStore in your own app only.
 
-**Copyright © SchedJoules 2016.**
+**Copyright © SchedJoules 2017**
