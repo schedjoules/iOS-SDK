@@ -1,5 +1,8 @@
 ## Version History
 
+### 2.2.0
+* Update UI conform iOS11
+
 ### 2.1.0
 * Update intro screens
 * Fix bug that prevented some users from subscribing to calendars after free trial period ended
