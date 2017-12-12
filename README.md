@@ -10,6 +10,8 @@ This repository contains the CalendarStore framework for iOS. The CalendarStore 
  - Add Automatically Renewable Subscriptions to iTunes Connect by following the [instructions](https://github.com/schedjoules/iOS-SDK/blob/master/connect.md)
  - Et voila!
 
+Note: before you get started you can also examine [SampleCalendarApp](https://github.com/schedjoules/iOS-SDK/tree/master/Example)
+
 ## License & Copyright
 You are allowed to use this framework, it's documentation, bundle resources and examples for the integration of the CalendarStore in your own app only.
 
