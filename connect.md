@@ -1,8 +1,8 @@
 ## Submit auto-renewable subscriptions to iTunes Connect
-It's not possible to use Apple's Application Uploader to add subscriptions to Connect, so you manually have to add auto-renewable subscriptions to Connect.
+
+### Retrieve renewable subscription info
 
 To get the information you need to enter in Connect go to:
-
 
 ```
 HTML: curl 'https://api.schedjoules.com/apps/renewable_subscriptions.html' -v -H 'Authorization: Token token="{YOUR_API_KEY}"'
@@ -18,7 +18,7 @@ JSON: curl 'https://api.schedjoules.com/apps/renewable_subscriptions' -v -H 'Aut
 * Press 'View Shared Secret' and send that secret to us. We'll use it to validate the purchase date and expiration date of the subscriptions
 
 ### Add auto-renewable subscription to Connect:
-* Press '+' to add an IAP
+* Press '+' to add an in-app purchase
 * Select 'Automatically Renewable Subscriptions’
 * Enter the information you find on https://api.schedjoules.com/apps/renewable_subscriptions.html.
 
@@ -45,7 +45,7 @@ Specifically, your Application Description has to include:
 
 NOTE: Please be sure to add this text to all App Localizations by selecting each specific localization and making appropriate changes.
 
-** Add text to Notes field for Apple Editors**
+** Add text to Notes field for Apple Editors **
 
 Click 'Prepare for Submission' and add the following text to the Notes field under 'App Review Information' to request Apple to disable the "Share Your Information" dialog" in the subscription purchase flow:
 
