@@ -1,5 +1,8 @@
 ## Version History
 
+### 2.3.4
+* Add subscription information in accordance with Apple's Schedule 2, Section 3.8(b) requirements for partner implementations
+
 ### 2.2.1
 * Add subscription information in accordance with Apple's Schedule 2, Section 3.8(b) requirements
 
