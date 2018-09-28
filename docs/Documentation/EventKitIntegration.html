@@ -3,22 +3,22 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>EventKitIntegration Document</title>
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="index.html">CalendarStore </a>
+				<a href="../../index.html">CalendarStore </a>
 			</h1>
 
 			<p id="developer-home">
-				<a href="index.html">SchedJoules</a>
+				<a href="../../index.html">SchedJoules</a>
 			</p>
 			
 		</div>
@@ -28,7 +28,7 @@
 		<div class="container">
 			<nav>
 				<ul id="header-buttons" role="toolbar">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="../../index.html">Home</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -38,15 +38,75 @@
 		<div id="overview-contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">EventKitIntegration Document</h1>
 
-					
+					<h1>EventKit Integration</h1>
+
+<h2>Overview</h2>
+
+<p>The CalendarStore framework loosely integrates with the EventKit framework. Calendars will be installed as <em>Subscribed Calendars</em> into the iOS system, which can be read using the EventKit framework.</p>
+
+<p>Different methods of installing calendars from the store are planned for future releases.</p>
+
+<h2>EKEventStore Instance</h2>
+
+<p>Apps using EventKit usually have one EKEventStore instance they communicate with. Because the CalendarStore also might need an EKEventStore instance, it will try to create one if it doesn&rsquo;t have one. This is of course a waste of resources if the app already has such an instance. Therefore, it&rsquo;s possible to set the EKEventStore instance used by the CalendarStore framework using the <a href="../../Classes/CalStoreEventKitController.html"><code>CalStoreEventKitController</code></a> class.</p>
+
+<p>One can set the EKEventStore instance using</p>
+
+<pre><code>[CalStoreEventKitController sharedController].eventStore = &lt;#your EKEventStore instance here#&gt;.
+</code></pre>
+
+<h2>Disable all EventKit integration</h2>
+
+<p>It&rsquo;s possible to stop the CalendarStore from using any EventKit objects, such as EKCalendar or EKEventStore. Set the <code>usesEventKit</code> property to <code>NO</code>:</p>
+
+<pre><code>[CalStoreEventKitController sharedController].eventStore = NO;
+</code></pre>
+
+<h2>Checking if a <a href="../../Classes/CalStorePageItemCalendar.html">CalStorePageItemCalendar</a> is installed</h2>
+
+<p>Due to limitations of the EventKit framework in iOS, it&rsquo;s very hard for apps to tell if a specific EKCalendar is installed on the user&rsquo;s device: calendarIds, names might all change. This has influence on the <code></code>CalStorePageItemCalendar<code>.installed</code> property.</p>
+
+<p><code></code>CalStorePageItemCalendar<code>.installed</code> can return either YES, or NO:</p>
+
+<ul>
+<li><code>YES</code> means that the EKCalendar that got installed still got found</li>
+<li><code>NO</code> means that the EKCalendar was not found, this can have two reasons:
+
+<ul>
+<li>the EKCalendar is still installed but has a new id</li>
+<li>the EKCalendar is no longer installed</li>
+</ul>
+</li>
+</ul>
+
+
+<p>So, one should only regard <code>YES</code> as a reliable answer: this property should only be used for informational purposes.</p>
+
+<h2>Responding to newly added EKCalendars</h2>
+
+<p>When the CalendarStore installs a new <em>Subscribed Calendar</em>, it tries to detect the matching <code>EKCalendar</code>. If it succeeded in doing so, a <code>kCalStoreEKCalendarSubscriptionInstalledNotification</code> is broadcasted.</p>
+
+<p>The userInfo dictionary of the <code>NSNotification</code> will contain the following keys:</p>
+
+<ul>
+<li><code>kCalStoreEKCalendarSubscriptionInstalledCalendarIdentifierKey</code> the calendarIdentifier of the EKCalendar that got installed</li>
+<li><code>kCalStoreEKCalendarSubscriptionInstalledItemKey</code> the <a href="../../Classes/CalStorePageItemCalendar.html"><code>CalStorePageItemCalendar</code></a> object that got installed, if available</li>
+</ul>
+
+
+<h4>Good User Experience: Making installed calendars visible in your app automatically</h4>
+
+<p>It&rsquo;s a good idea to observe <code>kCalStoreEKCalendarSubscriptionInstalledNotification</code> notifications and ensure that the just installed <code>EKCalendar</code> is added to your app&rsquo;s list of visible calendars. Otherwise, it might remain hidden and make the user question if the installation succeeded.</p>
 
 					<footer>
 						<div class="footer-copyright">
 							
 							<p class="copyright">Copyright &copy; 2018 SchedJoules. All rights reserved. Updated: 2018-09-28</p>
 							
+							
+							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 							
 						</div>
 					</footer>
@@ -55,6 +115,6 @@
 		</div>
 	</article>
 
-	<script src="js/script.js"></script>
+	<script src="../../js/script.js"></script>
 </body>
 </html>

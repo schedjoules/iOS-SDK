@@ -3,22 +3,22 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>OverridingDefaultActions Document</title>
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="index.html">CalendarStore </a>
+				<a href="../../index.html">CalendarStore </a>
 			</h1>
 
 			<p id="developer-home">
-				<a href="index.html">SchedJoules</a>
+				<a href="../../index.html">SchedJoules</a>
 			</p>
 			
 		</div>
@@ -28,7 +28,7 @@
 		<div class="container">
 			<nav>
 				<ul id="header-buttons" role="toolbar">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="../../index.html">Home</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -38,15 +38,140 @@
 		<div id="overview-contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">OverridingDefaultActions Document</h1>
 
-					
+					<h1>Overriding Default Actions</h1>
+
+<h2>Overview</h2>
+
+<p>The CalendarStore framework provides UI classes and low-level model classes. The UI classes provide a rich and complete store experience to the user, while the model classes allows apps to build their own UI.</p>
+
+<p>However, often apps only want to change some small part of the UI. It wouldn&rsquo;t make much sense to re-implement the whole UI from scratch to accomplish that. For that, all UI classes implement the <code>pageItemHandlerDelegate</code>, to allow apps to override specific behavior only.</p>
+
+<h2>Default PageItem actions</h2>
+
+<p>The UI classes (<a href="../../Classes/CalStoreCalendarStoreViewController.html">CalStoreCalendarStoreViewController</a>, <a href="../../Classes/CalStoreStyledPageViewController.html">CalStoreStyledPageViewController</a>, etc) all perform specific actions when the user interact when a <a href="../../Classes/CalStorePageItem.html">CalStorePageItem</a> object via their UI.</p>
+
+<p>For example, CalStoreCalendarViewController will start installing a calendar via EventKit when the user taps on an already purchases item. <a href="../../Classes/CalStoreStyledPageViewController.html">CalStoreStyledPageViewController</a> does the same, only presenting different UI.</p>
+
+<h2>Overriding PageItem actions</h2>
+
+<p>Every UI class that interacts with CalStorePageItem&rsquo;s, does have a <code>pageItemHandlerDelegate</code>. Delegates should conform to the formal protocol <a href="../../Protocols/CalStorePageItemHandlerDelegate.html">CalStorePageItemHandlerDelegate</a>. This delegate object will receive various callbacks when a user interacts with a page-item and allows the delegate to override and stop the default behavior of the action, dynamically by returning <code>NO</code> for the should* methods. Returning <code>YES</code> or not implementing it, will ensure the default action will be performed.</p>
+
+<h2>Example: Overriding installation behavior</h2>
+
+<p>If you have an app that doesn&rsquo;t want to use EventKit for installing calendars, you can still use  the provided UI classes and override the installation process.  The following sample code will show how to accomplish this:</p>
+
+<pre><code>@class SomeViewController () CalStorePageItemHandlerDelegate
+@end
+
+@implementation SomeViewController
+
+-(void)launchCalendarStore
+{
+    CalStoreCalendarViewController* vc = [CalStoreCalendarStoreViewController calendarStoreViewController];
+    vc.pageItemHandlerDelegate = self;
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+-(BOOL)shouldInstallCalendarForItem:(CalStorePageItemCalendar*)pageItem
+                       withCallback:(CalStorePageItemHandlerDelegateCallback)showViewControllerCallback
+{
+    // NOTE: in general, it's a good idea to provide some 'progress' feedback UI
+    // to the user, either with the help of showViewControllerCallback() our other means.
+
+    // let the framework create a unique url for our subscription
+    [pageItem createUrlWithCompletionHandler:^(NSURL* url, NSError* error){
+
+        // if we got an url, let our internal engine subscribe to the calendar
+        if[(url != nil)
+           [[OurInternalICSEngine sharedEngine] addSubscribedCalendarWithUrl:url];
+        else
+            NSLog(@"Error when requesting url for pageItem (%@): %@", pageItem, url); // we should also show the error to the user
+    }];
+
+
+    // we override this behavior, so return NO to indicate the default behavior should not be performed
+    return NO;
+}
+
+@end
+</code></pre>
+
+<h2>Presenting Custom ViewControllers</h2>
+
+<p>Each method of the <a href="../../Protocols/CalStorePageItemHandlerDelegate.html">CalStorePageItemHandlerDelegate</a> protocol has a showViewControllerCallback parameter. This parameter is a block that takes one UIViewController* object. If you want to show a custom view controller for some action, you should call this block with your view controller as parameter: <code>presentViewController(vc)</code>.</p>
+
+<p>Be aware that, one calling showViewControllerCallback, the delegate method <code>shouldShowViewController:forItem:withCallback:</code> won&rsquo;t be invoked; it will only be invoked by default actions, not overriden behavior.</p>
+
+<p>The following sample code will show how to let the UI classes show custom view controllers.</p>
+
+<pre><code>@class SomeViewController () CalStorePageItemHandlerDelegate
+@end
+
+@implementation SomeViewController
+
+-(void)launchCalendarStore
+{
+    CalStoreCalendarViewController* vc = [CalStoreCalendarStoreViewController calendarStoreViewController];
+    vc.pageItemHandlerDelegate = self;
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+-(BOOL)shouldNavigateToWeatherForItem:(CalStorePageItemParameterizedCalendar*)pageItem
+                         withCallback:(CalStorePageItemHandlerDelegateCallback)showViewControllerCallback;
+{
+    // create our custom weather view controller
+    MyCustomWeatherViewController* vc = [[MyCustomWeatherViewController alloc] init];
+    vc.pageItem = pageItem;
+
+    // let the UI class present/push it
+    showViewControllerCallback(vc);
+
+    // we override this behavior, so return NO to indicate the default behavior should not be performed
+    return NO;
+}
+
+@end
+</code></pre>
+
+<h2>Showing custom Intro Walkthrough</h2>
+
+<p>The Intro Walkthrough can be provided with custom content from a plist.</p>
+
+<pre><code>NSBundle *bundle = [NSBundle mainBundle];
+NSString* plistPath = [bundle pathForResource:@"Intro" ofType:@"plist"];
+[[CalStoreController sharedController] presentModalIntroFromViewController:self.window.rootViewController 
+                                                             withPlistPath:plistPath];
+</code></pre>
+
+<p>Each page of the intro is configured as dictionary.</p>
+
+<pre><code>&lt;array&gt;
+    &lt;dict&gt;
+        &lt;key&gt;title&lt;/key&gt;
+        &lt;string&gt;Page1 title&lt;/string&gt;
+        &lt;key&gt;description&lt;/key&gt;
+        &lt;string&gt;Page1 description&lt;/string&gt;
+        &lt;key&gt;image&lt;/key&gt;
+        &lt;string&gt;Walkthrough-1.png&lt;/string&gt;
+        &lt;key&gt;background_color&lt;/key&gt;
+        &lt;string&gt;#EFEFF4&lt;/string&gt;
+        &lt;key&gt;text_background_color&lt;/key&gt;
+        &lt;string&gt;#E36364&lt;/string&gt;
+    &lt;/dict&gt;
+&lt;/array&gt;
+</code></pre>
+
+<p>The plist and images are loaded from the main bundle of your app. Consider localizing the plist file, matching you apps supported languages.</p>
 
 					<footer>
 						<div class="footer-copyright">
 							
 							<p class="copyright">Copyright &copy; 2018 SchedJoules. All rights reserved. Updated: 2018-09-28</p>
 							
+							
+							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 							
 						</div>
 					</footer>
@@ -55,6 +180,6 @@
 		</div>
 	</article>
 
-	<script src="js/script.js"></script>
+	<script src="../../js/script.js"></script>
 </body>
 </html>

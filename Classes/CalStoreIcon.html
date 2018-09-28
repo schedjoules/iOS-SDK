@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>CalStoreIcon Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -43,9 +43,39 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/fetchingImage">fetchingImage</option>
+		
+		<option value="//api/name/image">image</option>
+		
+		<option value="//api/name/url">url</option>
+		
+	</optgroup>
+	
 
 	
 
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/cancelImageFetch">- cancelImageFetch</option>
+		
+		<option value="//api/name/fetchImageWithCompletionHandler:">- fetchImageWithCompletionHandler:</option>
+		
+	</optgroup>
+	
 	
 </select>
 						</label>
@@ -59,15 +89,330 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">CalStoreIcon Class Reference</h1>
 
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/CalStoreObject.html">CalStoreObject</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>CalStoreIcon.h</td>
+</tr>
+						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Model object for the Icons being used in the Calendar Store.</p>
 
+<p>To get the <UIImage> object for this icon, use the <a href="#//api/name/image">image</a> property.
+If the <a href="#//api/name/image">image</a> property is nil, use <a href="#//api/name/fetchImageWithCompletionHandler:">fetchImageWithCompletionHandler:</a> .</p>
+
+<p><strong>Caching</strong></p>
+
+<p>It&rsquo;s recommended to use this class' <a href="#//api/name/image">image</a> and <a href="#//api/name/fetchImageWithCompletionHandler:">fetchImageWithCompletionHandler:</a>
+methods, instead of doing a network request yourself. The CalStoreIcon class
+will automatically perform caching and cache validation of the <a href="#//api/name/image">image</a>.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Image" name="task_Image"></a>
+						<h2 class="task-title">Image</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/image" title="image"></a>
+	<h3 class="method-title"><code><a href="#//api/name/image">&nbsp;&nbsp;image</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The UIImage for this icon. If nil, use <a href="#//api/name/fetchImageWithCompletionHandler:">fetchImageWithCompletionHandler:</a>
+to fetch the image asynchronously.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) UIImage *image</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Caching is done automatically for this property.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreIcon.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Fetching the Image" name="task_Fetching the Image"></a>
+						<h2 class="task-title">Fetching the Image</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/fetchingImage" title="fetchingImage"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchingImage">&nbsp;&nbsp;fetchingImage</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>YES when the <a href="#//api/name/image">image</a> for this icon is currently being fetched.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isFetchingImage) BOOL fetchingImage</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/cancelImageFetch">- cancelImageFetch</a></p></code></li>
+					
+					<li><code><p><a href="#//api/name/fetchImageWithCompletionHandler:">- fetchImageWithCompletionHandler:</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreIcon.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchImageWithCompletionHandler:" title="fetchImageWithCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchImageWithCompletionHandler:">&ndash;&nbsp;fetchImageWithCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Starts an async fetch operation for the <a href="#//api/name/image">image</a> for this icon.
+When completed successfully, the <a href="#//api/name/image">image</a> property will return the <a href="#//api/name/image">image</a>.
+To cancel an ongoing fetch operation, use <a href="#//api/name/cancelImageFetch">cancelImageFetch</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchImageWithCompletionHandler:(CalStoreImageCompletionHandler)<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The block to call when the fetch operation finished (either successful or not). Will be called on the main queue.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Only one fetch operation can be undergoing for the same CalStoreIcon object.
+             Starting another fetch operation while one is in progress will raise an exception.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/cancelImageFetch">- cancelImageFetch</a></p></code></li>
+					
+					<li><code><p><a href="#//api/name/image">@property image</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreIcon.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelImageFetch" title="cancelImageFetch"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelImageFetch">&ndash;&nbsp;cancelImageFetch</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancels an ongoing <a href="#//api/name/image">image</a> fetch operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelImageFetch</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreIcon.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="URL Info" name="task_URL Info"></a>
+						<h2 class="task-title">URL Info</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/url" title="url"></a>
+	<h3 class="method-title"><code><a href="#//api/name/url">&nbsp;&nbsp;url</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The URL where the <a href="#//api/name/image">image</a> for this icon is located. This url will be unique for each different
+version of the same <a href="#//api/name/image">image</a>. E.g., if a pixel in an <a href="#//api/name/image">image</a> changes, the url will be different.
+Thus, it is possible to cache images based on their url.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSURL *url</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreIcon.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
 					
 
                     
+                    
+          
 				</main>
 
 				<footer>
@@ -75,6 +420,8 @@
 						
 						<p class="copyright">Copyright &copy; 2018 SchedJoules. All rights reserved. Updated: 2018-09-28</p>
 						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

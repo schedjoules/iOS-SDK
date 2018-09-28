@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>CalStoreWeatherCalendarViewController Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -43,9 +43,29 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/pageItemHandlerDelegate">pageItemHandlerDelegate</option>
+		
+		<option value="//api/name/parameterizedCalendar">parameterizedCalendar</option>
+		
+	</optgroup>
+	
 
 	
 
+	
 	
 </select>
 						</label>
@@ -59,15 +79,160 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">CalStoreWeatherCalendarViewController Class Reference</h1>
 
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/CalStoreBaseViewController.html">CalStoreBaseViewController</a> : UIViewController</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>CalStoreWeatherCalendarViewController.h</td>
+</tr>
+						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>ViewController that allows one to install a weather calendar.</p>
 
+<p>A weather calendar is of type <a href="../Classes/CalStorePageItemParameterizedCalendar.html">CalStorePageItemParameterizedCalendar</a> and has its isWeatherCalendar property returning YES.
+This ViewController guides the user to selecting appropriate options, such as a city, purchasing the in-app purchase and installing a calendar.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/parameterizedCalendar" title="parameterizedCalendar"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parameterizedCalendar">&nbsp;&nbsp;parameterizedCalendar</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The weather calendar to guide the user to installing to. The isWeatherCalendar property must be YES.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) CalStorePageItemParameterizedCalendar *parameterizedCalendar</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/CalStorePageItemParameterizedCalendar.html">CalStorePageItemParameterizedCalendar</a></p></code></li>
+					
+					<li><code><p><a href="../Classes/CalStorePageItemParameterizedCalendar.html">CalStorePageItemParameterizedCalendar</a>.weatherCalendar</p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreWeatherCalendarViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Responding To PageItem actions" name="task_Responding To PageItem actions"></a>
+						<h2 class="task-title">Responding To PageItem actions</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/pageItemHandlerDelegate" title="pageItemHandlerDelegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pageItemHandlerDelegate">&nbsp;&nbsp;pageItemHandlerDelegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pageItem handler delegate allows to override the actions that are performed when the user
+interacts with a PageItem (e.g. installing an item).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;CalStorePageItemHandlerDelegate&gt; pageItemHandlerDelegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The delegate must adopt the <a href="../Protocols/CalStorePageItemHandlerDelegate.html">CalStorePageItemHandlerDelegate</a> formal protocol.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreWeatherCalendarViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
 					
 
                     
+                    
+          
 				</main>
 
 				<footer>
@@ -75,6 +240,8 @@
 						
 						<p class="copyright">Copyright &copy; 2018 SchedJoules. All rights reserved. Updated: 2018-09-28</p>
 						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

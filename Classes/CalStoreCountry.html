@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>CalStoreCountry Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -43,9 +43,49 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/availableTranslations">availableTranslations</option>
+		
+		<option value="//api/name/countryId">countryId</option>
+		
+		<option value="//api/name/fetchingAvailableTranslations">fetchingAvailableTranslations</option>
+		
+		<option value="//api/name/icon">icon</option>
+		
+		<option value="//api/name/iso3166Code">iso3166Code</option>
+		
+		<option value="//api/name/localizedName">localizedName</option>
+		
+		<option value="//api/name/name">name</option>
+		
+	</optgroup>
+	
 
 	
 
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/cancelAvailableTranslationsFetch">- cancelAvailableTranslationsFetch</option>
+		
+		<option value="//api/name/fetchAvailableTranslationsWithCompletionHandler:">- fetchAvailableTranslationsWithCompletionHandler:</option>
+		
+		<option value="//api/name/fetchAvailableTranslationsWithCompletionHandler:authorizationToken:">- fetchAvailableTranslationsWithCompletionHandler:authorizationToken:</option>
+		
+	</optgroup>
+	
 	
 </select>
 						</label>
@@ -59,15 +99,610 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">CalStoreCountry Class Reference</h1>
 
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>CalStoreCountry.h</td>
+</tr>
+						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The CalendarStore frameworks supports multiple different countries (locations). A CalStoreCountry object
+holds information about a country that is supported in the Calendar Store.</p>
 
+<p>The <a href="#//api/name/iso3166Code">iso3166Code</a> property is the code that should be used for the location property of the <a href="../Classes/CalStoreController.html">CalStoreController</a>
+to change the CalendarStore to a country.</p>
+
+<p>When displaying CalStoreCountry objects to the user, always show the <a href="#//api/name/localizedName">localizedName</a>, which is localized
+according to the locale property from <a href="../Classes/CalStoreController.html">CalStoreController</a>.</p>
+
+<p><strong>Available Translations</strong></p>
+
+<p>The Calendar Store associated with a country can support multiple translations. For example,
+The German Calendar Store data can be shown in German or English, while the Canadian Calendar Store
+can be shown in French, Dutch and English.</p>
+
+<p>To get the list of possible translations for a country, use the <a href="#//api/name/availableTranslations">availableTranslations</a> property of a
+CalStoreCountry object. When this property is nil, the data needs to be fetched using the
+<a href="#//api/name/fetchAvailableTranslationsWithCompletionHandler:">fetchAvailableTranslationsWithCompletionHandler:</a> method. This method will fetch the data asynchronously
+from and will call the completionHandler when it is available.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Information" name="task_Information"></a>
+						<h2 class="task-title">Information</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/countryId" title="countryId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/countryId">&nbsp;&nbsp;countryId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The id for this country.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *countryId</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCountry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/iso3166Code" title="iso3166Code"></a>
+	<h3 class="method-title"><code><a href="#//api/name/iso3166Code">&nbsp;&nbsp;iso3166Code</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The  ISO3166 code for this country. Assign this to the location property of the <a href="../Classes/CalStoreController.html">CalStoreController</a> sharedController instance
+to change the country of the Calendar Store.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *iso3166Code</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This is an ISO3166 code, see <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</a> .</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/CalStoreController.html">CalStoreController</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCountry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Getting name" name="task_Getting name"></a>
+						<h2 class="task-title">Getting name</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The non-localized name for this country. Should not be user-facing.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *name</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCountry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/localizedName" title="localizedName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/localizedName">&nbsp;&nbsp;localizedName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The localized <a href="#//api/name/name">name</a> for this country. Use this property when you need to display a country to the user.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *localizedName</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCountry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Getting an icon" name="task_Getting an icon"></a>
+						<h2 class="task-title">Getting an icon</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/icon" title="icon"></a>
+	<h3 class="method-title"><code><a href="#//api/name/icon">&nbsp;&nbsp;icon</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The (flag-)icon for this country.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CalStoreIcon *icon</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCountry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Available Translations" name="task_Available Translations"></a>
+						<h2 class="task-title">Available Translations</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/availableTranslations" title="availableTranslations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/availableTranslations">&nbsp;&nbsp;availableTranslations</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A list of <a href="../Classes/CalStoreAvailableTranslation.html">CalStoreAvailableTranslation</a> objects, which define the supported locales for this country.
+If nil, use <a href="#//api/name/fetchAvailableTranslationsWithCompletionHandler:">fetchAvailableTranslationsWithCompletionHandler:</a> to fetch the list asynchronously from the API.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *availableTranslations</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A CalendarStore can support different translations in which the content can be given back. This array holds
+a list of <a href="../Classes/CalStoreAvailableTranslation.html">CalStoreAvailableTranslation</a> objects, which tell which locales are supported for the given country.</p>
+
+<p>To change the locale for the CalendarStore, use the locale property of the <a href="../Classes/CalStoreController.html">CalStoreController</a> sharedInstance object.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/fetchAvailableTranslationsWithCompletionHandler:">- fetchAvailableTranslationsWithCompletionHandler:</a></p></code></li>
+					
+					<li><code><p><a href="../Classes/CalStoreController.html">CalStoreController</a></p></code></li>
+					
+					<li><code><p><a href="../Classes/CalStoreAvailableTranslation.html">CalStoreAvailableTranslation</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCountry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Fetching Available Translations" name="task_Fetching Available Translations"></a>
+						<h2 class="task-title">Fetching Available Translations</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/fetchingAvailableTranslations" title="fetchingAvailableTranslations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchingAvailableTranslations">&nbsp;&nbsp;fetchingAvailableTranslations</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>YES if this object is busy fetching <a href="#//api/name/availableTranslations">availableTranslations</a>, NO otherwise. Only one <a href="#//api/name/fetchAvailableTranslationsWithCompletionHandler:">fetchAvailableTranslationsWithCompletionHandler:</a> operation can be performed
+per CalStoreCountry object at the same time.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isFetchingAvailableTranslations) BOOL fetchingAvailableTranslations</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Use <a href="#//api/name/cancelAvailableTranslationsFetch">cancelAvailableTranslationsFetch</a> to cancel an ongoing <a href="#//api/name/fetchAvailableTranslationsWithCompletionHandler:">fetchAvailableTranslationsWithCompletionHandler:</a> operation</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/fetchAvailableTranslationsWithCompletionHandler:">- fetchAvailableTranslationsWithCompletionHandler:</a></p></code></li>
+					
+					<li><code><p><a href="#//api/name/cancelAvailableTranslationsFetch">- cancelAvailableTranslationsFetch</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCountry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchAvailableTranslationsWithCompletionHandler:" title="fetchAvailableTranslationsWithCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchAvailableTranslationsWithCompletionHandler:">&ndash;&nbsp;fetchAvailableTranslationsWithCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Call when <a href="#//api/name/availableTranslations">availableTranslations</a> is nil. Will asynchronously fetch the <a href="#//api/name/availableTranslations">availableTranslations</a> from the API.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchAvailableTranslationsWithCompletionHandler:(CalStoreCountryAvailableTranslationsCompletionHandler)<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>When the fetch operation finishes, the completionHandler will be invoked on the main queue.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> Calling this method when <a href="#//api/name/fetchingAvailableTranslations">fetchingAvailableTranslations</a> is YES will raise an exception.</p></div><p>This method will use the authorizationToken from the <a href="../Classes/CalStoreController.html">CalStoreController</a>. If you want to provide the authorizationToken yourself,
+use fetchAvailableTranslationsWithCompletionHandler:</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/availableTranslations">@property availableTranslations</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCountry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchAvailableTranslationsWithCompletionHandler:authorizationToken:" title="fetchAvailableTranslationsWithCompletionHandler:authorizationToken:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchAvailableTranslationsWithCompletionHandler:authorizationToken:">&ndash;&nbsp;fetchAvailableTranslationsWithCompletionHandler:authorizationToken:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Same as <a href="#//api/name/fetchAvailableTranslationsWithCompletionHandler:">fetchAvailableTranslationsWithCompletionHandler:</a>, but with the option of using a custom authorizationToken.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchAvailableTranslationsWithCompletionHandler:(CalStoreCountryAvailableTranslationsCompletionHandler)<em>completionHandler</em> authorizationToken:(NSString *)<em>authorizationToken</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>When the fetch operation finishes, the completionHandler will be invoked on the main queue.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>authorizationToken</code></th>
+						<td><p>the AuthorizationToken to use for the underlying API request that&rsquo;s being made</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> Only use if you need to provide a different token than the one used by <a href="../Classes/CalStoreController.html">CalStoreController</a>.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCountry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelAvailableTranslationsFetch" title="cancelAvailableTranslationsFetch"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelAvailableTranslationsFetch">&ndash;&nbsp;cancelAvailableTranslationsFetch</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancels an ongoing fetch request for <a href="#//api/name/availableTranslations">availableTranslations</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelAvailableTranslationsFetch</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CalStoreCountry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
 					
 
                     
+                    
+          
 				</main>
 
 				<footer>
@@ -75,6 +710,8 @@
 						
 						<p class="copyright">Copyright &copy; 2018 SchedJoules. All rights reserved. Updated: 2018-09-28</p>
 						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>
